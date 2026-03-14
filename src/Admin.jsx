@@ -357,8 +357,12 @@ const Admin = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const [showTokenModal, setShowTokenModal] = useState(false);
   const [tokenInput, setTokenInput] = useState(() => localStorage.getItem('admin_gh_token') || '');
+  const handleTokenChange = (val) => {
+    setTokenInput(val);
+    if (val) localStorage.setItem('admin_gh_token', val);
+    else localStorage.removeItem('admin_gh_token');
+  };
 
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [editingPost, setEditingPost] = useState(null);
@@ -424,7 +428,8 @@ const Admin = () => {
     setShowPaste(false);
   };
 
-  const doPublish = async (token) => {
+  const doPublish = async () => {
+    if (!tokenInput) { setError('Falta el GitHub Token — ingresalo en el sidebar'); return; }
     const post = { ...editingPost };
     if (!post.slug) post.slug = slugify(post.en.title || post.es.title || '');
     setSaving(true);
@@ -435,31 +440,22 @@ const Admin = () => {
         ? [post, ...posts]
         : posts.map((p, i) => i === selectedIndex ? post : p);
 
-      const { sha: currentSha } = await ghGet(token);
-      await ghPut(token, newPosts, currentSha);
+      const { sha: currentSha } = await ghGet(tokenInput);
+      await ghPut(tokenInput, newPosts, currentSha);
       setPosts(newPosts);
-      localStorage.setItem('admin_gh_token', token);
       if (selectedIndex === -1) setSelectedIndex(0);
       setEditingPost(post);
       setSuccess('¡Publicado! Vercel redeploy en ~1 min.');
-      setShowTokenModal(false);
     } catch (e) {
       setError(e.message);
-      if (e.message.includes('401') || e.message.includes('token') || e.message.includes('Bad credentials')) {
-        localStorage.removeItem('admin_gh_token');
-        setTokenInput('');
-        setShowTokenModal(true);
-      }
     } finally {
       setSaving(false);
     }
   };
 
-  const handleSave = async () => {
+  const handleSave = () => {
     if (!editingPost.en?.title && !editingPost.es?.title) { setError('El título es obligatorio'); return; }
-    const savedToken = localStorage.getItem('admin_gh_token');
-    if (savedToken) doPublish(savedToken);
-    else setShowTokenModal(true);
+    doPublish();
   };
 
   // ---- Password gate ----
@@ -498,45 +494,6 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex font-sans">
 
-      {/* Token modal */}
-      {showTokenModal && (
-        <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center px-6">
-          <div className="bg-white rounded-2xl p-8 w-full max-w-sm shadow-2xl">
-            <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-2">GitHub Token</p>
-            <p className="text-gray-500 text-sm mb-6 leading-relaxed">
-              Necesitás un token con scope <code className="bg-gray-100 px-1 rounded">repo</code>. Se guarda en tu navegador.
-            </p>
-            <div className="space-y-3">
-              <input
-                type="password"
-                value={tokenInput}
-                onChange={e => setTokenInput(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && tokenInput && doPublish(tokenInput)}
-                placeholder="ghp_..."
-                autoFocus
-                className="w-full border border-gray-200 rounded-xl p-3 text-sm font-mono focus:outline-none focus:border-pink-300"
-              />
-              {error && <p className="text-red-400 text-xs">{error}</p>}
-              <div className="flex gap-3">
-                <button
-                  onClick={() => { setShowTokenModal(false); setError(''); }}
-                  className="flex-1 border border-gray-200 text-gray-500 py-3 rounded-xl font-bold text-xs hover:border-gray-300 transition-colors"
-                >
-                  Cancelar
-                </button>
-                <button
-                  onClick={() => tokenInput && doPublish(tokenInput)}
-                  disabled={saving || !tokenInput}
-                  className="flex-1 bg-pink-500 text-white py-3 rounded-xl font-black text-xs hover:bg-pink-600 transition-colors disabled:opacity-50"
-                >
-                  {saving ? 'Publicando...' : 'Publicar'}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Sidebar */}
       <div className="w-64 bg-white border-r border-gray-100 flex flex-col shrink-0">
         <div className="p-5 border-b border-gray-100">
@@ -567,13 +524,19 @@ const Admin = () => {
           ))}
         </div>
 
-        <div className="p-4 border-t border-gray-100">
-          <button
-            onClick={() => { localStorage.removeItem('admin_gh_token'); setTokenInput(''); setSuccess('Token eliminado'); }}
-            className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
-          >
-            Cambiar token
-          </button>
+        <div className="p-4 border-t border-gray-100 space-y-2">
+          <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">GitHub Token</p>
+          <input
+            type="password"
+            value={tokenInput}
+            onChange={e => handleTokenChange(e.target.value)}
+            placeholder="ghp_..."
+            className="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs font-mono focus:outline-none focus:border-pink-300"
+          />
+          {tokenInput
+            ? <p className="text-[10px] text-green-500">✓ Token guardado</p>
+            : <p className="text-[10px] text-gray-400">Requerido para publicar</p>
+          }
         </div>
       </div>
 
