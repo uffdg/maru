@@ -8,7 +8,9 @@ import {
   Monitor,
   Zap,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Menu,
+  X
 } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from './LanguageContext';
@@ -83,6 +85,7 @@ const BlogCarousel = ({ lang }) => {
 const App = () => {
   const { lang, toggle } = useLanguage();
   const t = translations[lang];
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const mentoringIcons = [
     <Monitor className="w-5 h-5 mb-4 text-pink-500" />,
@@ -101,20 +104,47 @@ const App = () => {
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-pink-100">
 
       {/* --- NAV --- */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-20 py-5 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <img src={maruLogo} alt="Maru Fiorillo" style={{ height: '32px', width: 'auto' }} />
-        <div className="flex gap-6 text-[11px] font-bold uppercase tracking-widest items-center">
-          <a href="#projects" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.projects}</a>
-          <a href="#about" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.about}</a>
-          <a href="#mentoring" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.mentoring}</a>
-          <Link to="/blog" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.blog}</Link>
-          <a href="#contact" className="text-pink-500 hover:text-pink-600 transition-colors">{t.nav.contact}</a>
-          <button onClick={toggle} className="text-[11px] font-black uppercase tracking-widest flex items-center gap-1">
-            <span className={lang === 'en' ? 'text-pink-500' : 'text-gray-400'}>EN</span>
-            <span className="text-gray-300">/</span>
-            <span className={lang === 'es' ? 'text-pink-500' : 'text-gray-400'}>ES</span>
-          </button>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div className="flex items-center justify-between px-6 md:px-20 py-5">
+          <img src={maruLogo} alt="Maru Fiorillo" style={{ height: '32px', width: 'auto' }} />
+
+          {/* Desktop menu */}
+          <div className="hidden md:flex gap-6 text-[11px] font-bold uppercase tracking-widest items-center">
+            <a href="#projects" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.projects}</a>
+            <a href="#about" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.about}</a>
+            <a href="#mentoring" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.mentoring}</a>
+            <Link to="/blog" className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.blog}</Link>
+            <a href="#contact" className="text-pink-500 hover:text-pink-600 transition-colors">{t.nav.contact}</a>
+            <button onClick={toggle} className="text-[11px] font-black uppercase tracking-widest flex items-center gap-1">
+              <span className={lang === 'en' ? 'text-pink-500' : 'text-gray-400'}>EN</span>
+              <span className="text-gray-300">/</span>
+              <span className={lang === 'es' ? 'text-pink-500' : 'text-gray-400'}>ES</span>
+            </button>
+          </div>
+
+          {/* Mobile right side */}
+          <div className="flex md:hidden items-center gap-3">
+            <button onClick={toggle} className="text-[11px] font-black uppercase tracking-widest flex items-center gap-1">
+              <span className={lang === 'en' ? 'text-pink-500' : 'text-gray-400'}>EN</span>
+              <span className="text-gray-300">/</span>
+              <span className={lang === 'es' ? 'text-pink-500' : 'text-gray-400'}>ES</span>
+            </button>
+            <button onClick={() => setMenuOpen(o => !o)} className="p-1 text-gray-500 hover:text-pink-500 transition-colors">
+              {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile dropdown */}
+        {menuOpen && (
+          <div className="md:hidden border-t border-gray-100 bg-white px-6 py-6 flex flex-col gap-5 text-[11px] font-bold uppercase tracking-widest">
+            <a href="#projects" onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.projects}</a>
+            <a href="#about" onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.about}</a>
+            <a href="#mentoring" onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.mentoring}</a>
+            <Link to="/blog" onClick={() => setMenuOpen(false)} className="text-gray-500 hover:text-pink-500 transition-colors">{t.nav.blog}</Link>
+            <a href="#contact" onClick={() => setMenuOpen(false)} className="text-pink-500 hover:text-pink-600 transition-colors">{t.nav.contact}</a>
+          </div>
+        )}
       </nav>
 
       {/* --- HERO SECTION --- */}
