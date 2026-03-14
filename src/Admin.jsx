@@ -436,8 +436,7 @@ const Admin = () => {
         : posts.map((p, i) => i === selectedIndex ? post : p);
 
       const { sha: currentSha } = await ghGet(token);
-      const result = await ghPut(token, newPosts, currentSha);
-      setSha(result.content.sha);
+      await ghPut(token, newPosts, currentSha);
       setPosts(newPosts);
       localStorage.setItem('admin_gh_token', token);
       if (selectedIndex === -1) setSelectedIndex(0);
