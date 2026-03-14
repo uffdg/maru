@@ -90,43 +90,25 @@ const Wuufy = () => {
       ))}
 
       {/* LOGO SECTION */}
-      <section className="py-24 border-t border-gray-50 bg-[#F5C518]">
+      <section className="py-16 border-t border-gray-50 bg-[#F5C518]">
         <img
           src={moolliLogo}
           alt="Moolli — Una tribu de dog lovers"
-          className="w-full max-w-2xl mx-auto block px-12"
+          className="w-full max-w-sm mx-auto block px-12"
         />
       </section>
 
-      {/* APP SCREENSHOTS — METRICS */}
-      <section className="py-24 border-t border-gray-50 bg-gray-950">
+      {/* APP SCREENSHOTS */}
+      <section className="py-20 border-t border-gray-50 bg-gray-950">
         <div className="px-6 md:px-20 max-w-5xl mx-auto mb-12">
           <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">The Product</p>
           <h2 className="text-4xl md:text-5xl font-black leading-tight text-white">Moolli · 2023</h2>
         </div>
-        <img
-          src={moolliApp1}
-          alt="Moolli app — métricas e integración con apps de salud"
-          className="w-full block"
-        />
-      </section>
-
-      {/* APP SCREENSHOTS — ENGAGEMENT */}
-      <section className="border-t border-white/5 bg-gray-950">
-        <img
-          src={moolliApp2}
-          alt="Moolli app — engagement, diagnóstico AI y referidos"
-          className="w-full block"
-        />
-      </section>
-
-      {/* APP SCREENSHOTS — FULL SCREENS */}
-      <section className="border-t border-white/5 bg-gray-950 pb-24">
-        <img
-          src={moolliApp3}
-          alt="Moolli app — pantallas completas"
-          className="w-full block"
-        />
+        <div className="max-w-5xl mx-auto px-6 md:px-20 space-y-12">
+          <img src={moolliApp1} alt="Moolli app — métricas e integración con apps de salud" className="w-full rounded-2xl" />
+          <img src={moolliApp2} alt="Moolli app — engagement, diagnóstico AI y referidos" className="w-full rounded-2xl" />
+          <img src={moolliApp3} alt="Moolli app — pantallas completas" className="w-full rounded-2xl" />
+        </div>
       </section>
 
       {/* FOOTER */}
