@@ -667,56 +667,191 @@
       "title": "El foresight no es predecir el futuro",
       "excerpt": "Es diseñar las condiciones para que el futuro que querés sea más probable. Lo que aprendí trabajando en la conceptualización de barrios históricos en la Patagonia.",
       "content": [
-        { "type": "intro", "text": "Es diseñar las condiciones para que el futuro que querés sea más probable. Lo que aprendí trabajando en la conceptualización de barrios históricos en la Patagonia." },
-        { "type": "paragraph", "text": "Cuando enseño design thinking siempre digo lo mismo: lo más difícil no son los frameworks. Es aguantar las ganas de saltar a la solución antes de entender bien qué tenés entre manos." },
-        { "type": "paragraph", "text": "KM5 me lo demostró cada vez." },
-        { "type": "paragraph", "text": "KM5 es un barrio de Comodoro Rivadavia, una ciudad costera en la Patagonia argentina. El nombre viene de su distancia al kilómetro cero — el museo ferroportuario, origen histórico de la ciudad. El barrio está entre la universidad y el mar, rodeado de barrancas de arcilla y viento permanente. Fue un pueblo ferroviario. El último tren pasó hace 70 años. Los vecinos todavía se reconocen como ferroviarios." },
-        { "type": "paragraph", "text": "Esto es lo que pasó cuando aplicamos una metodología de UX y design thinking no a un producto ni a una interfaz, sino a un barrio — su gente, sus ruinas, sus aspiraciones y su crisis de identidad." },
-        { "type": "h2", "text": "El encargo: diseñar pertenencia" },
-        { "type": "paragraph", "text": "El proyecto era parte de Pioneros 2030, el Plan Estratégico de Turismo de Comodoro Rivadavia. El programa \"Barrios con Encanto\" buscaba conceptualizar los barrios históricos de la ciudad — KM5, Astra y Diadema — no desde una lógica top-down de planificación urbana, sino desde adentro: desde la mirada y la voz de quienes los habitan." },
-        { "type": "paragraph", "text": "El challenge statement que definimos para KM5 fue deliberadamente humano:" },
-        { "type": "callout", "text": "Vamos a diseñar el concepto del barrio KM5 para mejorar la experiencia de sus habitantes, porque valoran la vida plena, cómoda y en familia." },
-        { "type": "paragraph", "text": "Ese framing importa. No nos pidieron diseñar una atracción turística ni una marca municipal. Nos pidieron entender una comunidad y ayudarla a ver su propio potencial." },
-        { "type": "h2", "text": "La metodología: un Double Diamond en el campo" },
-        { "type": "paragraph", "text": "El proceso siguió la estructura del Double Diamond — diverger, converger, diverger de nuevo, converger — a lo largo de nueve fases: revisión de documentación, definición del desafío, relevamiento de campo, empathy map, mind mapping, ideación con HMW, brainstorming de soluciones, mapa futuro y proto-personas." },
-        { "type": "paragraph", "text": "Lo que hizo a este proyecto distinto fue el campo: no hicimos encuestas ni focus groups. Recorrimos el barrio. Dos veces. Hablamos con vecinos en las esquinas y frente a edificios abandonados. Nos paramos en la rotonda del balancín — decorada con una bomba de petróleo, símbolo físico de la identidad económica de la ciudad — e intentamos entender qué significa vivir entre dos historias: el pasado ferroviario y el presente petrolero." },
-        { "type": "paragraph", "text": "Lo que encontramos fue una comunidad en una crisis de identidad silenciosa. El ferrocarril se fue. La economía del petróleo pertenece a KM3, no a KM5. Entonces, ¿quiénes son?" },
-        { "type": "quote", "text": "\"Hace 70 años que no pasa un tren pero la gente se sigue reconociendo como un pueblo ferroviario.\" — un vecino" },
-        { "type": "paragraph", "text": "Eso no es nostalgia. Es una pregunta legítima sobre pertenencia." },
-        { "type": "h2", "text": "Frame creation: la lente de Dorst" },
-        { "type": "paragraph", "text": "Acá es donde Kees Dorst se vuelve relevante. Dorst plantea que en el diseño el movimiento de razonamiento es inverso al de la resolución de problemas clásica: no partís de un qué y un cómo conocidos para llegar a un resultado. Tenés un resultado deseado y tenés que razonar hacia atrás para encontrar el frame — el encuadre — que lo hace posible." },
-        { "type": "paragraph", "text": "KM5 no era un problema con frame conocido. El barrio tenía varios frames compitiendo: somos ferroviarios (la generación mayor), ya no somos ferroviarios pero no sabemos qué somos (los más jóvenes), somos un barrio que podría ser algo grande pero nadie nos dijo qué (la aspiración que subyace a las dos anteriores)." },
-        { "type": "paragraph", "text": "El trabajo fue encontrar el frame que habilitara acción nueva. Y ese frame no era ni el patrimonio ni el petróleo — era proximidad y potencial. El barrio está a 10 minutos caminando de una de las principales universidades de la Patagonia. Da al mar. Tiene infraestructura abandonada de carácter extraordinario — una pileta termal, una usina eléctrica, un viejo cine, un lanchón reconvertido en monumento histórico. El frame que lo desbloqueó todo fue: KM5 ya tiene todo lo que necesita. Los recursos están. Solo que no están activados." },
-        { "type": "paragraph", "text": "Reencuadrar no es cambiar la realidad. Es cambiar lo que la realidad hace posible." },
-        { "type": "h2", "text": "Significado como materia de diseño: Verganti" },
-        { "type": "paragraph", "text": "Roberto Verganti agrega otra capa. Donde Dorst trabaja la lógica del razonamiento proyectual, Verganti trabaja el significado que el diseño le propone a las personas." },
-        { "type": "paragraph", "text": "Su idea central es que la innovación más radical no viene de escuchar lo que los usuarios dicen que quieren — viene de proponer un nuevo significado para un producto, un servicio o, en este caso, un lugar. Las personas no solo usan las cosas: les dan sentido. Y los lugares cargan con ese peso de manera especial." },
-        { "type": "paragraph", "text": "Los vecinos de KM5 no nos iban a decir \"queremos un coworking en la usina\". Nos iban a decir que extrañaban el cine, que la pileta era olímpica, que la estación está vacía y nadie sabe qué hacer con ella. Nuestro trabajo era escuchar esas historias no como una wish list, sino como un mapa de significado latente — lo que este lugar podría significar para la gente si su potencial se activara." },
-        { "type": "paragraph", "text": "Las proto-personas que desarrollamos al final — Felipe, el padre de familia y profesor de geografía; Felicitas, la emprendedora; Matías, el estudiante de ingeniería venido de otra parte de la provincia — no eran segmentos de mercado. Eran propuestas de significado posible. ¿Quién podría vivir bien en KM5 si KM5 estuviera en su mejor versión? ¿Qué necesitaría el barrio para sostener esa vida?" },
-        { "type": "paragraph", "text": "Las personas no se derivaron de data. Se diseñaron desde la aspiración." },
-        { "type": "h2", "text": "La máquina de los HMW" },
-        { "type": "paragraph", "text": "Entre el discovery y las soluciones usamos HMW como herramienta estructurante — generando preguntas disparadoras en catorce clusters temáticos: movilidad, ecología, economía, tecnología, cultura, espacios comunes, familia, calidad de vida, arte, actividad física, el mar, urbanismo, educación y vivienda." },
-        { "type": "paragraph", "text": "Las preguntas iban de lo concreto a lo visionario:" },
-        { "type": "list", "items": [
-          "¿Cómo podríamos crear un barrio policéntrico?",
-          "¿Cómo podríamos resignificar los espacios abandonados para que los vecinos los habiten y se los apropien?",
-          "¿Cómo podríamos usar el mar y los recursos marinos de manera sostenible para el desarrollo?",
-          "¿Cómo podríamos construir un nuevo paradigma de escuela que involucre a todo el barrio?"
-        ]},
-        { "type": "paragraph", "text": "Los HMW funcionan porque mantienen abierto el problem space sin colapsar en una solución única. En el aula los uso exactamente para eso — para enseñarle a los estudiantes a tolerar la ambigüedad, a no cerrar antes de tiempo. En KM5 hicieron lo mismo: mantuvieron la conversación abierta el tiempo suficiente para que emergieran ideas que no hubiéramos anticipado." },
-        { "type": "paragraph", "text": "La usina como hotel boutique. La vieja estación de tren como café concert. La pileta termal como espacio de boulder y deporte extremo. Molinos de viento offshore como infraestructura energética y símbolo visual de transición energética — visibles desde el barrio, resignificando la relación de Comodoro con la energía: de la extracción a la generación." },
-        { "type": "h2", "text": "El mapa futuro como design artifact" },
-        { "type": "paragraph", "text": "El output del proceso no fue un informe. Fue un mapa futuro — una propuesta espacial de lo que KM5 podría llegar a ser, combinando intervenciones físicas, ideas programáticas y las personas que habitarían ese futuro." },
-        { "type": "paragraph", "text": "El mapa proponía, entre otras cosas: espacios de coworking y coliving conectados a la universidad; un corredor gastronómico costero desde el hotel boutique en la vieja usina hasta el mar; un área de deporte urbano que se extendía sobre el agua con skate, boulder y deportes acuáticos; un programa de murales que canalizaba la cultura de grafiti existente hacia la expresión artística organizada; bicicletas públicas a lo largo del vial costero que conecta KM5 con KM3; y prototipos de vivienda sustentable integrados al tejido del barrio." },
-        { "type": "paragraph", "text": "Nada de esto se inventó desde afuera. Cada elemento se trazaba hasta algo que escuchamos, vimos o sentimos en el campo. La pileta que todavía guarda la memoria de haber sido olímpica. Los estudiantes que no encuentran dónde sentarse entre clases. Las familias que usan la calle como living porque las plazas son demasiado chicas. Las paredes cubiertas de tags de rivalidad futbolística — que son también, miradas de otra manera, evidencia de una comunidad que le importa profundamente su territorio." },
-        { "type": "h2", "text": "Lo que foresight realmente significa" },
-        { "type": "paragraph", "text": "Esto es lo que quiero decir cuando digo que el foresight no es predecir el futuro." },
-        { "type": "paragraph", "text": "Predecir asume una trayectoria fija — calculás hacia dónde va todo e intentás llegar antes. El foresight, en el sentido del diseño, es otra cosa: es identificar las condiciones que harían más probable que el futuro deseado emerja. Diseñás esas condiciones. Y después dejás que el futuro pase." },
-        { "type": "paragraph", "text": "Los vecinos de KM5 no necesitan que alguien les diga quiénes van a ser. Necesitan que alguien les muestre los assets que ya tienen — el agua, las ruinas, la universidad, el viento, los grafiteros, las familias del domingo — y pregunte: ¿cómo sería si todo esto estuviera trabajando junto?" },
-        { "type": "paragraph", "text": "Esa es la pregunta que el design thinking, en su mejor versión, sabe hacer." },
-        { "type": "paragraph", "text": "Y esa pregunta, compruebo cada vez, funciona igual en un aula en Buenos Aires que en una esquina ventosa de la Patagonia." },
-        { "type": "h3", "text": "Créditos" },
-        { "type": "paragraph", "text": "Este proyecto fue desarrollado por Holistic Interaction (Lorena Maceratesi y Mariana Fiorillo) en colaboración con Gabriel Klein del Plan Pioneros 2030, con coordinación de Luciana Perrone. Marzo 2022." }
+        {
+          "type": "intro",
+          "text": "Es diseñar las condiciones para que el futuro que querés sea más probable. Lo que aprendí trabajando en la conceptualización de barrios históricos en la Patagonia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando enseño design thinking siempre digo lo mismo: lo más difícil no son los frameworks. Es aguantar las ganas de saltar a la solución antes de entender bien qué tenés entre manos."
+        },
+        {
+          "type": "paragraph",
+          "text": "KM5 me lo demostró cada vez."
+        },
+        {
+          "type": "paragraph",
+          "text": "KM5 es un barrio de Comodoro Rivadavia, una ciudad costera en la Patagonia argentina. El nombre viene de su distancia al kilómetro cero — el museo ferroportuario, origen histórico de la ciudad. El barrio está entre la universidad y el mar, rodeado de barrancas de arcilla y viento permanente. Fue un pueblo ferroviario. El último tren pasó hace 70 años. Los vecinos todavía se reconocen como ferroviarios."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto es lo que pasó cuando aplicamos una metodología de UX y design thinking no a un producto ni a una interfaz, sino a un barrio — su gente, sus ruinas, sus aspiraciones y su crisis de identidad."
+        },
+        {
+          "type": "h2",
+          "text": "El encargo: diseñar pertenencia"
+        },
+        {
+          "type": "paragraph",
+          "text": "El proyecto era parte de Pioneros 2030, el Plan Estratégico de Turismo de Comodoro Rivadavia. El programa \"Barrios con Encanto\" buscaba conceptualizar los barrios históricos de la ciudad — KM5, Astra y Diadema — no desde una lógica top-down de planificación urbana, sino desde adentro: desde la mirada y la voz de quienes los habitan."
+        },
+        {
+          "type": "paragraph",
+          "text": "El challenge statement que definimos para KM5 fue deliberadamente humano:"
+        },
+        {
+          "type": "callout",
+          "text": "Vamos a diseñar el concepto del barrio KM5 para mejorar la experiencia de sus habitantes, porque valoran la vida plena, cómoda y en familia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ese framing importa. No nos pidieron diseñar una atracción turística ni una marca municipal. Nos pidieron entender una comunidad y ayudarla a ver su propio potencial."
+        },
+        {
+          "type": "h2",
+          "text": "La metodología: un Double Diamond en el campo"
+        },
+        {
+          "type": "paragraph",
+          "text": "El proceso siguió la estructura del Double Diamond — diverger, converger, diverger de nuevo, converger — a lo largo de nueve fases: revisión de documentación, definición del desafío, relevamiento de campo, empathy map, mind mapping, ideación con HMW, brainstorming de soluciones, mapa futuro y proto-personas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo que hizo a este proyecto distinto fue el campo: no hicimos encuestas ni focus groups. Recorrimos el barrio. Dos veces. Hablamos con vecinos en las esquinas y frente a edificios abandonados. Nos paramos en la rotonda del balancín — decorada con una bomba de petróleo, símbolo físico de la identidad económica de la ciudad — e intentamos entender qué significa vivir entre dos historias: el pasado ferroviario y el presente petrolero."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo que encontramos fue una comunidad en una crisis de identidad silenciosa. El ferrocarril se fue. La economía del petróleo pertenece a KM3, no a KM5. Entonces, ¿quiénes son?"
+        },
+        {
+          "type": "quote",
+          "text": "\"Hace 70 años que no pasa un tren pero la gente se sigue reconociendo como un pueblo ferroviario.\" — un vecino"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eso no es nostalgia. Es una pregunta legítima sobre pertenencia."
+        },
+        {
+          "type": "h2",
+          "text": "Frame creation: la lente de Dorst"
+        },
+        {
+          "type": "paragraph",
+          "text": "Acá es donde Kees Dorst se vuelve relevante. Dorst plantea que en el diseño el movimiento de razonamiento es inverso al de la resolución de problemas clásica: no partís de un qué y un cómo conocidos para llegar a un resultado. Tenés un resultado deseado y tenés que razonar hacia atrás para encontrar el frame — el encuadre — que lo hace posible."
+        },
+        {
+          "type": "paragraph",
+          "text": "KM5 no era un problema con frame conocido. El barrio tenía varios frames compitiendo: somos ferroviarios (la generación mayor), ya no somos ferroviarios pero no sabemos qué somos (los más jóvenes), somos un barrio que podría ser algo grande pero nadie nos dijo qué (la aspiración que subyace a las dos anteriores)."
+        },
+        {
+          "type": "paragraph",
+          "text": "El trabajo fue encontrar el frame que habilitara acción nueva. Y ese frame no era ni el patrimonio ni el petróleo — era proximidad y potencial. El barrio está a 10 minutos caminando de una de las principales universidades de la Patagonia. Da al mar. Tiene infraestructura abandonada de carácter extraordinario — una pileta termal, una usina eléctrica, un viejo cine, un lanchón reconvertido en monumento histórico. El frame que lo desbloqueó todo fue: KM5 ya tiene todo lo que necesita. Los recursos están. Solo que no están activados."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reencuadrar no es cambiar la realidad. Es cambiar lo que la realidad hace posible."
+        },
+        {
+          "type": "h2",
+          "text": "Significado como materia de diseño: Verganti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roberto Verganti agrega otra capa. Donde Dorst trabaja la lógica del razonamiento proyectual, Verganti trabaja el significado que el diseño le propone a las personas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Su idea central es que la innovación más radical no viene de escuchar lo que los usuarios dicen que quieren — viene de proponer un nuevo significado para un producto, un servicio o, en este caso, un lugar. Las personas no solo usan las cosas: les dan sentido. Y los lugares cargan con ese peso de manera especial."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los vecinos de KM5 no nos iban a decir \"queremos un coworking en la usina\". Nos iban a decir que extrañaban el cine, que la pileta era olímpica, que la estación está vacía y nadie sabe qué hacer con ella. Nuestro trabajo era escuchar esas historias no como una wish list, sino como un mapa de significado latente — lo que este lugar podría significar para la gente si su potencial se activara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Las proto-personas que desarrollamos al final — Felipe, el padre de familia y profesor de geografía; Felicitas, la emprendedora; Matías, el estudiante de ingeniería venido de otra parte de la provincia — no eran segmentos de mercado. Eran propuestas de significado posible. ¿Quién podría vivir bien en KM5 si KM5 estuviera en su mejor versión? ¿Qué necesitaría el barrio para sostener esa vida?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Las personas no se derivaron de data. Se diseñaron desde la aspiración."
+        },
+        {
+          "type": "h2",
+          "text": "La máquina de los HMW"
+        },
+        {
+          "type": "paragraph",
+          "text": "Entre el discovery y las soluciones usamos HMW como herramienta estructurante — generando preguntas disparadoras en catorce clusters temáticos: movilidad, ecología, economía, tecnología, cultura, espacios comunes, familia, calidad de vida, arte, actividad física, el mar, urbanismo, educación y vivienda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Las preguntas iban de lo concreto a lo visionario:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "¿Cómo podríamos crear un barrio policéntrico?",
+            "¿Cómo podríamos resignificar los espacios abandonados para que los vecinos los habiten y se los apropien?",
+            "¿Cómo podríamos usar el mar y los recursos marinos de manera sostenible para el desarrollo?",
+            "¿Cómo podríamos construir un nuevo paradigma de escuela que involucre a todo el barrio?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Los HMW funcionan porque mantienen abierto el problem space sin colapsar en una solución única. En el aula los uso exactamente para eso — para enseñarle a los estudiantes a tolerar la ambigüedad, a no cerrar antes de tiempo. En KM5 hicieron lo mismo: mantuvieron la conversación abierta el tiempo suficiente para que emergieran ideas que no hubiéramos anticipado."
+        },
+        {
+          "type": "paragraph",
+          "text": "La usina como hotel boutique. La vieja estación de tren como café concert. La pileta termal como espacio de boulder y deporte extremo. Molinos de viento offshore como infraestructura energética y símbolo visual de transición energética — visibles desde el barrio, resignificando la relación de Comodoro con la energía: de la extracción a la generación."
+        },
+        {
+          "type": "h2",
+          "text": "El mapa futuro como design artifact"
+        },
+        {
+          "type": "paragraph",
+          "text": "El output del proceso no fue un informe. Fue un mapa futuro — una propuesta espacial de lo que KM5 podría llegar a ser, combinando intervenciones físicas, ideas programáticas y las personas que habitarían ese futuro."
+        },
+        {
+          "type": "paragraph",
+          "text": "El mapa proponía, entre otras cosas: espacios de coworking y coliving conectados a la universidad; un corredor gastronómico costero desde el hotel boutique en la vieja usina hasta el mar; un área de deporte urbano que se extendía sobre el agua con skate, boulder y deportes acuáticos; un programa de murales que canalizaba la cultura de grafiti existente hacia la expresión artística organizada; bicicletas públicas a lo largo del vial costero que conecta KM5 con KM3; y prototipos de vivienda sustentable integrados al tejido del barrio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nada de esto se inventó desde afuera. Cada elemento se trazaba hasta algo que escuchamos, vimos o sentimos en el campo. La pileta que todavía guarda la memoria de haber sido olímpica. Los estudiantes que no encuentran dónde sentarse entre clases. Las familias que usan la calle como living porque las plazas son demasiado chicas. Las paredes cubiertas de tags de rivalidad futbolística — que son también, miradas de otra manera, evidencia de una comunidad que le importa profundamente su territorio."
+        },
+        {
+          "type": "h2",
+          "text": "Lo que foresight realmente significa"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto es lo que quiero decir cuando digo que el foresight no es predecir el futuro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Predecir asume una trayectoria fija — calculás hacia dónde va todo e intentás llegar antes. El foresight, en el sentido del diseño, es otra cosa: es identificar las condiciones que harían más probable que el futuro deseado emerja. Diseñás esas condiciones. Y después dejás que el futuro pase."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los vecinos de KM5 no necesitan que alguien les diga quiénes van a ser. Necesitan que alguien les muestre los assets que ya tienen — el agua, las ruinas, la universidad, el viento, los grafiteros, las familias del domingo — y pregunte: ¿cómo sería si todo esto estuviera trabajando junto?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esa es la pregunta que el design thinking, en su mejor versión, sabe hacer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Y esa pregunta, compruebo cada vez, funciona igual en un aula en Buenos Aires que en una esquina ventosa de la Patagonia."
+        },
+        {
+          "type": "h3",
+          "text": "Créditos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Este proyecto fue desarrollado por Holistic Interaction en colaboración con Gabriel Klein del Plan Pioneros 2030, con coordinación de Luciana Perrone. Marzo 2022."
+        }
       ]
     }
   },
