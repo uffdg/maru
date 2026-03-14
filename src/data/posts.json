@@ -865,47 +865,105 @@
       "content": [
         {
           "type": "intro",
-          "text": "The discovery nobody asked for (and that changed everything) Ana came to our first meeting with a clear idea: she wanted to build a blog about dog wellness. She had a community of dog lovers, a vision, and a chat platform that wasn't gaining traction. Her husband — CEO of a fintech startup — had met my co-founder and me at a Google Accelerator Design Sprint. He introduced us. And in that first meeting, I made the decision that defined the entire project. I convinced her not to build the blog. Not because it was a bad idea. But because before building anything, we needed to understand what real problem we were solving — and for whom."
+          "text": "Ana came with a clear idea. I convinced her not to build it."
         },
         {
           "type": "paragraph",
-          "text": "Starting point: a founder with vision and no data Ana had something valuable: a genuine value hypothesis. She believed that dog-owning families needed a trusted network — health information, services, community — and that they'd pay for it. But she had no evidence. She had intuition. That's not enough to raise capital. And raising capital was the real objective. So I proposed a different path: before defining the product, listen. A structured discovery process that would let us arrive at the Design Sprint with direction, not assumptions."
+          "text": "She wanted to build a blog about dog wellness. She had a community of dog lovers, a vision, and a chat platform that wasn’t gaining traction."
         },
         {
           "type": "paragraph",
-          "text": "The process: three phases, one interdisciplinary team We structured the work into three phases: Analysis → Ideation → Validation. Analysis — understanding the ecosystem We ran two parallel tracks: users and investors. For users, we designed social media surveys and conducted in-depth interviews with 10 dog lovers: 4 women aged 30–47 and 6 men aged 30–38, from seven different neighborhoods across Mexico City. The interviews weren't generic — we built tailored scripts to explore family composition, health practices (veterinary care, vaccinations, insurance), service usage, community dynamics, and purchasing behavior. For investors, we held conversations with venture capital to understand what the product would need to achieve market traction and investor appeal. This is something many teams skip in discovery: investors are product stakeholders too. We also conducted a deep interview with the founder — her vision, her values, what she wasn't willing to compromise. Ideation — synthesizing to decide With data in hand, we built a central user persona: Eduardo Ramírez, 34, account executive, Colonia del Valle. Lives with his partner and two adopted dogs. Active on social media. Seeks validated, trustworthy information. Wants quality services without sacrificing his budget. Eduardo wasn't invented. He was the synthesis of real patterns from the interviews — and he became the compass for every product decision that followed. With that foundation, we defined the MVP: not a blog, not a chat platform, but a dog wellness app featuring AI-powered self-diagnosis, 24/7 online vet consultations, health tracking, and a freemium model with micropayments for premium services. Validation — the Design Sprint We organized a five-day sprint following Google's methodology, with a deliberately heterogeneous group: Ana (founder), a technical expert, a marketing consultant, an investor, a designer, and my co-founder and me as the facilitation team."
+          "text": "**What she didn’t have was data.** She had intuition — and intuition isn’t enough to raise capital. Raising capital was the real objective."
+        },
+        {
+          "type": "h2",
+          "text": "The Process: Three Phases, One Team"
+        },
+        {
+          "type": "h3",
+          "text": "01 — Analysis: Understanding the Ecosystem"
         },
         {
           "type": "paragraph",
-          "text": "Day 1: Understanding — all stakeholders shared their read on the problem space Day 2: Ideation — structured exercises to explore features and functionalities Day 3: Prototyping — the designer translated concepts into a high-fidelity Figma prototype Day 4: Review — presentation to the founder and refinements Day 5: User testing — five potential users, real feedback, concrete iterations"
+          "text": "We ran two parallel tracks: **users and investors.** For users, we designed surveys and conducted in-depth interviews with 10 dog owners across 7 neighborhoods in Mexico City."
         },
         {
           "type": "paragraph",
-          "text": "By the end of the sprint, we had something we didn't have at the start: a validated prototype, a clear value proposition, and an investor pitch built on evidence."
+          "text": "Interview scripts explored health practices, service usage, and purchasing behavior. **Investors were part of the analysis from day one** — not as a later consideration, but as product stakeholders who shaped the brief."
+        },
+        {
+          "type": "h3",
+          "text": "02 — Ideation: Building the Compass"
         },
         {
           "type": "paragraph",
-          "text": "The outcome: Best Product at BubbleCon 2023 Ana took the prototype and the strategic documentation from the project and enrolled in Bubble.io's bootcamp to build the MVP in no-code. In 2023, at BubbleCon in New York, Moolli won Best Product. The product is now called Wuufy, is actively raising capital, and is positioned as the wellness app for dog-loving families — backed by a strategic design framework and a user experience grounded in real data."
+          "text": "With data in hand, we built one central user persona: **Eduardo Ramírez, 34, account executive, Colonia del Valle.** Lives with his partner and two adopted dogs. Seeks trusted, validated information."
         },
         {
           "type": "paragraph",
-          "text": "What I learned Discovery is not a phase. It's an act of conviction. When Ana arrived with the blog idea, the easy move was to say yes. It's what she asked for. But the work of a product facilitator isn't to execute what the client imagines — it's to help them discover what they actually need to build. That requires having an uncomfortable conversation early. And then building a process rigorous enough that data speaks louder than assumptions. Including the investor in the Design Sprint was a strategic choice, not an afterthought. Having them in the room from day one changed the dynamic. The product was designed with market criteria already embedded — not as a later layer of \"can this be funded?\", but as a design constraint from the start. The generalist facilitator plays a role that pure disciplines don't cover. I'm not a UX researcher, a business strategist, or a product designer in the narrow sense. I'm the connector. The person who can speak with the founder in her language, with the investor in his, with the users in theirs — and synthesize it all into a coherent product direction. That's what I did in Moolli. And it's what won at BubbleCon."
+          "text": "Eduardo wasn’t invented. He was the synthesis of real interview patterns — and he became the compass for every product decision that followed."
         },
         {
           "type": "paragraph",
-          "text": "POST LINKEDIN ES El discovery que nadie pidió (y que ganó Best Product en BubbleCon 2023) Ana llegó con una idea: quería hacer un blog sobre bienestar canino. Yo la convencí de no hacerlo. No porque fuera mala idea — sino porque antes de construir cualquier cosa, necesitábamos entender qué problema real queríamos resolver y para quién. Su marido, CEO de una fintech, nos había conocido en un Design Sprint del Google Accelerator. Ana tenía visión, una comunidad de dog lovers, y una plataforma de chat sin tracción. Lo que no tenía era evidencia. Entonces propuse un proceso: → Entrevistas en profundidad con 10 dog lovers de distintos barrios de CDMX → Conversaciones con inversores de capital de riesgo (porque también son stakeholders del producto) → Entrevista a fondo con la fundadora para entender qué no estaba dispuesta a ceder → Síntesis en una persona de usuario real: Eduardo, 34 años, Colonia del Valle → Un Design Sprint de 5 días con fundadora, experta técnica, inversor, diseñadora y equipo facilitador Al final del sprint teníamos un prototipo validado y una presentación para inversores construida sobre datos reales — no suposiciones. Ana tomó ese material, aprendió Bubble.io, y construyó el MVP. En 2023, Moolli ganó Best Product en BubbleCon en Nueva York. Hoy el producto se llama Wuufy y está levantando capital."
+          "text": "**The MVP we defined:** not a blog, not a chat platform — but a dog wellness app with AI-powered self-diagnosis, 24/7 vet consultations, health tracking, and a freemium model."
+        },
+        {
+          "type": "h3",
+          "text": "03 — Validation: The Design Sprint"
         },
         {
           "type": "paragraph",
-          "text": "Lo que me llevo de este proyecto: El trabajo de quien facilita procesos de producto no es ejecutar lo que el cliente imagina. Es ayudarle a descubrir lo que necesita construir. A veces eso empieza con decirle \"no\" a la primera idea."
+          "text": "We ran a five-day sprint with a deliberately heterogeneous group: Ana (founder), a technical expert, a marketing consultant, an investor, a designer, and our facilitation team."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Day 1: Understanding — all stakeholders mapped the problem space",
+            "Day 2: Ideation — structured exercises to explore features",
+            "Day 3: Prototyping — high-fidelity Figma prototype",
+            "Day 4: Review — founder presentation and refinements",
+            "Day 5: User testing — 5 real users, concrete iterations"
+          ]
+        },
+        {
+          "type": "quote",
+          "text": "By the end of the sprint, we had something we didn’t have at the start: a validated prototype, a clear value proposition, and an investor pitch built on evidence."
+        },
+        {
+          "type": "h2",
+          "text": "The Outcome"
         },
         {
           "type": "paragraph",
-          "text": "POST LINKEDIN EN The discovery nobody asked for (and that won Best Product at BubbleCon 2023) Ana came to our first meeting with a clear idea: she wanted to build a blog about dog wellness. I convinced her not to. Not because it was a bad idea — but because before building anything, we needed to understand what real problem we were solving, and for whom. Her husband, CEO of a fintech startup, had met my co-founder and me at a Google Accelerator Design Sprint. Ana had vision, a dog-lover community, and a chat platform going nowhere. What she didn't have was evidence. So I proposed a process: → In-depth interviews with 10 dog owners across 7 neighborhoods in Mexico City → Conversations with venture capital (because investors are product stakeholders too) → A deep founder interview to understand what she wouldn't compromise on → Synthesis into one real user persona: Eduardo, 34, Colonia del Valle → A 5-day Design Sprint with the founder, a technical expert, an investor, a designer, and our facilitation team By the end of the sprint, we had a validated prototype and an investor pitch built on real data — not assumptions. Ana took that material, learned Bubble.io, and built the MVP. In 2023, Moolli won Best Product at BubbleCon in New York. The product is now called Wuufy and is actively raising capital."
+          "text": "Ana took the prototype and strategic documentation, enrolled in a Bubble.io bootcamp, and built the MVP in no-code. **In 2023, at BubbleCon in New York, Moolli won Best Product.**"
         },
         {
           "type": "paragraph",
-          "text": "What I take from this project: The work of a product facilitator isn't to execute what the client imagines. It's to help them discover what they actually need to build. Sometimes that starts with saying \"no\" to the first idea."
+          "text": "The product is now called Wuufy. It’s actively raising capital, positioned as the wellness app for dog-loving families — backed by a design framework grounded in real data."
+        },
+        {
+          "type": "h2",
+          "text": "What I Learned"
+        },
+        {
+          "type": "quote",
+          "text": "Discovery is not a phase. It’s an act of conviction."
+        },
+        {
+          "type": "paragraph",
+          "text": "When Ana arrived with the blog idea, the easy move was to say yes. **The work of a product facilitator isn’t to execute what the client imagines — it’s to help them discover what they actually need to build.**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Including the investor in the Design Sprint was strategic, not casual. Having them in the room from day one meant the product was designed with market criteria already embedded."
+        },
+        {
+          "type": "paragraph",
+          "text": "**I’m not a UX researcher, a business strategist, or a product designer in the narrow sense.** I’m the connector — speaking with the founder in her language, with the investor in his, with users in theirs."
+        },
+        {
+          "type": "paragraph",
+          "text": "That’s what I did in Moolli. And it’s what won at BubbleCon."
         }
       ]
     },
@@ -915,31 +973,105 @@
       "content": [
         {
           "type": "intro",
-          "text": "El discovery que nadie pidió (y que lo cambió todo) Ana llegó con una idea clara: quería hacer un blog sobre bienestar canino. Tenía una comunidad de dog lovers, ganas, y una plataforma de chat que no estaba traccionando. Su marido, CEO de una startup de finanzas, nos había conocido en un Design Sprint del Google Accelerator. Nos presentó. Y en esa primera reunión, yo tomé la decisión que definió todo el proyecto. La convencí de no hacer el blog. No porque fuera una mala idea. Sino porque antes de construir cualquier cosa, necesitábamos entender qué problema real estábamos resolviendo — y para quién."
+          "text": "Ana llegó con una idea clara. Yo la convencí de no hacerla."
         },
         {
           "type": "paragraph",
-          "text": "El punto de partida: una fundadora con visión y sin datos Ana tenía algo valioso: una hipótesis de valor genuina. Creía que las familias con perros necesitaban una red de confianza — información sobre salud, servicios, comunidad — y que estaban dispuestas a pagar por eso. Pero no tenía evidencia. Tenía intuición. Eso no es suficiente para levantar capital. Y levantar capital era el objetivo real. Entonces propuse un camino diferente: antes de definir el producto, escuchar. Un proceso de discovery estructurado que nos permitiera llegar al Design Sprint con dirección, no con suposiciones."
+          "text": "Quería hacer un blog sobre bienestar canino. Tenía una comunidad de dog lovers, visión, y una plataforma de chat que no traccionaba."
         },
         {
           "type": "paragraph",
-          "text": "El proceso: tres fases, un equipo interdisciplinario Estructuramos el trabajo en tres fases: Análisis → Ideación → Validación. Análisis — entender el ecosistema Empezamos con dos frentes simultáneos: usuarios e inversores. Para los usuarios, diseñamos una encuesta en redes sociales y entrevistamos a 10 dog lovers: 4 mujeres de entre 30 y 47 años, 6 hombres de entre 30 y 38, de distintos barrios de Ciudad de México. Las entrevistas no fueron genéricas — armamos guías específicas para explorar composición familiar, prácticas de salud (veterinaria, vacunas, seguros), uso de servicios, comunidad y comportamiento de compra. Para los inversores, tuvimos conversaciones con capital de riesgo para entender qué necesitaba el producto para tener atractivo en el mercado. Esto es algo que muchos equipos omiten en el discovery: los inversores también son stakeholders del producto. También entrevistamos a la fundadora en profundidad — su visión, sus valores, lo que no estaba dispuesta a ceder. Ideación — sintetizar para decidir Con los datos encima, construimos un perfil de usuario central: Eduardo Ramírez, 34 años, ejecutivo, Colonia del Valle. Vive con su pareja y dos perros adoptados. Activo en redes sociales. Busca información confiable de fuentes validadas. Quiere servicios de calidad sin comprometer el presupuesto. Eduardo no era un arquetipo inventado. Era la síntesis de patrones reales de las entrevistas — y fue la brújula que usamos para todas las decisiones posteriores. Con ese material, definimos el MVP: no un blog, no una plataforma de chat, sino una app de bienestar canino con autodiagnóstico por IA, consultas veterinarias online, seguimiento de salud, y un modelo freemium con micropagos para servicios premium. Validación — el Design Sprint Organizamos un sprint de cinco días siguiendo la metodología de Google, con un grupo deliberadamente heterogéneo: Ana (fundadora), una experta técnica, una consultora de marketing, un inversor, una diseñadora, y mi socia y yo como equipo facilitador."
+          "text": "**Lo que no tenía era evidencia.** Tenía intuición — y la intuición no alcanza para levantar capital. Levantar capital era el objetivo real."
+        },
+        {
+          "type": "h2",
+          "text": "El Proceso: Tres Fases, Un Equipo"
+        },
+        {
+          "type": "h3",
+          "text": "01 — Análisis: Entender el Ecosistema"
         },
         {
           "type": "paragraph",
-          "text": "Día 1: Comprensión — todos los stakeholders compartieron su visión del problema Día 2: Ideación — ejercicios estructurados para explorar features y funcionalidades Día 3: Prototipado — la diseñadora convirtió los conceptos en un prototipo de alta fidelidad en Figma Día 4: Review — presentación a la fundadora y ajustes Día 5: User testing — cinco usuarios potenciales, feedback real, iteraciones concretas"
+          "text": "Arrancamos con dos frentes simultáneos: **usuarios e inversores.** Para usuarios, diseñamos encuestas e hicimos entrevistas en profundidad con 10 dog lovers de distintos barrios de Ciudad de México."
         },
         {
           "type": "paragraph",
+          "text": "Las guías exploraban prácticas de salud, uso de servicios y comportamiento de compra. **Los inversores entraron al proceso desde el día uno** — no como capa posterior, sino como stakeholders que moldearon el brief."
+        },
+        {
+          "type": "h3",
+          "text": "02 — Ideación: Construir la Brújula"
+        },
+        {
+          "type": "paragraph",
+          "text": "Con los datos encima, construimos un perfil de usuario central: **Eduardo Ramírez, 34 años, ejecutivo, Colonia del Valle.** Vive con su pareja y dos perros adoptados. Busca información confiable de fuentes validadas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eduardo no era un arquetipo inventado. Era la síntesis de patrones reales de las entrevistas — y fue la brújula para todas las decisiones posteriores."
+        },
+        {
+          "type": "paragraph",
+          "text": "**El MVP que definimos:** no un blog, no una plataforma de chat — sino una app de bienestar canino con autodiagnóstico por IA, consultas veterinarias online, seguimiento de salud, y modelo freemium."
+        },
+        {
+          "type": "h3",
+          "text": "03 — Validación: El Design Sprint"
+        },
+        {
+          "type": "paragraph",
+          "text": "Organizamos un sprint de cinco días con un grupo deliberadamente heterogéneo: Ana (fundadora), experta técnica, consultora de marketing, inversor, diseñadora, y nuestro equipo facilitador."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Día 1: Comprensión — todos los stakeholders mapearon el problema",
+            "Día 2: Ideación — ejercicios estructurados para explorar features",
+            "Día 3: Prototipado — prototipo de alta fidelidad en Figma",
+            "Día 4: Review — presentación a la fundadora y ajustes",
+            "Día 5: User testing — 5 usuarios reales, feedback concreto"
+          ]
+        },
+        {
+          "type": "quote",
           "text": "Al final del sprint teníamos algo que no teníamos al principio: un prototipo validado, una propuesta de valor clara, y una presentación para inversores construida sobre evidencia."
         },
         {
-          "type": "paragraph",
-          "text": "El resultado: Best Product en BubbleCon 2023 Ana tomó ese prototipo y la documentación estratégica del proyecto y se inscribió en el bootcamp de Bubble.io para construir el MVP en no-code. En 2023, en BubbleCon en Nueva York, Moolli ganó Best Product. El producto hoy se llama Wuufy, está en proceso de levantar capital, y se posiciona como la app de bienestar para familias dog-loving — respaldada por un framework de diseño estratégico y una experiencia de usuario que nació de datos reales."
+          "type": "h2",
+          "text": "El Resultado"
         },
         {
           "type": "paragraph",
-          "text": "Lo que aprendí de este proyecto El discovery no es una fase. Es un acto de convicción. Cuando Ana llegó con la idea del blog, la opción fácil era decir \"sí, hagámoslo\". Era lo que ella pedía. Pero el trabajo de quien facilita procesos de producto no es ejecutar lo que el cliente imagina — es ayudarle a descubrir lo que necesita construir. Eso requiere tener una conversación incómoda al principio. Y después de esa conversación, armar un proceso lo suficientemente riguroso como para que los datos hablen más fuerte que las suposiciones. Incluir al inversor en el Design Sprint fue una decisión estratégica, no casual. Tenerlo en la sala desde el día uno cambió la dinámica. El producto se diseñó con los criterios de mercado incorporados — no como una capa posterior de \"¿esto se puede financiar?\", sino como una restricción de diseño desde el inicio. El facilitador generalista tiene un rol que las disciplinas puras no cubren. No soy UX researcher, ni estratega de negocio, ni diseñadora de producto en sentido estricto. Soy el nexo. La persona que puede hablar con la fundadora en su idioma, con el inversor en el suyo, con los usuarios en el de ellos — y sintetizar todo eso en una dirección de producto coherente. Eso es lo que hice en Moolli. Y es lo que ganó en BubbleCon."
+          "text": "Ana tomó el prototipo y la documentación estratégica, aprendió Bubble.io, y construyó el MVP en no-code. **En 2023, en BubbleCon en Nueva York, Moolli ganó Best Product.**"
+        },
+        {
+          "type": "paragraph",
+          "text": "El producto hoy se llama Wuufy. Está levantando capital, posicionado como la app de bienestar para familias dog-loving — respaldado por un framework de diseño estratégico nacido de datos reales."
+        },
+        {
+          "type": "h2",
+          "text": "Lo Que Aprendí"
+        },
+        {
+          "type": "quote",
+          "text": "El discovery no es una fase. Es un acto de convicción."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando Ana llegó con la idea del blog, la opción fácil era decir que sí. **El trabajo de quien facilita procesos de producto no es ejecutar lo que el cliente imagina — es ayudarle a descubrir lo que necesita construir.**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Incluir al inversor en el Design Sprint fue una decisión estratégica. Tenerlo en la sala desde el día uno significó que el producto se diseñó con los criterios de mercado incorporados desde el inicio."
+        },
+        {
+          "type": "paragraph",
+          "text": "**No soy UX researcher, ni estratéga de negocio, ni diseñadora de producto en sentido estricto.** Soy el nexo — la persona que habla con la fundadora en su idioma, con el inversor en el suyo, con los usuarios en el de ellos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eso es lo que hice en Moolli. Y es lo que ganó en BubbleCon."
         }
       ]
     }
