@@ -128,7 +128,7 @@ const BlogPost = () => {
         </div>
       </article>
 
-      <footer className="bg-pink-500 py-16 px-6 md:px-20 text-white text-center rounded-t-[3rem] mt-10">
+      <footer className="bg-pink-500 py-20 px-6 md:px-20 text-white text-center">
         <Link to="/blog" className="text-4xl md:text-5xl font-black tracking-tighter hover:text-pink-200 transition-colors">
           {lang === 'en' ? '← Back to Blog' : '← Volver al Blog'}
         </Link>

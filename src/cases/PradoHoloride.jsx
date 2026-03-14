@@ -226,7 +226,7 @@ const PradoHoloride = () => {
       ))}
 
       {/* FOOTER */}
-      <footer className="bg-pink-500 py-16 px-6 md:px-20 text-white text-center rounded-t-[3rem] mt-10">
+      <footer className="bg-pink-500 py-20 px-6 md:px-20 text-white text-center">
         <p className="text-[11px] font-bold uppercase tracking-widest text-white/70 mb-6">{t.nextLabel}</p>
         <Link to="/cases/comodoro" className="text-4xl md:text-5xl font-black tracking-tighter hover:text-pink-200 transition-colors">
           Barrios con Encanto →
