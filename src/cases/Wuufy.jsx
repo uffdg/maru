@@ -1,83 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import CaseNav from './CaseNav';
+import casesData from '../data/cases.json';
 
-const caseT = {
-  en: {
-    back: '← Back to portfolio',
-    label: 'Product Discovery · Award-Winning MVP',
-    title: 'Wuufy',
-    subtitle: 'A full discovery process that led to an MVP — and won Best Product at BubbleCon 2023.',
-    meta: {
-      skillsLabel: 'Skills',
-      awardLabel: 'Award',
-      companyLabel: 'Company',
-    },
-    about: {
-      label: 'About the project',
-      heading: 'Discovery done right.',
-      body: "Wuufy started as a discovery project. I led the end-to-end process: understanding the problem space, defining the user, mapping the opportunity, and translating everything into a product concept. The resulting MVP won Best Product at BubbleCon 2023. Discovery done right doesn't just validate assumptions — it builds the foundation for something that wins.",
-    },
-    phases: [
-      {
-        number: "01",
-        title: "Understanding the problem space",
-        body: "We started with no assumptions. Through exploratory research — user interviews, market analysis, and opportunity mapping — we defined the real problem Wuufy needed to solve and who it needed to solve it for.",
-      },
-      {
-        number: "02",
-        title: "Defining the user",
-        body: "From the research we built a precise user definition: not a persona, but a behavioral and motivational profile that could guide every product decision. Understanding who the user was — and equally, who they weren't — became the filter for scope.",
-      },
-      {
-        number: "03",
-        title: "From concept to MVP",
-        body1: "With a clear problem and user in place, I led the translation from insight to product concept. We defined the MVP scope, validated the core flows, and built something lean enough to ship and strong enough to win.",
-        body2: "The MVP won Best Product at BubbleCon 2023. Discovery done right doesn't just validate assumptions — it builds the foundation for something that wins.",
-      },
-    ],
-    nextLabel: 'Next case study',
-  },
-  es: {
-    back: '← Volver al portfolio',
-    label: 'Product Discovery · MVP Premiado',
-    title: 'Wuufy',
-    subtitle: 'Un proceso completo de discovery que llevó a un MVP — y ganó Mejor Producto en BubbleCon 2023.',
-    meta: {
-      skillsLabel: 'Habilidades',
-      awardLabel: 'Premio',
-      companyLabel: 'Empresa',
-    },
-    about: {
-      label: 'Sobre el proyecto',
-      heading: 'Discovery bien hecho.',
-      body: 'Wuufy comenzó como un proyecto de discovery. Lideré el proceso end-to-end: entender el espacio del problema, definir al usuario, mapear la oportunidad y traducir todo en un concepto de producto. El MVP resultante ganó Mejor Producto en BubbleCon 2023. El discovery bien hecho no solo valida supuestos — construye la base para algo que gana.',
-    },
-    phases: [
-      {
-        number: "01",
-        title: "Entendiendo el espacio del problema",
-        body: "Comenzamos sin supuestos. A través de investigación exploratoria — entrevistas con usuarios, análisis de mercado y mapeo de oportunidades — definimos el problema real que Wuufy necesitaba resolver y para quién necesitaba resolverlo.",
-      },
-      {
-        number: "02",
-        title: "Definiendo al usuario",
-        body: "A partir de la investigación construimos una definición precisa del usuario: no una persona, sino un perfil conductual y motivacional que pudiera guiar cada decisión de producto. Entender quién era el usuario — e igualmente, quién no era — se convirtió en el filtro para el alcance.",
-      },
-      {
-        number: "03",
-        title: "Del concepto al MVP",
-        body1: "Con un problema y usuario claros, lideré la traducción de insight a concepto de producto. Definimos el alcance del MVP, validamos los flujos principales y construimos algo lo suficientemente lean para lanzar y lo suficientemente sólido para ganar.",
-        body2: "El MVP ganó Mejor Producto en BubbleCon 2023. El discovery bien hecho no solo valida supuestos — construye la base para algo que gana.",
-      },
-    ],
-    nextLabel: 'Próximo caso',
-  },
-};
+const caseData = casesData['wuufy'];
 
 const Wuufy = () => {
   const { lang } = useLanguage();
-  const t = caseT[lang];
+  const t = caseData[lang];
+  const meta = caseData.meta;
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-pink-100">
@@ -102,16 +33,16 @@ const Wuufy = () => {
       <section className="px-6 md:px-20 pb-24">
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50">
           <div className="space-y-2 border-l-2 border-pink-500 pl-6">
-            <p className="text-[10px] font-bold uppercase text-gray-400">{t.meta.skillsLabel}</p>
-            <p className="font-bold text-gray-900 text-sm">Product Discovery · MVP Definition · Strategic Design</p>
+            <p className="text-[10px] font-bold uppercase text-gray-400">Skills</p>
+            <p className="font-bold text-gray-900 text-sm">{meta.skills}</p>
           </div>
           <div className="space-y-2 border-l-2 border-gray-100 pl-6">
-            <p className="text-[10px] font-bold uppercase text-gray-400">{t.meta.awardLabel}</p>
-            <p className="font-bold text-gray-900 text-sm">Best Product · BubbleCon 2023</p>
+            <p className="text-[10px] font-bold uppercase text-gray-400">Award</p>
+            <p className="font-bold text-gray-900 text-sm">{meta.award}</p>
           </div>
           <div className="space-y-2 border-l-2 border-gray-100 pl-6">
-            <p className="text-[10px] font-bold uppercase text-gray-400">{t.meta.companyLabel}</p>
-            <p className="font-bold text-gray-900 text-sm">Holistic Interaction</p>
+            <p className="text-[10px] font-bold uppercase text-gray-400">Company</p>
+            <p className="font-bold text-gray-900 text-sm">{meta.company}</p>
           </div>
         </div>
       </section>

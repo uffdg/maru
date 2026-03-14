@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import postsData from './data/posts.json';
+import casesJsonData from './data/cases.json';
 
 const REPO = 'uffdg/maru';
 const FILE_PATH = 'src/data/posts.json';
+const CASES_FILE_PATH = 'src/data/cases.json';
 const ADMIN_PASSWORD = 'maru2026';
 
 // ---- Bold text helper ----
@@ -60,6 +62,36 @@ const ghPut = async (token, posts, sha) => {
       Accept: 'application/vnd.github.v3+json',
     },
     body: JSON.stringify({ message: 'Update blog posts via admin', content: encoded, sha }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `Error ${res.status}`);
+  }
+  return res.json();
+};
+
+const ghGetCases = async (token) => {
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${CASES_FILE_PATH}`, {
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.v3+json' },
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `Error ${res.status}`);
+  }
+  const data = await res.json();
+  return { cases: JSON.parse(b64ToUtf8(data.content)), sha: data.sha };
+};
+
+const ghPutCases = async (token, cases, sha) => {
+  const encoded = utf8ToB64(JSON.stringify(cases, null, 2));
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${CASES_FILE_PATH}`, {
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+      Accept: 'application/vnd.github.v3+json',
+    },
+    body: JSON.stringify({ message: 'Update case studies via admin', content: encoded, sha }),
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
@@ -369,11 +401,84 @@ const PastePanel = ({ onConvert, onClose }) => {
   );
 };
 
+// ---- Case Field Editor ----
+const CASE_SLUGS = [
+  { slug: 'mercantil-andina', name: 'Mercantil Andina' },
+  { slug: 'agrofy', name: 'Agrofy' },
+  { slug: 'wuufy', name: 'Wuufy' },
+  { slug: 'google-startups', name: 'Google for Startups' },
+  { slug: 'comodoro', name: 'Comodoro Rivadavia' },
+  { slug: 'prado-holoride', name: 'Museo del Prado' },
+  { slug: 'holoride', name: 'Holoride' },
+];
+
+const CaseFieldEditor = ({ data, onChange, depth = 0 }) => {
+  if (typeof data === 'string') {
+    const isLong = data.length > 80 || data.includes('\n');
+    return isLong ? (
+      <textarea
+        value={data}
+        onChange={e => onChange(e.target.value)}
+        rows={Math.max(2, Math.ceil(data.length / 80))}
+        className="w-full border border-gray-200 rounded-lg p-3 text-sm text-gray-700 resize-y focus:outline-none focus:border-pink-300 font-sans"
+      />
+    ) : (
+      <input
+        value={data}
+        onChange={e => onChange(e.target.value)}
+        className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:border-pink-300"
+      />
+    );
+  }
+
+  if (Array.isArray(data)) {
+    return (
+      <div className="space-y-3">
+        {data.map((item, i) => (
+          <div key={i} className="pl-4 border-l-2 border-pink-100 space-y-2">
+            <p className="text-[10px] font-black uppercase tracking-widest text-pink-400">{i + 1}</p>
+            <CaseFieldEditor
+              data={item}
+              onChange={updated => {
+                const arr = [...data];
+                arr[i] = updated;
+                onChange(arr);
+              }}
+              depth={depth + 1}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (typeof data === 'object' && data !== null) {
+    return (
+      <div className={`space-y-4 ${depth > 0 ? 'pl-4 border-l-2 border-gray-100' : ''}`}>
+        {Object.entries(data).map(([key, val]) => (
+          <div key={key}>
+            <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 block mb-1">{key}</label>
+            <CaseFieldEditor
+              data={val}
+              onChange={updated => onChange({ ...data, [key]: updated })}
+              depth={depth + 1}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return null;
+};
+
 // ---- Main Admin Component ----
 const Admin = () => {
   const [authed, setAuthed] = useState(false);
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState(false);
+
+  const [adminTab, setAdminTab] = useState('blog'); // 'blog' | 'cases'
 
   const [posts, setPosts] = useState(() => JSON.parse(JSON.stringify(postsData)));
 
@@ -382,6 +487,14 @@ const Admin = () => {
   const [success, setSuccess] = useState('');
 
   const [tokenInput, setTokenInput] = useState(() => localStorage.getItem('admin_gh_token') || '');
+
+  // Cases state
+  const [casesData, setCasesData] = useState(() => JSON.parse(JSON.stringify(casesJsonData)));
+  const [selectedCaseSlug, setSelectedCaseSlug] = useState(null);
+  const [activeCaseLang, setActiveCaseLang] = useState('es');
+  const [casesSaving, setCasesSaving] = useState(false);
+  const [casesError, setCasesError] = useState('');
+  const [casesSuccess, setCasesSuccess] = useState('');
   const handleTokenChange = (val) => {
     setTokenInput(val);
     if (val) localStorage.setItem('admin_gh_token', val);
@@ -482,6 +595,31 @@ const Admin = () => {
     doPublish();
   };
 
+  const doPublishCases = async () => {
+    if (!tokenInput) { setCasesError('Falta el GitHub Token — ingresalo en el sidebar'); return; }
+    setCasesSaving(true);
+    setCasesError('');
+    setCasesSuccess('');
+    try {
+      const { sha } = await ghGetCases(tokenInput);
+      await ghPutCases(tokenInput, casesData, sha);
+      setCasesSuccess('¡Publicado! Vercel redeploy en ~1 min.');
+    } catch (e) {
+      setCasesError(e.message);
+    } finally {
+      setCasesSaving(false);
+    }
+  };
+
+  const updateCaseField = (slug, lang, updatedData) => {
+    setCasesData(prev => ({
+      ...prev,
+      [slug]: lang === 'meta'
+        ? { ...prev[slug], meta: updatedData }
+        : { ...prev[slug], [lang]: updatedData },
+    }));
+  };
+
   // ---- Password gate ----
   if (!authed) {
     return (
@@ -521,21 +659,39 @@ const Admin = () => {
       {/* Sidebar */}
       <div className="w-64 bg-white border-r border-gray-100 flex flex-col shrink-0">
         <div className="p-5 border-b border-gray-100">
-          <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Maru · Blog Editor</p>
+          <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Maru · Admin</p>
           <Link to="/" className="text-xs text-pink-500 hover:underline">← Ver sitio</Link>
         </div>
 
-        <div className="p-4">
+        {/* Tab switcher */}
+        <div className="flex border-b border-gray-100">
           <button
-            onClick={() => handleSelectPost(-1)}
-            className="w-full bg-pink-500 text-white py-2.5 px-4 rounded-xl font-black uppercase tracking-widest text-[10px] hover:bg-pink-600 transition-colors"
+            onClick={() => setAdminTab('blog')}
+            className={`flex-1 py-2.5 text-[10px] font-black uppercase tracking-widest transition-colors ${adminTab === 'blog' ? 'text-pink-500 border-b-2 border-pink-500' : 'text-gray-400 hover:text-gray-600'}`}
           >
-            + Nuevo post
+            Blog
+          </button>
+          <button
+            onClick={() => setAdminTab('cases')}
+            className={`flex-1 py-2.5 text-[10px] font-black uppercase tracking-widest transition-colors ${adminTab === 'cases' ? 'text-pink-500 border-b-2 border-pink-500' : 'text-gray-400 hover:text-gray-600'}`}
+          >
+            Casos
           </button>
         </div>
 
+        {adminTab === 'blog' && (
+          <div className="p-4">
+            <button
+              onClick={() => handleSelectPost(-1)}
+              className="w-full bg-pink-500 text-white py-2.5 px-4 rounded-xl font-black uppercase tracking-widest text-[10px] hover:bg-pink-600 transition-colors"
+            >
+              + Nuevo post
+            </button>
+          </div>
+        )}
+
         <div className="flex-1 overflow-y-auto">
-          {posts.map((post, i) => (
+          {adminTab === 'blog' && posts.map((post, i) => (
             <button
               key={post.slug || i}
               onClick={() => handleSelectPost(i)}
@@ -544,6 +700,17 @@ const Admin = () => {
               <p className="text-[10px] font-bold uppercase tracking-widest text-pink-400 mb-1">{post.label}</p>
               <p className="text-sm font-bold text-gray-900 leading-tight line-clamp-2">{post.es?.title || post.en?.title || post.slug}</p>
               <p className="text-[10px] text-gray-400 mt-1">{post.date}</p>
+            </button>
+          ))}
+
+          {adminTab === 'cases' && CASE_SLUGS.map(({ slug, name }) => (
+            <button
+              key={slug}
+              onClick={() => { setSelectedCaseSlug(slug); setCasesError(''); setCasesSuccess(''); }}
+              className={`w-full text-left p-4 border-b border-gray-50 hover:bg-pink-50/50 transition-colors ${selectedCaseSlug === slug ? 'bg-pink-50 border-l-2 border-l-pink-500' : 'border-l-2 border-l-transparent'}`}
+            >
+              <p className="text-sm font-bold text-gray-900 leading-tight">{name}</p>
+              <p className="text-[10px] text-gray-400 mt-0.5">/cases/{slug}</p>
             </button>
           ))}
         </div>
@@ -564,12 +731,65 @@ const Admin = () => {
         </div>
       </div>
 
-      {/* Editor area */}
-      {!editingPost ? (
+      {/* Cases editor area */}
+      {adminTab === 'cases' && (
+        !selectedCaseSlug ? (
+          <div className="flex-1 flex items-center justify-center">
+            <p className="text-gray-400 text-sm">Seleccioná un caso de estudio</p>
+          </div>
+        ) : (
+          <div className="flex-1 flex flex-col overflow-hidden">
+            {/* Top bar */}
+            <div className="bg-white border-b border-gray-100 px-6 py-3 flex items-center gap-4">
+              <p className="text-sm font-black text-gray-900">{CASE_SLUGS.find(c => c.slug === selectedCaseSlug)?.name}</p>
+              <div className="ml-auto flex items-center gap-3">
+                {casesError && <p className="text-red-400 text-xs max-w-xs">{casesError}</p>}
+                {casesSuccess && <p className="text-green-500 text-xs max-w-xs">{casesSuccess}</p>}
+                <button
+                  onClick={doPublishCases}
+                  disabled={casesSaving}
+                  className="bg-pink-500 text-white px-6 py-2 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-pink-600 transition-colors disabled:opacity-50"
+                >
+                  {casesSaving ? 'Publicando...' : 'Publicar'}
+                </button>
+              </div>
+            </div>
+
+            {/* Lang tabs */}
+            <div className="bg-white border-b border-gray-100 px-6 flex gap-6">
+              {['es', 'en', 'meta'].map(tab => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveCaseLang(tab)}
+                  className={`py-3 text-xs font-black uppercase tracking-widest border-b-2 transition-colors ${activeCaseLang === tab ? 'border-pink-500 text-pink-500' : 'border-transparent text-gray-400 hover:text-gray-600'}`}
+                >
+                  {tab === 'en' ? 'English' : tab === 'es' ? 'Español' : 'Meta'}
+                </button>
+              ))}
+            </div>
+
+            {/* Fields */}
+            <div className="flex-1 overflow-y-auto p-6">
+              <div className="max-w-3xl mx-auto">
+                <CaseFieldEditor
+                  data={activeCaseLang === 'meta'
+                    ? casesData[selectedCaseSlug]?.meta || {}
+                    : casesData[selectedCaseSlug]?.[activeCaseLang] || {}
+                  }
+                  onChange={updated => updateCaseField(selectedCaseSlug, activeCaseLang, updated)}
+                />
+              </div>
+            </div>
+          </div>
+        )
+      )}
+
+      {/* Blog editor area */}
+      {adminTab === 'blog' && !editingPost ? (
         <div className="flex-1 flex items-center justify-center">
           <p className="text-gray-400 text-sm">Seleccioná un post o creá uno nuevo</p>
         </div>
-      ) : (
+      ) : adminTab === 'blog' && (
         <div className="flex-1 flex flex-col overflow-hidden">
 
           {/* Top bar */}

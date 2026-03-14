@@ -1,0 +1,519 @@
+{
+  "mercantil-andina": {
+    "meta": {
+      "skills": "Team Leadership · Pain Point Mapping · Product Roadmap",
+      "company": "Mercantil Andina · Holistic Interaction",
+      "year": "—"
+    },
+    "en": {
+      "label": "Product Leadership · Insurance",
+      "title": "Mercantil\nAndina",
+      "subtitle": "Mapping the pain points of a traditional insurance company to define a product roadmap for digital transformation.",
+      "about": {
+        "label": "About the project",
+        "heading": "From friction to roadmap.",
+        "body": "Mercantil Andina is one of Argentina's leading insurance companies. I led the design team and the product discovery process, identifying critical pain points across their digital and operational experience. From that research I defined and prioritized a product roadmap that translated user and business needs into a clear execution plan."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Understanding the pain points",
+          "body": "We conducted an extensive discovery process across multiple touchpoints — policyholder journeys, internal operational workflows, and digital product audits. The goal was to identify where friction was highest and where a digital intervention would generate the most business and user value."
+        },
+        {
+          "number": "02",
+          "title": "Mapping the system",
+          "body": "From the research we built a comprehensive pain point map connecting user frustrations to operational bottlenecks. This allowed us to see not just where users struggled, but why — and what organizational or technical constraints were behind each friction point."
+        },
+        {
+          "number": "03",
+          "title": "Defining the roadmap",
+          "body": "With a clear picture of the problem landscape, I led the prioritization process and defined a product roadmap that translated user and business needs into a structured execution plan — phased by impact, feasibility, and strategic alignment."
+        }
+      ],
+      "nextLabel": "Next case study"
+    },
+    "es": {
+      "label": "Liderazgo de Producto · Seguros",
+      "title": "Mercantil\nAndina",
+      "subtitle": "Mapeando los pain points de una compañía de seguros tradicional para definir un roadmap de producto para la transformación digital.",
+      "about": {
+        "label": "Sobre el proyecto",
+        "heading": "Del dolor al roadmap.",
+        "body": "Mercantil Andina es una de las principales compañías de seguros de Argentina. Lideré el equipo de diseño y el proceso de product discovery, identificando pain points críticos en su experiencia digital y operacional. A partir de esa investigación definí y prioricé un roadmap de producto que tradujo las necesidades de usuarios y negocio en un plan de ejecución claro."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Entendiendo los pain points",
+          "body": "Realizamos un extenso proceso de discovery a través de múltiples touchpoints — recorridos de asegurados, flujos operativos internos y auditorías de producto digital. El objetivo era identificar dónde era mayor la fricción y dónde una intervención digital generaría más valor para el negocio y los usuarios."
+        },
+        {
+          "number": "02",
+          "title": "Mapeando el sistema",
+          "body": "A partir de la investigación construimos un mapa completo de pain points que conectaba las frustraciones de los usuarios con los cuellos de botella operacionales. Esto nos permitió ver no solo dónde los usuarios tenían dificultades, sino por qué — y qué restricciones organizativas o técnicas había detrás de cada punto de fricción."
+        },
+        {
+          "number": "03",
+          "title": "Definiendo el roadmap",
+          "body": "Con un panorama claro del problema, lideré el proceso de priorización y definí un roadmap de producto que tradujo las necesidades de usuarios y negocio en un plan de ejecución estructurado — organizado por impacto, factibilidad y alineación estratégica."
+        }
+      ],
+      "nextLabel": "Próximo caso"
+    }
+  },
+  "agrofy": {
+    "meta": {
+      "skills": "Team Mentoring · Product Coaching · Design Thinking",
+      "company": "Agrofy · Holistic Interaction"
+    },
+    "en": {
+      "label": "Mentoring · Agtech Startup",
+      "title": "Agrofy",
+      "subtitle": "Mentoring and training the product and design team of one of Latin America's leading agtech platforms.",
+      "about": {
+        "label": "About the project",
+        "heading": "Growing the people around you.",
+        "body": "Agrofy is one of the largest agtech marketplaces in Latin America. I worked with their team as a mentor and trainer, helping them build product and design capabilities, sharpen their processes, and grow as a cross-functional team. Sometimes the most impactful product work is the one you do by growing the people around you."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Building product capability",
+          "body": "I worked with Agrofy's product and design team to identify gaps in their process and practice. Rather than delivering outputs, the goal was to build internal capability — giving the team the frameworks, tools, and confidence to make better product decisions on their own."
+        },
+        {
+          "number": "02",
+          "title": "Design thinking in practice",
+          "body": "We ran workshops and working sessions that brought design thinking into the team's everyday workflow — not as a methodology to follow, but as a lens for approaching problems. The focus was on research habits, framing questions well, and validating before building."
+        },
+        {
+          "number": "03",
+          "title": "Growing cross-functional teams",
+          "body": "Some of the most valuable work happened at the intersection of product, design, and engineering. I helped the team build shared language, clearer handoffs, and a culture of collaborative decision-making. Sometimes the most impactful product work is the one you do by growing the people around you."
+        }
+      ],
+      "nextLabel": "Next case study"
+    },
+    "es": {
+      "label": "Mentoría · Startup Agtech",
+      "title": "Agrofy",
+      "subtitle": "Mentoreando y capacitando al equipo de producto y diseño de una de las principales plataformas agtech de Latinoamérica.",
+      "about": {
+        "label": "Sobre el proyecto",
+        "heading": "Haciendo crecer a las personas a tu alrededor.",
+        "body": "Agrofy es uno de los marketplaces de agtech más grandes de Latinoamérica. Trabajé con su equipo como mentora y capacitadora, ayudándolos a construir capacidades de producto y diseño, afilar sus procesos y crecer como equipo cross-funcional. A veces el trabajo de producto más impactante es el que hacés haciendo crecer a las personas a tu alrededor."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Construyendo capacidad de producto",
+          "body": "Trabajé con el equipo de producto y diseño de Agrofy para identificar brechas en su proceso y práctica. En lugar de entregar outputs, el objetivo era construir capacidad interna — darle al equipo los frameworks, herramientas y confianza para tomar mejores decisiones de producto por su cuenta."
+        },
+        {
+          "number": "02",
+          "title": "Design thinking en la práctica",
+          "body": "Realizamos workshops y sesiones de trabajo que llevaron el design thinking al flujo de trabajo cotidiano del equipo — no como una metodología a seguir, sino como una lente para abordar problemas. El foco estuvo en hábitos de investigación, formular bien las preguntas y validar antes de construir."
+        },
+        {
+          "number": "03",
+          "title": "Haciendo crecer equipos cross-funcionales",
+          "body": "Parte del trabajo más valioso sucedió en la intersección de producto, diseño e ingeniería. Ayudé al equipo a construir lenguaje compartido, handoffs más claros y una cultura de toma de decisiones colaborativa. A veces el trabajo de producto más impactante es el que hacés haciendo crecer a las personas a tu alrededor."
+        }
+      ],
+      "nextLabel": "Próximo caso"
+    }
+  },
+  "wuufy": {
+    "meta": {
+      "skills": "Product Discovery · MVP Definition · Strategic Design",
+      "award": "Best Product · BubbleCon 2023",
+      "company": "Holistic Interaction"
+    },
+    "en": {
+      "label": "Product Discovery · Award-Winning MVP",
+      "title": "Wuufy",
+      "subtitle": "A full discovery process that led to an MVP — and won Best Product at BubbleCon 2023.",
+      "about": {
+        "label": "About the project",
+        "heading": "Discovery done right.",
+        "body": "Wuufy started as a discovery project. I led the end-to-end process: understanding the problem space, defining the user, mapping the opportunity, and translating everything into a product concept. The resulting MVP won Best Product at BubbleCon 2023. Discovery done right doesn't just validate assumptions — it builds the foundation for something that wins."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Understanding the problem space",
+          "body": "We started with no assumptions. Through exploratory research — user interviews, market analysis, and opportunity mapping — we defined the real problem Wuufy needed to solve and who it needed to solve it for."
+        },
+        {
+          "number": "02",
+          "title": "Defining the user",
+          "body": "From the research we built a precise user definition: not a persona, but a behavioral and motivational profile that could guide every product decision. Understanding who the user was — and equally, who they weren't — became the filter for scope."
+        },
+        {
+          "number": "03",
+          "title": "From concept to MVP",
+          "body1": "With a clear problem and user in place, I led the translation from insight to product concept. We defined the MVP scope, validated the core flows, and built something lean enough to ship and strong enough to win.",
+          "body2": "The MVP won Best Product at BubbleCon 2023. Discovery done right doesn't just validate assumptions — it builds the foundation for something that wins."
+        }
+      ],
+      "nextLabel": "Next case study"
+    },
+    "es": {
+      "label": "Product Discovery · MVP Premiado",
+      "title": "Wuufy",
+      "subtitle": "Un proceso completo de discovery que llevó a un MVP — y ganó Mejor Producto en BubbleCon 2023.",
+      "about": {
+        "label": "Sobre el proyecto",
+        "heading": "Discovery bien hecho.",
+        "body": "Wuufy comenzó como un proyecto de discovery. Lideré el proceso end-to-end: entender el espacio del problema, definir al usuario, mapear la oportunidad y traducir todo en un concepto de producto. El MVP resultante ganó Mejor Producto en BubbleCon 2023. El discovery bien hecho no solo valida supuestos — construye la base para algo que gana."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Entendiendo el espacio del problema",
+          "body": "Comenzamos sin supuestos. A través de investigación exploratoria — entrevistas con usuarios, análisis de mercado y mapeo de oportunidades — definimos el problema real que Wuufy necesitaba resolver y para quién necesitaba resolverlo."
+        },
+        {
+          "number": "02",
+          "title": "Definiendo al usuario",
+          "body": "A partir de la investigación construimos una definición precisa del usuario: no una persona, sino un perfil conductual y motivacional que pudiera guiar cada decisión de producto. Entender quién era el usuario — e igualmente, quién no era — se convirtió en el filtro para el alcance."
+        },
+        {
+          "number": "03",
+          "title": "Del concepto al MVP",
+          "body1": "Con un problema y usuario claros, lideré la traducción de insight a concepto de producto. Definimos el alcance del MVP, validamos los flujos principales y construimos algo lo suficientemente lean para lanzar y lo suficientemente sólido para ganar.",
+          "body2": "El MVP ganó Mejor Producto en BubbleCon 2023. El discovery bien hecho no solo valida supuestos — construye la base para algo que gana."
+        }
+      ],
+      "nextLabel": "Próximo caso"
+    }
+  },
+  "google-startups": {
+    "meta": {
+      "skills": "Strategic Mentoring · Design Sprints · Product Validation",
+      "program": "Google for Startups Accelerator · Latin America",
+      "years": "2017 – Present · 20+ cohorts"
+    },
+    "en": {
+      "label": "Mentoring · Latin America",
+      "title": "Google for\nStartups",
+      "subtitle": "20+ cohorts. Hundreds of founders. One consistent mission: help them build the right thing.",
+      "about": {
+        "label": "About the work",
+        "heading": "Help them build the right thing.",
+        "body": "Since 2017 I've been a mentor and Design Sprint facilitator for Google for Startups Accelerator across Latin America. I've worked with founders at the earliest and most uncertain stages of their companies — helping them validate ideas, reframe problems, define MVPs, and build product teams. This is where I developed my deepest instinct for what makes a product survive its first contact with reality."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Working at the zero stage",
+          "body": "Most of the founders I've worked with are pre-product or pre-traction. They have a hypothesis, a team, and a window of time. My role is to help them compress the learning cycle — move from assumption to evidence as fast as possible, without building things they don't need to build yet."
+        },
+        {
+          "number": "02",
+          "title": "Design Sprints as a thinking tool",
+          "body": "I've used Design Sprints not as a process checkbox but as a genuine tool for collective sense-making. A well-run sprint forces a founding team to externalize their assumptions, align on the real question, and test a version of the answer before committing to execution. Across 20+ cohorts, this has been the most consistently valuable intervention I've facilitated."
+        },
+        {
+          "number": "03",
+          "title": "What mentoring taught me about product",
+          "body1": "Working with hundreds of founders at the earliest stages of their companies gave me something no single product role could: pattern recognition at scale. I've seen the same mistakes made in fintech, agtech, healthtech, and consumer — and I've learned what separates the products that survive first contact with reality from the ones that don't.",
+          "body2": "This is where I developed my deepest instinct for what makes a product survive its first contact with reality."
+        }
+      ],
+      "nextLabel": "Next case study"
+    },
+    "es": {
+      "label": "Mentoría · Latinoamérica",
+      "title": "Google for\nStartups",
+      "subtitle": "Más de 20 cohortes. Cientos de founders. Una misión consistente: ayudarlos a construir lo correcto.",
+      "about": {
+        "label": "Sobre el trabajo",
+        "heading": "Ayudarlos a construir lo correcto.",
+        "body": "Desde 2017 soy mentora y facilitadora de Design Sprints para Google for Startups Accelerator en Latinoamérica. He trabajado con founders en las etapas más tempranas e inciertas de sus empresas — ayudándolos a validar ideas, reformular problemas, definir MVPs y construir equipos de producto. Aquí es donde desarrollé mi instinto más profundo sobre qué hace que un producto sobreviva su primer contacto con la realidad."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Trabajando en la etapa cero",
+          "body": "La mayoría de los founders con los que he trabajado son pre-producto o pre-tracción. Tienen una hipótesis, un equipo y una ventana de tiempo. Mi rol es ayudarlos a comprimir el ciclo de aprendizaje — pasar de supuesto a evidencia lo más rápido posible, sin construir cosas que no necesitan construir todavía."
+        },
+        {
+          "number": "02",
+          "title": "Design Sprints como herramienta de pensamiento",
+          "body": "He usado los Design Sprints no como un checkbox de proceso sino como una herramienta genuina para la construcción colectiva de sentido. Un sprint bien ejecutado obliga a un equipo fundador a externalizar sus supuestos, alinearse en la pregunta real y testear una versión de la respuesta antes de comprometerse a la ejecución. A través de más de 20 cohortes, esta ha sido la intervención más consistentemente valiosa que he facilitado."
+        },
+        {
+          "number": "03",
+          "title": "Lo que la mentoría me enseñó sobre producto",
+          "body1": "Trabajar con cientos de founders en las etapas más tempranas de sus empresas me dio algo que ningún rol de producto individual podría: reconocimiento de patrones a escala. He visto los mismos errores cometerse en fintech, agtech, healthtech y consumo — y he aprendido qué separa los productos que sobreviven el primer contacto con la realidad de los que no.",
+          "body2": "Aquí es donde desarrollé mi instinto más profundo sobre qué hace que un producto sobreviva su primer contacto con la realidad."
+        }
+      ],
+      "nextLabel": "Próximo caso"
+    }
+  },
+  "comodoro": {
+    "meta": {
+      "client": "Plan Pioneros 2030 · Municipio de Comodoro Rivadavia",
+      "role": "Lead Field Researcher & Strategist",
+      "year": "2021",
+      "team": "HI — Holistic Interaction"
+    },
+    "en": {
+      "label": "Strategic Foresight · Urban Design",
+      "title": "Barrios con Encanto —\nComodoro Rivadavia",
+      "subtitle": "Designing 10-year futures for three historic neighborhoods in Comodoro Rivadavia, Patagonia.",
+      "about": {
+        "label": "About the project",
+        "heading": "Futures designed from within.",
+        "body": "As part of Comodoro Rivadavia's Pioneros 2030 strategic plan, I led the field research and future conceptualization of three historic neighborhoods — KM5, Astra, and Diadema. Working directly with residents, I mapped current identity and designed distinct 10-year futures for each: a youth and knowledge hub, a world-class audiovisual and cultural district, and a wellness and spirituality destination."
+      },
+      "challenge": {
+        "label": "01",
+        "title": "The Challenge",
+        "body": "Comodoro Rivadavia needed to define the future of three historic neighborhoods — KM5, Astra, and Diadema — based on the identity and voice of their own residents, not top-down urban planning."
+      },
+      "process": {
+        "label": "02",
+        "title": "The Process",
+        "body": "We conducted two full field visits to each neighborhood. From there we built empathy maps, identity mindmaps, HMW ideation sessions, and future scenario maps for each one."
+      },
+      "concepts": {
+        "label": "03",
+        "title": "The Concepts"
+      },
+      "learned": {
+        "label": "04",
+        "title": "What I learned",
+        "body": "\"Designing futures for communities requires listening before proposing. The strongest concepts came directly from what residents said they valued — not what external experts assumed they needed.\""
+      },
+      "neighborhoods": [
+        {
+          "title": "KM5 — El Barrio del Futuro Joven",
+          "concept": "A youth and knowledge hub connecting the neighborhood's industrial heritage with the nearby university. Proposed: co-living spaces, extreme sports park in the old YPF pool, coastal gastronomy route, sustainable housing, and a cultural arts corridor."
+        },
+        {
+          "title": "Astra — Polo Audiovisual Patagónico",
+          "concept": "A world-class audiovisual and cultural district built around the existing rugby infrastructure and historic buildings. Proposed: film sets, international festivals, a cine-theatre of excellence, innovation hub, and co-working spaces for creative industries."
+        },
+        {
+          "title": "Diadema — Destino Wellness de la Patagonia",
+          "concept": "A wellness, spirituality, and sustainability destination anchored in the neighborhood's natural tranquility and existing monastic presence. Proposed: retreat centers, glamping, organic gastronomy, mindfulness spaces, and a renewable energy corridor."
+        }
+      ],
+      "nextLabel": "Next case study"
+    },
+    "es": {
+      "label": "Foresight Estratégico · Diseño Urbano",
+      "title": "Barrios con Encanto —\nComodoro Rivadavia",
+      "subtitle": "Diseñando futuros a 10 años para tres barrios históricos de Comodoro Rivadavia, Patagonia.",
+      "about": {
+        "label": "Sobre el proyecto",
+        "heading": "Futuros diseñados desde adentro.",
+        "body": "Como parte del plan estratégico Pioneros 2030 de Comodoro Rivadavia, lideré la investigación de campo y la conceptualización de futuros de tres barrios históricos — KM5, Astra y Diadema. Trabajando directamente con los vecinos, mapeé la identidad actual y diseñé futuros a 10 años distintos para cada uno: un hub de juventud y conocimiento, un distrito audiovisual y cultural de clase mundial, y un destino de bienestar y espiritualidad."
+      },
+      "challenge": {
+        "label": "01",
+        "title": "El desafío",
+        "body": "Comodoro Rivadavia necesitaba definir el futuro de tres barrios históricos — KM5, Astra y Diadema — basado en la identidad y la voz de sus propios vecinos, no en planificación urbana de arriba hacia abajo."
+      },
+      "process": {
+        "label": "02",
+        "title": "El proceso",
+        "body": "Realizamos dos visitas completas de campo a cada barrio. A partir de ahí construimos mapas de empatía, mapas mentales de identidad, sesiones de ideación HMW y mapas de escenarios futuros para cada uno."
+      },
+      "concepts": {
+        "label": "03",
+        "title": "Los conceptos"
+      },
+      "learned": {
+        "label": "04",
+        "title": "Lo que aprendí",
+        "body": "\"Diseñar futuros para comunidades requiere escuchar antes de proponer. Los conceptos más fuertes vinieron directamente de lo que los vecinos dijeron que valoraban — no de lo que expertos externos asumían que necesitaban.\""
+      },
+      "neighborhoods": [
+        {
+          "title": "KM5 — El Barrio del Futuro Joven",
+          "concept": "A youth and knowledge hub connecting the neighborhood's industrial heritage with the nearby university. Proposed: co-living spaces, extreme sports park in the old YPF pool, coastal gastronomy route, sustainable housing, and a cultural arts corridor."
+        },
+        {
+          "title": "Astra — Polo Audiovisual Patagónico",
+          "concept": "A world-class audiovisual and cultural district built around the existing rugby infrastructure and historic buildings. Proposed: film sets, international festivals, a cine-theatre of excellence, innovation hub, and co-working spaces for creative industries."
+        },
+        {
+          "title": "Diadema — Destino Wellness de la Patagonia",
+          "concept": "A wellness, spirituality, and sustainability destination anchored in the neighborhood's natural tranquility and existing monastic presence. Proposed: retreat centers, glamping, organic gastronomy, mindfulness spaces, and a renewable energy corridor."
+        }
+      ],
+      "nextLabel": "Próximo caso"
+    }
+  },
+  "prado-holoride": {
+    "meta": {
+      "skills": "Strategic Foresight · Experience Design · Systems Thinking",
+      "company": "Paginar · Holistic Interaction",
+      "year": "2017–2019"
+    },
+    "en": {
+      "label": "Strategic Design · Cultural Futures",
+      "title": "Museo Nacional\ndel Prado",
+      "subtitle": "Designing the future visitor experience for one of the world's great museums.",
+      "about": {
+        "label": "About the project",
+        "heading": "A 200-year-old institution. A future-facing brief.",
+        "body1": "In collaboration with Paginar and Holistic Interaction, we were commissioned to reimagine the complete digital experience of Museo Nacional del Prado for its 200th anniversary — not just the ticket purchase flow, but the entire visitor journey, from the moment someone considers a visit to long after they leave.",
+        "body2": "This was a futures design project: we asked what visiting a world-class museum could feel like when technology, culture, and human behavior converge."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Understanding the system",
+          "body": "We mapped the full visitor ecosystem — who comes to the Prado, from where, with what expectations, and through which channels. We conducted stakeholder interviews, visitor journey research, and competitive benchmarking across the world's leading cultural institutions."
+        },
+        {
+          "number": "02",
+          "title": "Designing the future",
+          "body": "We ran co-design sessions with internal teams and external cultural experts to define what a world-class museum experience could look like in the next decade. We moved beyond ticket flows into experience architecture: pre-visit discovery, on-site navigation, and post-visit engagement."
+        },
+        {
+          "number": "03",
+          "title": "Making it real",
+          "body": "From the future vision, we designed the digital systems that would bring it to life — a reimagined purchase and planning flow, a personalized visit companion, and a digital layer connecting the physical museum to ongoing cultural engagement."
+        },
+        {
+          "number": "04",
+          "title": "Learnings & Legacy",
+          "body1": "Working at this scale — a 200-year-old institution with global reach — taught us that transformation in cultural organizations requires designing for trust as much as usability. Every proposal had to honor the weight of the institution while creating space for a new kind of visitor relationship.",
+          "body2": "The customer journey map we built remains one of the most complete system maps of a cultural institution's visitor experience — from pre-visit consideration to post-visit engagement, across digital and physical touchpoints."
+        }
+      ],
+      "systemMap": {
+        "label": "The System Map",
+        "title": "Experiencia Digital\nMuseo del Prado",
+        "desc": "A complete map of the future visitor experience — seven phases, two user archetypes, every touchpoint from digital to physical. Built to guide not just design decisions, but organizational strategy.",
+        "caption": "Full customer journey map — Museo Nacional del Prado · 2018"
+      },
+      "nextLabel": "Next case study"
+    },
+    "es": {
+      "label": "Diseño Estratégico · Futuros Culturales",
+      "title": "Museo Nacional\ndel Prado",
+      "subtitle": "Diseñando la experiencia futura del visitante para uno de los grandes museos del mundo.",
+      "about": {
+        "label": "Sobre el proyecto",
+        "heading": "Una institución de 200 años. Un brief orientado al futuro.",
+        "body1": "En colaboración con Paginar y Holistic Interaction, fuimos comisionados para reimaginar la experiencia digital completa del Museo Nacional del Prado para su 200° aniversario — no solo el flujo de compra de entradas, sino todo el recorrido del visitante, desde el momento en que alguien considera visitar hasta mucho después de que se va.",
+        "body2": "Este fue un proyecto de diseño de futuros: nos preguntamos cómo podría sentirse visitar un museo de clase mundial cuando la tecnología, la cultura y el comportamiento humano convergen."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Entendiendo el sistema",
+          "body": "Mapeamos el ecosistema completo del visitante — quién viene al Prado, desde dónde, con qué expectativas y a través de qué canales. Realizamos entrevistas con stakeholders, investigación del recorrido del visitante y benchmarking competitivo entre las principales instituciones culturales del mundo."
+        },
+        {
+          "number": "02",
+          "title": "Diseñando el futuro",
+          "body": "Realizamos sesiones de co-diseño con equipos internos y expertos culturales externos para definir cómo podría ser una experiencia de museo de clase mundial en la próxima década. Fuimos más allá de los flujos de entradas hacia la arquitectura de experiencia: descubrimiento previo a la visita, navegación en el sitio y engagement post-visita."
+        },
+        {
+          "number": "03",
+          "title": "Haciéndolo real",
+          "body": "A partir de la visión futura, diseñamos los sistemas digitales que la harían realidad — un flujo de compra y planificación reimaginado, un asistente de visita personalizado y una capa digital que conecta el museo físico con el engagement cultural continuo."
+        },
+        {
+          "number": "04",
+          "title": "Aprendizajes y legado",
+          "body1": "Trabajar a esta escala — una institución de 200 años con alcance global — nos enseñó que la transformación en organizaciones culturales requiere diseñar para la confianza tanto como para la usabilidad. Cada propuesta tenía que honrar el peso de la institución mientras creaba espacio para un nuevo tipo de relación con el visitante.",
+          "body2": "El mapa de customer journey que construimos sigue siendo uno de los mapas sistémicos más completos de la experiencia del visitante de una institución cultural — desde la consideración previa a la visita hasta el engagement post-visita, a través de todos los puntos de contacto digitales y físicos."
+        }
+      ],
+      "systemMap": {
+        "label": "El mapa del sistema",
+        "title": "Experiencia Digital\nMuseo del Prado",
+        "desc": "Un mapa completo de la experiencia futura del visitante — siete fases, dos arquetipos de usuario, cada punto de contacto del digital al físico. Construido para guiar no solo las decisiones de diseño, sino la estrategia organizacional.",
+        "caption": "Mapa completo de customer journey — Museo Nacional del Prado · 2018"
+      },
+      "nextLabel": "Próximo caso"
+    }
+  },
+  "holoride": {
+    "meta": {
+      "skills": "Design Team Leadership · Research Strategy · Product Management",
+      "company": "Holoride · Holistic Interaction",
+      "year": "2023–2024"
+    },
+    "en": {
+      "label": "Product Leadership · Emerging Technology",
+      "title": "Holoride",
+      "subtitle": "Leading design and research for a frontier technology startup — before the market was ready.",
+      "about": {
+        "label": "About the project",
+        "heading": "A product category that didn't exist yet.",
+        "body1": "Holoride was a Munich-based startup building immersive VR entertainment for passengers inside moving vehicles — a product category that didn't exist yet. I led the design and research team, managing the end-to-end process from user research strategy to UI delivery across multiple product workstreams including Holo Credits, the Shopping Cart Flow, and market validation exercises with participants across Europe and the US.",
+        "body2": "Holoride shut down in 2024. Working on a product ahead of its time is one of the most instructive experiences a product leader can have."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Research & Strategy",
+          "body": "We designed a multi-market research strategy to understand how passengers in moving vehicles experience discomfort, entertainment, and immersion. Studies were conducted with participants across Europe and the US, combining in-vehicle sessions, remote testing, and concept validation exercises across multiple product workstreams."
+        },
+        {
+          "number": "02",
+          "title": "Product Design",
+          "body": "I led the design team across several concurrent workstreams: Holo Credits (the platform's reward and monetization system), the Shopping Cart Flow (in-vehicle commerce), and the core VR content experience. Each required designing for a context — a moving vehicle, with motion sickness constraints and no standard interaction conventions — that had no established design patterns."
+        },
+        {
+          "number": "03",
+          "title": "Validation",
+          "body1": "We ran validation exercises across multiple markets to test both usability and product-market fit. The core challenge was not whether users could use the product — they could — but whether the problem the product solved was real enough, and present enough in daily life, to build a sustainable business around.",
+          "body2": "Holoride shut down in 2024. Working on a product ahead of its time is one of the most instructive experiences a product leader can have."
+        }
+      ],
+      "reflection": {
+        "label": "Reflection",
+        "title": "What I learned",
+        "body": "\"Designing for a product category that doesn't exist yet requires a different kind of research. You're not validating solutions — you're validating whether the problem is real enough to sustain a business. Holoride had brilliant technology. The market timing wasn't there. That's a product lesson, not a design lesson.\""
+      },
+      "nextLabel": "Next case study"
+    },
+    "es": {
+      "label": "Liderazgo de Producto · Tecnología Emergente",
+      "title": "Holoride",
+      "subtitle": "Liderando diseño e investigación para una startup de tecnología de frontera — antes de que el mercado estuviera listo.",
+      "about": {
+        "label": "Sobre el proyecto",
+        "heading": "Una categoría de producto que aún no existía.",
+        "body1": "Holoride era una startup de Múnich que construía entretenimiento VR inmersivo para pasajeros dentro de vehículos en movimiento — una categoría de producto que aún no existía. Lideré el equipo de diseño e investigación, gestionando el proceso end-to-end desde la estrategia de investigación de usuarios hasta la entrega de UI en múltiples workstreams de producto, incluyendo Holo Credits, el Flujo del Carrito de Compras y ejercicios de validación de mercado con participantes de Europa y los Estados Unidos.",
+        "body2": "Holoride cerró en 2024. Trabajar en un producto antes de su tiempo es una de las experiencias más instructivas que puede tener un product leader."
+      },
+      "phases": [
+        {
+          "number": "01",
+          "title": "Investigación y estrategia",
+          "body": "Diseñamos una estrategia de investigación multi-mercado para entender cómo los pasajeros en vehículos en movimiento experimentan el malestar, el entretenimiento y la inmersión. Los estudios se realizaron con participantes en Europa y los Estados Unidos, combinando sesiones dentro de vehículos, testing remoto y ejercicios de validación de conceptos en múltiples workstreams de producto."
+        },
+        {
+          "number": "02",
+          "title": "Diseño de producto",
+          "body": "Lideré el equipo de diseño en varios workstreams simultáneos: Holo Credits (el sistema de recompensas y monetización de la plataforma), el Flujo del Carrito de Compras (comercio dentro del vehículo) y la experiencia central de contenido VR. Cada uno requería diseñar para un contexto — un vehículo en movimiento, con restricciones de mareos y sin convenciones de interacción establecidas — que no tenía patrones de diseño previos."
+        },
+        {
+          "number": "03",
+          "title": "Validación",
+          "body1": "Realizamos ejercicios de validación en múltiples mercados para testear tanto la usabilidad como el product-market fit. El desafío central no era si los usuarios podían usar el producto — podían — sino si el problema que el producto resolvía era suficientemente real y presente en la vida cotidiana como para construir un negocio sostenible.",
+          "body2": "Holoride cerró en 2024. Trabajar en un producto antes de su tiempo es una de las experiencias más instructivas que puede tener un product leader."
+        }
+      ],
+      "reflection": {
+        "label": "Reflexión",
+        "title": "Lo que aprendí",
+        "body": "\"Diseñar para una categoría de producto que aún no existe requiere un tipo diferente de investigación. No estás validando soluciones — estás validando si el problema es suficientemente real como para sostener un negocio. Holoride tenía tecnología brillante. El timing de mercado no estuvo. Esa es una lección de producto, no una lección de diseño.\""
+      },
+      "nextLabel": "Próximo caso"
+    }
+  }
+}

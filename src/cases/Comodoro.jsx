@@ -1,113 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import CaseNav from './CaseNav';
+import casesData from '../data/cases.json';
 
-const caseT = {
-  en: {
-    back: '← Back to portfolio',
-    label: 'Strategic Foresight · Urban Design',
-    title: 'Barrios con Encanto —\nComodoro Rivadavia',
-    subtitle: 'Designing 10-year futures for three historic neighborhoods in Comodoro Rivadavia, Patagonia.',
-    meta: {
-      clientLabel: 'Client',
-      roleLabel: 'Role',
-      outputLabel: 'Output',
-    },
-    about: {
-      label: 'About the project',
-      heading: 'Futures designed from within.',
-      body: "As part of Comodoro Rivadavia's Pioneros 2030 strategic plan, I led the field research and future conceptualization of three historic neighborhoods — KM5, Astra, and Diadema. Working directly with residents, I mapped current identity and designed distinct 10-year futures for each: a youth and knowledge hub, a world-class audiovisual and cultural district, and a wellness and spirituality destination.",
-    },
-    challenge: {
-      label: '01',
-      title: 'The Challenge',
-      body: 'Comodoro Rivadavia needed to define the future of three historic neighborhoods — KM5, Astra, and Diadema — based on the identity and voice of their own residents, not top-down urban planning.',
-    },
-    process: {
-      label: '02',
-      title: 'The Process',
-      body: 'We conducted two full field visits to each neighborhood. From there we built empathy maps, identity mindmaps, HMW ideation sessions, and future scenario maps for each one.',
-    },
-    concepts: {
-      label: '03',
-      title: 'The Concepts',
-    },
-    learned: {
-      label: '04',
-      title: 'What I learned',
-      body: '"Designing futures for communities requires listening before proposing. The strongest concepts came directly from what residents said they valued — not what external experts assumed they needed."',
-    },
-    neighborhoods: [
-      {
-        title: "KM5 — El Barrio del Futuro Joven",
-        concept: "A youth and knowledge hub connecting the neighborhood's industrial heritage with the nearby university. Proposed: co-living spaces, extreme sports park in the old YPF pool, coastal gastronomy route, sustainable housing, and a cultural arts corridor.",
-      },
-      {
-        title: "Astra — Polo Audiovisual Patagónico",
-        concept: "A world-class audiovisual and cultural district built around the existing rugby infrastructure and historic buildings. Proposed: film sets, international festivals, a cine-theatre of excellence, innovation hub, and co-working spaces for creative industries.",
-      },
-      {
-        title: "Diadema — Destino Wellness de la Patagonia",
-        concept: "A wellness, spirituality, and sustainability destination anchored in the neighborhood's natural tranquility and existing monastic presence. Proposed: retreat centers, glamping, organic gastronomy, mindfulness spaces, and a renewable energy corridor.",
-      },
-    ],
-    nextLabel: 'Next case study',
-  },
-  es: {
-    back: '← Volver al portfolio',
-    label: 'Foresight Estratégico · Diseño Urbano',
-    title: 'Barrios con Encanto —\nComodoro Rivadavia',
-    subtitle: 'Diseñando futuros a 10 años para tres barrios históricos de Comodoro Rivadavia, Patagonia.',
-    meta: {
-      clientLabel: 'Cliente',
-      roleLabel: 'Rol',
-      outputLabel: 'Resultado',
-    },
-    about: {
-      label: 'Sobre el proyecto',
-      heading: 'Futuros diseñados desde adentro.',
-      body: 'Como parte del plan estratégico Pioneros 2030 de Comodoro Rivadavia, lideré la investigación de campo y la conceptualización de futuros de tres barrios históricos — KM5, Astra y Diadema. Trabajando directamente con los vecinos, mapeé la identidad actual y diseñé futuros a 10 años distintos para cada uno: un hub de juventud y conocimiento, un distrito audiovisual y cultural de clase mundial, y un destino de bienestar y espiritualidad.',
-    },
-    challenge: {
-      label: '01',
-      title: 'El desafío',
-      body: 'Comodoro Rivadavia necesitaba definir el futuro de tres barrios históricos — KM5, Astra y Diadema — basado en la identidad y la voz de sus propios vecinos, no en planificación urbana de arriba hacia abajo.',
-    },
-    process: {
-      label: '02',
-      title: 'El proceso',
-      body: 'Realizamos dos visitas completas de campo a cada barrio. A partir de ahí construimos mapas de empatía, mapas mentales de identidad, sesiones de ideación HMW y mapas de escenarios futuros para cada uno.',
-    },
-    concepts: {
-      label: '03',
-      title: 'Los conceptos',
-    },
-    learned: {
-      label: '04',
-      title: 'Lo que aprendí',
-      body: '"Diseñar futuros para comunidades requiere escuchar antes de proponer. Los conceptos más fuertes vinieron directamente de lo que los vecinos dijeron que valoraban — no de lo que expertos externos asumían que necesitaban."',
-    },
-    neighborhoods: [
-      {
-        title: "KM5 — El Barrio del Futuro Joven",
-        concept: "A youth and knowledge hub connecting the neighborhood's industrial heritage with the nearby university. Proposed: co-living spaces, extreme sports park in the old YPF pool, coastal gastronomy route, sustainable housing, and a cultural arts corridor.",
-      },
-      {
-        title: "Astra — Polo Audiovisual Patagónico",
-        concept: "A world-class audiovisual and cultural district built around the existing rugby infrastructure and historic buildings. Proposed: film sets, international festivals, a cine-theatre of excellence, innovation hub, and co-working spaces for creative industries.",
-      },
-      {
-        title: "Diadema — Destino Wellness de la Patagonia",
-        concept: "A wellness, spirituality, and sustainability destination anchored in the neighborhood's natural tranquility and existing monastic presence. Proposed: retreat centers, glamping, organic gastronomy, mindfulness spaces, and a renewable energy corridor.",
-      },
-    ],
-    nextLabel: 'Próximo caso',
-  },
-};
+const caseData = casesData['comodoro'];
 
 const Comodoro = () => {
   const { lang } = useLanguage();
-  const t = caseT[lang];
+  const t = caseData[lang];
+  const meta = caseData.meta;
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-pink-100">
@@ -134,20 +35,20 @@ const Comodoro = () => {
       <section className="px-6 md:px-20 pb-24">
         <div className="max-w-5xl mx-auto grid md:grid-cols-4 gap-8 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50">
           <div className="space-y-2 border-l-2 border-pink-500 pl-6">
-            <p className="text-[10px] font-bold uppercase text-gray-400">{t.meta.clientLabel}</p>
-            <p className="font-bold text-gray-900 text-sm">Plan Pioneros 2030 · Municipio de Comodoro Rivadavia</p>
+            <p className="text-[10px] font-bold uppercase text-gray-400">Client</p>
+            <p className="font-bold text-gray-900 text-sm">{meta.client}</p>
           </div>
           <div className="space-y-2 border-l-2 border-gray-100 pl-6">
-            <p className="text-[10px] font-bold uppercase text-gray-400">{t.meta.roleLabel}</p>
-            <p className="font-bold text-gray-900 text-sm">Lead Field Researcher & Strategist</p>
+            <p className="text-[10px] font-bold uppercase text-gray-400">Role</p>
+            <p className="font-bold text-gray-900 text-sm">{meta.role}</p>
           </div>
           <div className="space-y-2 border-l-2 border-gray-100 pl-6">
             <p className="text-[10px] font-bold uppercase text-gray-400">Year</p>
-            <p className="font-bold text-gray-900 text-sm">2021</p>
+            <p className="font-bold text-gray-900 text-sm">{meta.year}</p>
           </div>
           <div className="space-y-2 border-l-2 border-gray-100 pl-6">
             <p className="text-[10px] font-bold uppercase text-gray-400">Team</p>
-            <p className="font-bold text-gray-900 text-sm">HI — Holistic Interaction</p>
+            <p className="font-bold text-gray-900 text-sm">{meta.team}</p>
           </div>
         </div>
       </section>
