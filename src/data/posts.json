@@ -7,154 +7,460 @@
       "title": "What I learned building a product before the market was ready",
       "excerpt": "Holoride had brilliant technology. The market timing wasn't there. That's a product lesson, not a design lesson — and it changes how I think about validation.",
       "content": [
-        { "type": "intro", "text": "Or: timing is everything, and nobody tells you until it's too late." },
-        { "type": "paragraph", "text": "When I joined the project, Holoride had everything a startup is supposed to need to succeed: disruptive technology, Audi's backing, an aspirational market, and a team that genuinely believed in what they were building." },
-        { "type": "paragraph", "text": "What they didn't have was a market ready to receive it." },
-        { "type": "paragraph", "text": "I worked as UX Lead and UX Consultant in Munich for a company building virtual reality entertainment inside moving cars. The hardware synced the vehicle's motion with the VR experience to eliminate motion sickness. It was technically brilliant. It was futuristic. And in many ways, it was too soon." },
-        { "type": "paragraph", "text": "As founder of Holistic Interaction, the consultancy through which I participated, I also had to hold something that rarely appears in portfolios: when Holoride didn't pay, I absorbed the loss." },
-        { "type": "paragraph", "text": "This is the piece I wish I'd read before." },
-        { "type": "h2", "text": "The problem with frontier products" },
-        { "type": "paragraph", "text": "There's a category of products we could call frontier products: solutions that technically work, but depend on multiple external conditions aligning before the market actually exists. A good product isn't enough. You need:" },
-        { "type": "list", "items": [
-          "An installed base of compatible hardware (how many eligible cars are out there?)",
-          "A content ecosystem that justifies the purchase",
-          "Users who understand the value before they experience it",
-          "A distribution chain that didn't exist before you did"
-        ]},
-        { "type": "paragraph", "text": "Holoride had all of this pending. And the design work — my work — was to build a purchase experience for something people didn't yet know they wanted." },
-        { "type": "h3", "text": "Useful framework: Pre-condition mapping" },
-        { "type": "paragraph", "text": "Before designing any flow, it's worth doing a simple exercise: list every condition that must be true for the user to complete the desired action. Not product conditions. World conditions." },
-        { "type": "paragraph", "text": "In our case, the list was long: owning a compatible car, living in one of six enabled regions, being willing to install retrofit hardware, having tolerance for premium entertainment spending — and trusting that the product wouldn't disappear in two years." },
-        { "type": "paragraph", "text": "That last condition, in hindsight, was the most fragile of all." },
-        { "type": "h2", "text": "Designing for complexity without killing conversion" },
-        { "type": "paragraph", "text": "Holoride's Shopping Cart was one of the most complex purchase flows I've ever worked on. Not because the technology was hard, but because the purchase situation had too many variables:" },
-        { "type": "list", "items": [
-          "Do you already have the hardware, or do you need the retrofit?",
-          "Is your car compatible?",
-          "Are you buying for one person or two?",
-          "Bundle or individual items?",
-          "Do you already have a subscription, or are you adding it now?"
-        ]},
-        { "type": "paragraph", "text": "Each combination was a different path. The decision tree we built during Sense Making mapped over twenty possible purchase scenarios." },
-        { "type": "paragraph", "text": "The design lesson: the real complexity of a product must be resolved in back-end logic, not exposed in the UI. Users don't need to understand the decision tree. They need to feel like the system understands them." },
-        { "type": "paragraph", "text": "What worked was designing a progressive question flow that simplified options based on previous answers. If the user had a recent Audi, the retrofit step disappeared. If they already had hardware, they jumped straight to subscription." },
-        { "type": "callout", "text": "Quick win you can use today: if your onboarding or conversion flow has more than three interdependent variables, map the full decision tree before wireframing a single screen. Visual design is the last layer, not the first." },
-        { "type": "h2", "text": "What user testing revealed that nobody wanted to admit" },
-        { "type": "paragraph", "text": "We ran three rounds of testing with users in the US and Europe. The technical learnings were clear — I simplified the retrofit step for users who didn't need it, reorganized the visual hierarchy of bundles, reduced friction in checkout — but the most important insight wasn't in the usability data." },
-        { "type": "paragraph", "text": "It was in something users said before starting the task:" },
-        { "type": "quote", "text": "\"Does this actually exist yet? Can I try it before buying?\"" },
-        { "type": "paragraph", "text": "That question is a signal of market readiness, not UX. And it's exactly the kind of signal a product team under launch pressure tends to ignore." },
-        { "type": "h3", "text": "Useful framework: Separating UX problems from market problems" },
-        { "type": "paragraph", "text": "There's a common confusion between \"users don't complete the flow because the design is unclear\" and \"users don't complete the flow because they don't understand why they'd want the product.\" These are different problems with different solutions." },
-        { "type": "paragraph", "text": "The first is solved with good design. The second is solved with market education, social proof, early adopter programs — or time. A lot of time." },
-        { "type": "paragraph", "text": "A simple way to diagnose it: in your testing sessions, do users get stuck on how to do something, or on why they'd do it? If it's the latter, the problem isn't the design." },
-        { "type": "h2", "text": "On sustaining a business when the client doesn't pay" },
-        { "type": "paragraph", "text": "This rarely shows up in portfolios. But it's part of the story, and leaving it out would be dishonest." },
-        { "type": "paragraph", "text": "Holoride didn't pay. As the founder of the consultancy that executed the project, the loss was mine. Not the team's, not the client's — mine." },
-        { "type": "paragraph", "text": "That experience taught me something no product framework captures well: the financial risk of working with frontier startups is asymmetric. You bring the work, the expertise, the time. They bring the promise of a future that doesn't exist yet. When that future doesn't arrive, the risk that seemed shared turns out to have always been yours." },
-        { "type": "paragraph", "text": "I'm not saying this with bitterness. I'm saying it because it's useful information." },
-        { "type": "paragraph", "text": "What I'd do differently: milestone-based payments, not delivery-based. Contracts with IP clauses conditional on payment. And above all, an honest assessment of the client's runway before committing significant resources." },
-        { "type": "h2", "text": "Timing as a product variable" },
-        { "type": "paragraph", "text": "Holoride shut down operations in 2024. Not because the product was bad — technically, it was extraordinary — but because the EV and autonomous vehicle market didn't grow at the pace their business model required." },
-        { "type": "paragraph", "text": "This left me with a question I keep thinking about: how much of a product's success or failure is actually attributable to the product itself, versus the moment it appears in the world?" },
-        { "type": "paragraph", "text": "The honest answer: more than the product world wants to admit." },
-        { "type": "paragraph", "text": "There's a concept in strategy called timing risk — the risk that your solution is correct but the world isn't ready for it yet. It's different from execution risk (you built something nobody wanted) and competition risk (someone did it faster or better)." },
-        { "type": "paragraph", "text": "Timing risk is particularly cruel because it can't be solved with more iteration or better design. It requires patience or pivot. And in startups with limited runway, patience is a luxury few can afford." },
-        { "type": "h2", "text": "What I'm taking with me" },
-        { "type": "h3", "text": "On design:" },
-        { "type": "list", "items": [
-          "A frontier product's complexity must be resolved in logic, not in UI. Users need to feel understood by the system, not required to understand it.",
-          "Separating UX problems from market problems is a critical skill that no course teaches."
-        ]},
-        { "type": "h3", "text": "On product:" },
-        { "type": "list", "items": [
-          "Pre-condition mapping should happen before any spec. If the world's preconditions are fragile, so is the product.",
-          "Timing risk is real and underestimated. Naming it explicitly in product strategy isn't pessimism — it's honesty."
-        ]},
-        { "type": "h3", "text": "On consulting and founding:" },
-        { "type": "list", "items": [
-          "Evaluate your client's runway with the same rigor you apply to the design problem.",
-          "Milestone-based contracts aren't distrust. They're survival."
-        ]},
-        { "type": "paragraph", "text": "Holoride was a brilliant product at the wrong moment, executed with a level of technical and design sophistication that few startups ever reach. Working on it made me a better professional and, honestly, cost me money." },
-        { "type": "paragraph", "text": "Both things can be true at the same time." }
+        {
+          "type": "intro",
+          "text": "Or: timing is everything, and nobody tells you until it's too late."
+        },
+        {
+          "type": "paragraph",
+          "text": "When I joined the project, Holoride had everything a startup is supposed to need to succeed: disruptive technology, Audi's backing, an aspirational market, and a team that genuinely believed in what they were building."
+        },
+        {
+          "type": "paragraph",
+          "text": "What they didn't have was a market ready to receive it."
+        },
+        {
+          "type": "paragraph",
+          "text": "I worked as UX Lead and UX Consultant in Munich for a company building virtual reality entertainment inside moving cars. The hardware synced the vehicle's motion with the VR experience to eliminate motion sickness. It was technically brilliant. It was futuristic. And in many ways, it was too soon."
+        },
+        {
+          "type": "paragraph",
+          "text": "As founder of Holistic Interaction, the consultancy through which I participated, I also had to hold something that rarely appears in portfolios: when Holoride didn't pay, I absorbed the loss."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is the piece I wish I'd read before."
+        },
+        {
+          "type": "h2",
+          "text": "The problem with frontier products"
+        },
+        {
+          "type": "paragraph",
+          "text": "There's a category of products we could call frontier products: solutions that technically work, but depend on multiple external conditions aligning before the market actually exists. A good product isn't enough. You need:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "An installed base of compatible hardware (how many eligible cars are out there?)",
+            "A content ecosystem that justifies the purchase",
+            "Users who understand the value before they experience it",
+            "A distribution chain that didn't exist before you did"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride had all of this pending. And the design work — my work — was to build a purchase experience for something people didn't yet know they wanted."
+        },
+        {
+          "type": "h3",
+          "text": "Useful framework: Pre-condition mapping"
+        },
+        {
+          "type": "paragraph",
+          "text": "Before designing any flow, it's worth doing a simple exercise: list every condition that must be true for the user to complete the desired action. Not product conditions. World conditions."
+        },
+        {
+          "type": "paragraph",
+          "text": "In our case, the list was long: owning a compatible car, living in one of six enabled regions, being willing to install retrofit hardware, having tolerance for premium entertainment spending — and trusting that the product wouldn't disappear in two years."
+        },
+        {
+          "type": "paragraph",
+          "text": "That last condition, in hindsight, was the most fragile of all."
+        },
+        {
+          "type": "h2",
+          "text": "Designing for complexity without killing conversion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride's Shopping Cart was one of the most complex purchase flows I've ever worked on. Not because the technology was hard, but because the purchase situation had too many variables:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Do you already have the hardware, or do you need the retrofit?",
+            "Is your car compatible?",
+            "Are you buying for one person or two?",
+            "Bundle or individual items?",
+            "Do you already have a subscription, or are you adding it now?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Each combination was a different path. The decision tree we built during Sense Making mapped over twenty possible purchase scenarios."
+        },
+        {
+          "type": "paragraph",
+          "text": "The design lesson: the real complexity of a product must be resolved in back-end logic, not exposed in the UI. Users don't need to understand the decision tree. They need to feel like the system understands them."
+        },
+        {
+          "type": "paragraph",
+          "text": "What worked was designing a progressive question flow that simplified options based on previous answers. If the user had a recent Audi, the retrofit step disappeared. If they already had hardware, they jumped straight to subscription."
+        },
+        {
+          "type": "callout",
+          "text": "Quick win you can use today: if your onboarding or conversion flow has more than three interdependent variables, map the full decision tree before wireframing a single screen. Visual design is the last layer, not the first."
+        },
+        {
+          "type": "h2",
+          "text": "What user testing revealed that nobody wanted to admit"
+        },
+        {
+          "type": "paragraph",
+          "text": "We ran three rounds of testing with users in the US and Europe. The technical learnings were clear — I simplified the retrofit step for users who didn't need it, reorganized the visual hierarchy of bundles, reduced friction in checkout — but the most important insight wasn't in the usability data."
+        },
+        {
+          "type": "paragraph",
+          "text": "It was in something users said before starting the task:"
+        },
+        {
+          "type": "quote",
+          "text": "\"Does this actually exist yet? Can I try it before buying?\""
+        },
+        {
+          "type": "paragraph",
+          "text": "That question is a signal of market readiness, not UX. And it's exactly the kind of signal a product team under launch pressure tends to ignore."
+        },
+        {
+          "type": "h3",
+          "text": "Useful framework: Separating UX problems from market problems"
+        },
+        {
+          "type": "paragraph",
+          "text": "There's a common confusion between \"users don't complete the flow because the design is unclear\" and \"users don't complete the flow because they don't understand why they'd want the product.\" These are different problems with different solutions."
+        },
+        {
+          "type": "paragraph",
+          "text": "The first is solved with good design. The second is solved with market education, social proof, early adopter programs — or time. A lot of time."
+        },
+        {
+          "type": "paragraph",
+          "text": "A simple way to diagnose it: in your testing sessions, do users get stuck on how to do something, or on why they'd do it? If it's the latter, the problem isn't the design."
+        },
+        {
+          "type": "h2",
+          "text": "On sustaining a business when the client doesn't pay"
+        },
+        {
+          "type": "paragraph",
+          "text": "This rarely shows up in portfolios. But it's part of the story, and leaving it out would be dishonest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride didn't pay. As the founder of the consultancy that executed the project, the loss was mine. Not the team's, not the client's — mine."
+        },
+        {
+          "type": "paragraph",
+          "text": "That experience taught me something no product framework captures well: the financial risk of working with frontier startups is asymmetric. You bring the work, the expertise, the time. They bring the promise of a future that doesn't exist yet. When that future doesn't arrive, the risk that seemed shared turns out to have always been yours."
+        },
+        {
+          "type": "paragraph",
+          "text": "I'm not saying this with bitterness. I'm saying it because it's useful information."
+        },
+        {
+          "type": "paragraph",
+          "text": "What I'd do differently: milestone-based payments, not delivery-based. Contracts with IP clauses conditional on payment. And above all, an honest assessment of the client's runway before committing significant resources."
+        },
+        {
+          "type": "h2",
+          "text": "Timing as a product variable"
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride shut down operations in 2024. Not because the product was bad — technically, it was extraordinary — but because the EV and autonomous vehicle market didn't grow at the pace their business model required."
+        },
+        {
+          "type": "paragraph",
+          "text": "This left me with a question I keep thinking about: how much of a product's success or failure is actually attributable to the product itself, versus the moment it appears in the world?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The honest answer: more than the product world wants to admit."
+        },
+        {
+          "type": "paragraph",
+          "text": "There's a concept in strategy called timing risk — the risk that your solution is correct but the world isn't ready for it yet. It's different from execution risk (you built something nobody wanted) and competition risk (someone did it faster or better)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Timing risk is particularly cruel because it can't be solved with more iteration or better design. It requires patience or pivot. And in startups with limited runway, patience is a luxury few can afford."
+        },
+        {
+          "type": "h2",
+          "text": "What I'm taking with me"
+        },
+        {
+          "type": "h3",
+          "text": "On design:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A frontier product's complexity must be resolved in logic, not in UI. Users need to feel understood by the system, not required to understand it.",
+            "Separating UX problems from market problems is a critical skill that no course teaches."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "On product:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pre-condition mapping should happen before any spec. If the world's preconditions are fragile, so is the product.",
+            "Timing risk is real and underestimated. Naming it explicitly in product strategy isn't pessimism — it's honesty."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "On consulting and founding:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Evaluate your client's runway with the same rigor you apply to the design problem.",
+            "Milestone-based contracts aren't distrust. They're survival."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride was a brilliant product at the wrong moment, executed with a level of technical and design sophistication that few startups ever reach. Working on it made me a better professional and, honestly, cost me money."
+        },
+        {
+          "type": "paragraph",
+          "text": "Both things can be true at the same time."
+        }
       ]
     },
     "es": {
       "title": "Lo que aprendí construyendo un producto antes de que el mercado estuviera listo",
       "excerpt": "Holoride tenía tecnología brillante. El timing de mercado no estuvo. Esa es una lección de producto, no de diseño — y cambia cómo pienso la validación.",
       "content": [
-        { "type": "intro", "text": "O cómo el timing lo es todo, y nadie te lo dice hasta que ya es tarde." },
-        { "type": "paragraph", "text": "Cuando entré al proyecto, Holoride tenía todo lo que se supone que necesita una startup para triunfar: tecnología disruptiva, inversión de Audi, un mercado aspiracional y un equipo que creía genuinamente en lo que estaba haciendo." },
-        { "type": "paragraph", "text": "Lo que no tenía era un mercado listo para recibirlo." },
-        { "type": "paragraph", "text": "Trabajé como UX Lead y consultora de UX en Munich para una empresa que estaba construyendo entretenimiento de realidad virtual dentro de autos en movimiento. El hardware sincronizaba los movimientos del vehículo con la experiencia VR para eliminar el mareo. Era técnicamente brillante. Era futurista. Era, en muchos sentidos, demasiado pronto." },
-        { "type": "paragraph", "text": "Y siendo founder de Holistic Interaction, la consultora desde la que participé del proyecto, también tuve que sostener algo que rara vez se menciona en los portfolios: cuando Holoride no pagó, fui yo quien absorbió la pérdida." },
-        { "type": "paragraph", "text": "Esta es la nota que me hubiera gustado leer antes." },
-        { "type": "h2", "text": "El problema con los productos de frontera" },
-        { "type": "paragraph", "text": "Existe una categoría de productos que podríamos llamar frontier products: soluciones que técnicamente funcionan, pero que dependen de que múltiples condiciones externas se alineen para que el mercado exista. No basta con tener un buen producto. Necesitás:" },
-        { "type": "list", "items": [
-          "Una base instalada de hardware (¿cuántos autos compatibles hay?)",
-          "Un ecosistema de contenido que justifique la compra",
-          "Un usuario que entienda el valor antes de experimentarlo",
-          "Una cadena de distribución que no existía antes que vos"
-        ]},
-        { "type": "paragraph", "text": "Holoride tenía todo esto pendiente, y el trabajo de diseño —mi trabajo— era construir una experiencia de compra para algo que la gente todavía no sabía que quería." },
-        { "type": "h3", "text": "Framework útil: Pre-condition mapping" },
-        { "type": "paragraph", "text": "Antes de diseñar cualquier flujo, conviene hacer un ejercicio simple: listar todas las condiciones que deben ser verdaderas para que el usuario complete la acción deseada. No las condiciones del producto. Las condiciones del mundo." },
-        { "type": "paragraph", "text": "En nuestro caso, la lista era larga: tener un auto compatible, vivir en una de las seis regiones habilitadas, estar dispuesto a instalar hardware de retrofit, tener tolerancia al gasto en entretenimiento premium... y confiar en que el producto no iba a desaparecer en dos años." },
-        { "type": "paragraph", "text": "Esa última condición, en retrospectiva, era la más frágil de todas." },
-        { "type": "h2", "text": "Diseñar para la complejidad sin matar la conversión" },
-        { "type": "paragraph", "text": "El Shopping Cart de Holoride era uno de los flujos de compra más complejos en los que trabajé. No porque la tecnología fuera difícil, sino porque la situación de compra tenía demasiadas variables:" },
-        { "type": "list", "items": [
-          "¿Ya tenés el hardware o necesitás el retrofit?",
-          "¿Tenés un auto compatible o no?",
-          "¿Comprás solo o con acompañante?",
-          "¿Querés bundle o items individuales?",
-          "¿Ya tenés suscripción o la sumás ahora?"
-        ]},
-        { "type": "paragraph", "text": "Cada combinación era un camino distinto. La lógica de árbol de decisión que construimos en Sense Making mapeaba más de veinte escenarios posibles de compra." },
-        { "type": "paragraph", "text": "El aprendizaje de diseño: la complejidad real del producto tiene que resolverse en el back-end de lógica, no exponerse en la UI. El usuario no tiene que entender el árbol de decisiones. Tiene que sentir que el sistema lo entiende a él." },
-        { "type": "paragraph", "text": "Lo que hicimos —y funcionó— fue diseñar un flujo de preguntas progresivas que simplificaba las opciones según las respuestas anteriores. Si el usuario tenía un Audi reciente, el paso de retrofit desaparecía. Si ya tenía hardware, saltaba directo a la suscripción." },
-        { "type": "callout", "text": "Quick win aplicable hoy: si tu flujo de onboarding o conversión tiene más de tres variables dependientes entre sí, mapeá el árbol de decisión completo antes de wirefrear una sola pantalla. El diseño visual es la última capa, no la primera." },
-        { "type": "h2", "text": "Lo que el user testing reveló que nadie quería admitir" },
-        { "type": "paragraph", "text": "Hicimos tres rondas de testing con usuarios en Estados Unidos y Europa. Los aprendizajes técnicos fueron claros —simplifiqué el paso de retrofit para usuarios que no lo necesitaban, reorganicé la jerarquía visual de los bundles, reduje fricción en el checkout— pero el aprendizaje más importante no estaba en los datos de usabilidad." },
-        { "type": "paragraph", "text": "Estaba en algo que los usuarios decían antes de empezar la tarea:" },
-        { "type": "quote", "text": "\"¿Esto ya existe? ¿Puedo probarlo antes de comprarlo?\"" },
-        { "type": "paragraph", "text": "Esa pregunta es una señal de market readiness, no de UX. Y es exactamente el tipo de señal que un equipo de producto con presión por lanzar tiende a ignorar." },
-        { "type": "h3", "text": "Framework útil: Separar los problemas de UX de los problemas de mercado" },
-        { "type": "paragraph", "text": "Existe una confusión frecuente entre \"los usuarios no completan el flujo porque el diseño es confuso\" y \"los usuarios no completan el flujo porque no entienden por qué querrían el producto\". Son problemas distintos con soluciones distintas." },
-        { "type": "paragraph", "text": "El primero se resuelve con buen diseño. El segundo se resuelve con educación de mercado, prueba social, early adopter programs... o con tiempo. Mucho tiempo." },
-        { "type": "paragraph", "text": "Una manera simple de diagnosticarlo: en tus sesiones de testing, ¿los usuarios se traban en cómo hacer algo, o se traban en por qué lo harían? Si es lo segundo, el problema no es el diseño." },
-        { "type": "h2", "text": "Sobre sostener una empresa cuando el cliente no paga" },
-        { "type": "paragraph", "text": "Esto no suele estar en los portfolios. Pero es parte de la historia, y silenciarlo sería deshonesto." },
-        { "type": "paragraph", "text": "Holoride no cumplió con el pago. Como founder de la consultora que ejecutó el proyecto, la pérdida fue mía. No del equipo, no del cliente, mía." },
-        { "type": "paragraph", "text": "Esa experiencia me enseñó algo que ningún framework de producto captura bien: el riesgo financiero de trabajar con startups frontier es asimétrico. Vos ponés el trabajo, el expertise, el tiempo. Ellos ponen la promesa de un futuro que todavía no existe. Cuando ese futuro no llega, el riesgo que parecía compartido resulta que siempre fue tuyo." },
-        { "type": "paragraph", "text": "No lo digo con amargura. Lo digo porque es información útil." },
-        { "type": "paragraph", "text": "Lo que cambiaría: pagos por hitos, no por entrega final. Contratos con cláusulas de propiedad intelectual condicional al pago. Y, sobre todo, una evaluación honesta de la runway del cliente antes de comprometer recursos significativos." },
-        { "type": "h2", "text": "El timing como variable de producto" },
-        { "type": "paragraph", "text": "Holoride cerró operaciones en 2024. No porque el producto fuera malo —técnicamente era extraordinario— sino porque el mercado de autos eléctricos y autónomos no creció al ritmo que su modelo de negocio necesitaba." },
-        { "type": "paragraph", "text": "Esto me dejó con una pregunta que sigo pensando: ¿cuánto del éxito o fracaso de un producto es atribuible al producto en sí, y cuánto al momento en que aparece?" },
-        { "type": "paragraph", "text": "La respuesta honesta es: más de lo que el mundo de producto quiere admitir." },
-        { "type": "paragraph", "text": "Hay un concepto en estrategia que se llama timing risk —el riesgo de que tu solución sea correcta pero el mundo todavía no esté listo. Es diferente del riesgo de execution (construiste algo que nadie quería) y del riesgo de competition (alguien lo hizo antes o mejor)." },
-        { "type": "paragraph", "text": "El timing risk es especialmente cruel porque no se resuelve con más iteración ni con mejor diseño. Se resuelve con paciencia o con pivot. Y en startups con runway limitado, la paciencia es un lujo que pocos se pueden permitir." },
-        { "type": "h2", "text": "Lo que me llevo" },
-        { "type": "h3", "text": "Para el diseño:" },
-        { "type": "list", "items": [
-          "La complejidad de un producto frontier debe resolverse en lógica, no en UI. El usuario tiene que sentir que el sistema lo entiende, no que tiene que entenderlo.",
-          "Separar problemas de UX de problemas de mercado es una habilidad crítica que no se enseña en ningún curso."
-        ]},
-        { "type": "h3", "text": "Para el producto:" },
-        { "type": "list", "items": [
-          "El pre-condition mapping es un ejercicio que debería hacerse antes de cualquier spec. Si las precondiciones del mundo son frágiles, el producto lo es también.",
-          "El timing risk es real y subestimado. Nombrarlo explícitamente en la estrategia de producto no es pesimismo, es honestidad."
-        ]},
-        { "type": "h3", "text": "Para quien trabaja como consultor o founder:" },
-        { "type": "list", "items": [
-          "Evaluá la runway de tu cliente con la misma rigurosidad con la que evaluás el problema de diseño.",
-          "Los contratos por hitos no son desconfianza. Son supervivencia."
-        ]},
-        { "type": "paragraph", "text": "Holoride era un producto brillante en un momento equivocado, ejecutado con un nivel de sofisticación técnica y de diseño que pocas startups logran. Trabajar en él me hizo mejor profesional y, honestamente, me costó dinero." },
-        { "type": "paragraph", "text": "Ambas cosas pueden ser verdad al mismo tiempo." }
+        {
+          "type": "intro",
+          "text": "O cómo el timing lo es todo, y nadie te lo dice hasta que ya es tarde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuando entré al proyecto, Holoride tenía todo lo que se supone que necesita una startup para triunfar: tecnología disruptiva, inversión de Audi, un mercado aspiracional y un equipo que creía genuinamente en lo que estaba haciendo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo que no tenía era un mercado listo para recibirlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trabajé como UX Lead y consultora de UX en Munich para una empresa que estaba construyendo entretenimiento de realidad virtual dentro de autos en movimiento. El hardware sincronizaba los movimientos del vehículo con la experiencia VR para eliminar el mareo. Era técnicamente brillante. Era futurista. Era, en muchos sentidos, demasiado pronto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Y siendo founder de Holistic Interaction, la consultora desde la que participé del proyecto, también tuve que sostener algo que rara vez se menciona en los portfolios: cuando Holoride no pagó, fui yo quien absorbió la pérdida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta es la nota que me hubiera gustado leer antes."
+        },
+        {
+          "type": "h2",
+          "text": "El problema con los productos de frontera"
+        },
+        {
+          "type": "paragraph",
+          "text": "Existe una categoría de productos que podríamos llamar frontier products: soluciones que técnicamente funcionan, pero que dependen de que múltiples condiciones externas se alineen para que el mercado exista. No basta con tener un buen producto. Necesitás:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Una base instalada de hardware (¿cuántos autos compatibles hay?)",
+            "Un ecosistema de contenido que justifique la compra",
+            "Un usuario que entienda el valor antes de experimentarlo",
+            "Una cadena de distribución que no existía antes que vos"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride tenía todo esto pendiente, y el trabajo de diseño —mi trabajo— era construir una experiencia de compra para algo que la gente todavía no sabía que quería."
+        },
+        {
+          "type": "h3",
+          "text": "Framework útil: Pre-condition mapping"
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes de diseñar cualquier flujo, conviene hacer un ejercicio simple: listar todas las condiciones que deben ser verdaderas para que el usuario complete la acción deseada. No las condiciones del producto. Las condiciones del mundo."
+        },
+        {
+          "type": "paragraph",
+          "text": "En nuestro caso, la lista era larga: tener un auto compatible, vivir en una de las seis regiones habilitadas, estar dispuesto a instalar hardware de retrofit, tener tolerancia al gasto en entretenimiento premium... y confiar en que el producto no iba a desaparecer en dos años."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esa última condición, en retrospectiva, era la más frágil de todas."
+        },
+        {
+          "type": "h2",
+          "text": "Diseñar para la complejidad sin matar la conversión"
+        },
+        {
+          "type": "paragraph",
+          "text": "El Shopping Cart de Holoride era uno de los flujos de compra más complejos en los que trabajé. No porque la tecnología fuera difícil, sino porque la situación de compra tenía demasiadas variables:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "¿Ya tenés el hardware o necesitás el retrofit?",
+            "¿Tenés un auto compatible o no?",
+            "¿Comprás solo o con acompañante?",
+            "¿Querés bundle o items individuales?",
+            "¿Ya tenés suscripción o la sumás ahora?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada combinación era un camino distinto. La lógica de árbol de decisión que construimos en Sense Making mapeaba más de veinte escenarios posibles de compra."
+        },
+        {
+          "type": "paragraph",
+          "text": "El aprendizaje de diseño: la complejidad real del producto tiene que resolverse en el back-end de lógica, no exponerse en la UI. El usuario no tiene que entender el árbol de decisiones. Tiene que sentir que el sistema lo entiende a él."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo que hicimos —y funcionó— fue diseñar un flujo de preguntas progresivas que simplificaba las opciones según las respuestas anteriores. Si el usuario tenía un Audi reciente, el paso de retrofit desaparecía. Si ya tenía hardware, saltaba directo a la suscripción."
+        },
+        {
+          "type": "callout",
+          "text": "Quick win aplicable hoy: si tu flujo de onboarding o conversión tiene más de tres variables dependientes entre sí, mapeá el árbol de decisión completo antes de wirefrear una sola pantalla. El diseño visual es la última capa, no la primera."
+        },
+        {
+          "type": "h2",
+          "text": "Lo que el user testing reveló que nadie quería admitir"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hicimos tres rondas de testing con usuarios en Estados Unidos y Europa. Los aprendizajes técnicos fueron claros —simplifiqué el paso de retrofit para usuarios que no lo necesitaban, reorganicé la jerarquía visual de los bundles, reduje fricción en el checkout— pero el aprendizaje más importante no estaba en los datos de usabilidad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Estaba en algo que los usuarios decían antes de empezar la tarea:"
+        },
+        {
+          "type": "quote",
+          "text": "\"¿Esto ya existe? ¿Puedo probarlo antes de comprarlo?\""
+        },
+        {
+          "type": "paragraph",
+          "text": "Esa pregunta es una señal de market readiness, no de UX. Y es exactamente el tipo de señal que un equipo de producto con presión por lanzar tiende a ignorar."
+        },
+        {
+          "type": "h3",
+          "text": "Framework útil: Separar los problemas de UX de los problemas de mercado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Existe una confusión frecuente entre \"los usuarios no completan el flujo porque el diseño es confuso\" y \"los usuarios no completan el flujo porque no entienden por qué querrían el producto\". Son problemas distintos con soluciones distintas."
+        },
+        {
+          "type": "paragraph",
+          "text": "El primero se resuelve con buen diseño. El segundo se resuelve con educación de mercado, prueba social, early adopter programs... o con tiempo. Mucho tiempo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una manera simple de diagnosticarlo: en tus sesiones de testing, ¿los usuarios se traban en cómo hacer algo, o se traban en por qué lo harían? Si es lo segundo, el problema no es el diseño."
+        },
+        {
+          "type": "h2",
+          "text": "Sobre sostener una empresa cuando el cliente no paga"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto no suele estar en los portfolios. Pero es parte de la historia, y silenciarlo sería deshonesto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride no cumplió con el pago. Como founder de la consultora que ejecutó el proyecto, la pérdida fue mía. No del equipo, no del cliente, mía."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esa experiencia me enseñó algo que ningún framework de producto captura bien: el riesgo financiero de trabajar con startups frontier es asimétrico. Vos ponés el trabajo, el expertise, el tiempo. Ellos ponen la promesa de un futuro que todavía no existe. Cuando ese futuro no llega, el riesgo que parecía compartido resulta que siempre fue tuyo."
+        },
+        {
+          "type": "paragraph",
+          "text": "No lo digo con amargura. Lo digo porque es información útil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo que cambiaría: pagos por hitos, no por entrega final. Contratos con cláusulas de propiedad intelectual condicional al pago. Y, sobre todo, una evaluación honesta de la runway del cliente antes de comprometer recursos significativos."
+        },
+        {
+          "type": "h2",
+          "text": "El timing como variable de producto"
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride cerró operaciones en 2024. No porque el producto fuera malo —técnicamente era extraordinario— sino porque el mercado de autos eléctricos y autónomos no creció al ritmo que su modelo de negocio necesitaba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto me dejó con una pregunta que sigo pensando: ¿cuánto del éxito o fracaso de un producto es atribuible al producto en sí, y cuánto al momento en que aparece?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La respuesta honesta es: más de lo que el mundo de producto quiere admitir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hay un concepto en estrategia que se llama timing risk —el riesgo de que tu solución sea correcta pero el mundo todavía no esté listo. Es diferente del riesgo de execution (construiste algo que nadie quería) y del riesgo de competition (alguien lo hizo antes o mejor)."
+        },
+        {
+          "type": "paragraph",
+          "text": "El timing risk es especialmente cruel porque no se resuelve con más iteración ni con mejor diseño. Se resuelve con paciencia o con pivot. Y en startups con runway limitado, la paciencia es un lujo que pocos se pueden permitir."
+        },
+        {
+          "type": "h2",
+          "text": "Lo que me llevo"
+        },
+        {
+          "type": "h3",
+          "text": "Para el diseño:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "La complejidad de un producto frontier debe resolverse en lógica, no en UI. El usuario tiene que sentir que el sistema lo entiende, no que tiene que entenderlo.",
+            "Separar problemas de UX de problemas de mercado es una habilidad crítica que no se enseña en ningún curso."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Para el producto:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "El pre-condition mapping es un ejercicio que debería hacerse antes de cualquier spec. Si las precondiciones del mundo son frágiles, el producto lo es también.",
+            "El timing risk es real y subestimado. Nombrarlo explícitamente en la estrategia de producto no es pesimismo, es honestidad."
+          ]
+        },
+        {
+          "type": "h3",
+          "text": "Para quien trabaja como consultor o founder:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Evaluá la runway de tu cliente con la misma rigurosidad con la que evaluás el problema de diseño.",
+            "Los contratos por hitos no son desconfianza. Son supervivencia."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Holoride era un producto brillante en un momento equivocado, ejecutado con un nivel de sofisticación técnica y de diseño que pocas startups logran. Trabajar en él me hizo mejor profesional y, honestamente, me costó dinero."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ambas cosas pueden ser verdad al mismo tiempo."
+        }
       ]
     }
   },
@@ -166,57 +472,195 @@
       "title": "Foresight is not about predicting the future",
       "excerpt": "It's about designing the conditions that make a desired future more likely. What I learned working on 10-year neighborhood concepts in Patagonia.",
       "content": [
-        { "type": "intro", "text": "It's about designing the conditions that make a desired future more likely. What working on 10-year neighborhood concepts in Patagonia taught me about design thinking." },
-        { "type": "paragraph", "text": "When I teach design thinking, I always tell students the same thing: the hardest part isn't the tools. It's resisting the urge to jump to solutions before you understand what you're actually dealing with." },
-        { "type": "paragraph", "text": "KM5 broke that urge every single time." },
-        { "type": "paragraph", "text": "KM5 is a neighborhood in Comodoro Rivadavia, a coastal city in Patagonia, Argentina. Its name comes from its distance from kilometer zero — the old ferroportuario museum at the city's origin point. The neighborhood sits between the university and the sea, framed by clay cliffs and constant wind. It used to be a railroad town. The last train passed through 70 years ago. The residents still call themselves ferroviarios." },
-        { "type": "paragraph", "text": "This is the story of what happened when a UX and design thinking methodology was applied not to a product or a digital interface, but to a neighborhood — its people, its ruins, its aspirations, and its identity crisis." },
-        { "type": "h2", "text": "The brief: designing belonging" },
-        { "type": "paragraph", "text": "The project was part of Pioneros 2030, Comodoro Rivadavia's Strategic Tourism Plan. The \"Barrios con Encanto\" (Charming Neighborhoods) program aimed to conceptualize the city's historic neighborhoods — KM5, Astra, and Diadema — not from a top-down urban planning perspective, but from the inside out: through the eyes and voices of the people who actually live there." },
-        { "type": "paragraph", "text": "The challenge statement we defined for KM5 was deliberately human-centered:" },
-        { "type": "callout", "text": "We are going to design the concept of the KM5 neighborhood to improve the experience of its residents, because they value living a full, comfortable life with their families." },
-        { "type": "paragraph", "text": "That framing matters. We weren't asked to design a tourist attraction or a municipal brand. We were asked to understand a community and help it see its own potential." },
-        { "type": "h2", "text": "The methodology: a double diamond in the field" },
-        { "type": "paragraph", "text": "The process followed a Double Diamond structure — diverge, converge, diverge again, converge — across nine phases: documentation review, challenge definition, field research, empathy mapping, mind mapping, How Might We ideation, solution brainstorming, future mapping, and proto-persona creation." },
-        { "type": "paragraph", "text": "What made this project unusual was phase four: the field research wasn't done through surveys or focus groups. We walked the neighborhood. Twice. We talked to residents on street corners and in front of abandoned buildings. We stood at the balancín roundabout — a rotonda decorated with an oil pump, the physical symbol of the city's economic identity — and tried to understand what it meant to live between two histories: the railroad past and the petroleum present." },
-        { "type": "paragraph", "text": "What we found was a community in a quiet identity crisis. The railroad is gone. The petroleum economy belongs to KM3, not KM5. So who are they?" },
-        { "type": "quote", "text": "\"Hace 70 años que no pasa un tren pero la gente se sigue reconociendo como un pueblo ferroviario.\" — a resident" },
-        { "type": "paragraph", "text": "This is not nostalgia. It's a legitimate question about belonging." },
-        { "type": "h2", "text": "Frame creation: the Dorst lens" },
-        { "type": "paragraph", "text": "This is where Kees Dorst's framework of frame creation becomes essential for understanding what was actually happening in the research." },
-        { "type": "paragraph", "text": "Dorst distinguishes between two modes of design reasoning. In classical problem-solving, you work forward from a known what and how to arrive at a result. In design, you work differently: you have a desired outcome and you need to reason backward to find both the how and the what — the frame — that makes that outcome possible." },
-        { "type": "paragraph", "text": "KM5 wasn't a problem with a known frame. The neighborhood had multiple competing frames fighting for dominance: we are ferroviarios (the older generation), we are not ferroviarios anymore but we don't know what we are (the younger generation), and we are a neighborhood that could be something great but nobody has told us what (the aspiration underneath both)." },
-        { "type": "paragraph", "text": "Frame creation means surfacing the frame that enables new action. In KM5, the emerging frame wasn't about heritage or oil — it was about proximity and potential. The neighborhood is 10 minutes on foot from one of Patagonia's main universities. It faces the sea. It has abandoned infrastructure of extraordinary character — a thermal pool, a power plant, an old cinema, a docked barge turned monument. The frame that unlocked everything was: KM5 is a neighborhood that already has everything it needs to become something new. The resources are here. They're just not activated." },
-        { "type": "paragraph", "text": "That frame shift is what Dorst means when he says great design doesn't solve problems — it reframes them." },
-        { "type": "h2", "text": "Design-driven meaning: the Verganti layer" },
-        { "type": "paragraph", "text": "Roberto Verganti's contribution to this work operates at a different register. Where Dorst focuses on the logic of design reasoning, Verganti focuses on the meaning that design proposes to people." },
-        { "type": "paragraph", "text": "In Design-Driven Innovation, Verganti argues that the most radical innovation doesn't come from listening to what users say they want — it comes from proposing a new meaning for a product, a service, or in this case, a place. People don't just use things; they give them meaning. And places especially carry the weight of meaning." },
-        { "type": "paragraph", "text": "The residents of KM5 were not going to tell us \"we want a co-working space in the old power plant.\" They were going to tell us they missed the cinema, that the pool used to be Olympic-sized, that the station is empty and nobody knows what to do with it. Our job was to listen to those stories not as a wish list, but as a map of latent meaning — what this place could mean to people if its potential were unlocked." },
-        { "type": "paragraph", "text": "The proto-personas we developed at the end of the process — Felipe, the family man and geography teacher; Felicitas, the entrepreneur; Matías, the engineering student from Chubut — were not market segments. They were proposals of possible meaning. Who could live well in KM5 if KM5 were at its best? What kind of life would they be living? What would the neighborhood need to support that life?" },
-        { "type": "paragraph", "text": "This is Verganti's move: from understanding existing meaning to proposing new meaning. The personas weren't derived from data. They were designed from aspiration." },
-        { "type": "h2", "text": "The How Might We machine" },
-        { "type": "paragraph", "text": "Between the empathy phase and the solution phase, the methodology used How Might We (HMW) questions as a structuring tool — generating provocations across fourteen thematic clusters: mobility, ecology, economy, technology, culture, common spaces, family, quality of life, art, physical activity, the sea, urban design, education, and housing." },
-        { "type": "paragraph", "text": "The questions ranged from practical to visionary:" },
-        { "type": "list", "items": [
-          "How might we create a polycentric neighborhood?",
-          "How might we use the sea and marine resources sustainably for development?",
-          "How might we resignify abandoned spaces so residents inhabit and claim them?",
-          "How might we build a new school model that involves the whole neighborhood sustainably?"
-        ]},
-        { "type": "paragraph", "text": "HMW questions work because they hold open the problem space without collapsing it into a single solution. In a classroom, I use them to teach students to sit with ambiguity — to resist the reflex of premature closure. In KM5, they did exactly that: they kept the conversation open long enough for genuinely unexpected ideas to emerge." },
-        { "type": "paragraph", "text": "The power plant as a hotel. The old train station as a café-concert venue. The thermal pool as a boulder climbing park. Offshore wind turbines as both energy infrastructure and a visual symbol of energy transition — visible from the neighborhood, reframing Comodoro's relationship with energy from extraction to generation." },
-        { "type": "h2", "text": "The future map as design artifact" },
-        { "type": "paragraph", "text": "The output of the process was not a report. It was a future map — a spatial proposal for what KM5 could become, combining physical interventions, programmatic ideas, and the personas who would inhabit that future." },
-        { "type": "paragraph", "text": "The map proposed, among other things: co-working and co-living spaces connected to the university; a coastal gastronomic corridor from the boutique hotel in the old usina down to the sea; a public sports area extending over the water with skate, bouldering, and water sports; a mural program channeling the neighborhood's existing graffiti culture into organized artistic expression; free bike-sharing along the coastal path connecting KM5 to KM3; and sustainable housing prototypes embedded in the neighborhood fabric." },
-        { "type": "paragraph", "text": "None of this was invented from outside. Every element traced back to something we heard, saw, or felt in the field. The thermal pool that still holds the memory of being Olympic-sized. The students who can't find anywhere to sit between classes. The families who use the street as their living room because the plazas are too small. The walls covered in football rivalry tags — which are also, seen differently, evidence of a community that cares passionately about its territory." },
-        { "type": "h2", "text": "What foresight actually means" },
-        { "type": "paragraph", "text": "This is what I mean when I say foresight is not about prediction." },
-        { "type": "paragraph", "text": "Prediction assumes a fixed trajectory — you calculate where things are going and you try to get ahead of it. Foresight, in the design sense, means something different: it means identifying the conditions that would make a desired future more likely to emerge. You design those conditions. Then you let the future happen." },
-        { "type": "paragraph", "text": "The residents of KM5 don't need someone to tell them who they are going to be. They need someone to show them the assets they already have — the water, the ruins, the university, the wind, the grafiteros, the Sunday families — and ask: what would it look like if all of this were working together?" },
-        { "type": "paragraph", "text": "That's the question design thinking, at its best, knows how to ask." },
-        { "type": "paragraph", "text": "And that question, I find, works just as well in a classroom in Buenos Aires as it does on a windy street corner in Patagonia." },
-        { "type": "h3", "text": "Credits" },
-        { "type": "paragraph", "text": "This project was developed by Holistic Interaction (Lorena Maceratesi and Mariana Fiorillo) in collaboration with Gabriel Klein from Plan Pioneros 2030, with coordination by Luciana Perrone. March 2022." }
+        {
+          "type": "intro",
+          "text": "It's about designing the conditions that make a desired future more likely. What working on 10-year neighborhood concepts in Patagonia taught me about design thinking."
+        },
+        {
+          "type": "paragraph",
+          "text": "When I teach design thinking, I always tell students the same thing: the hardest part isn't the tools. It's resisting the urge to jump to solutions before you understand what you're actually dealing with."
+        },
+        {
+          "type": "paragraph",
+          "text": "KM5 broke that urge every single time."
+        },
+        {
+          "type": "paragraph",
+          "text": "KM5 is a neighborhood in Comodoro Rivadavia, a coastal city in Patagonia, Argentina. Its name comes from its distance from kilometer zero — the old ferroportuario museum at the city's origin point. The neighborhood sits between the university and the sea, framed by clay cliffs and constant wind. It used to be a railroad town. The last train passed through 70 years ago. The residents still call themselves ferroviarios."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is the story of what happened when a UX and design thinking methodology was applied not to a product or a digital interface, but to a neighborhood — its people, its ruins, its aspirations, and its identity crisis."
+        },
+        {
+          "type": "h2",
+          "text": "The brief: designing belonging"
+        },
+        {
+          "type": "paragraph",
+          "text": "The project was part of Pioneros 2030, Comodoro Rivadavia's Strategic Tourism Plan. The \"Barrios con Encanto\" (Charming Neighborhoods) program aimed to conceptualize the city's historic neighborhoods — KM5, Astra, and Diadema — not from a top-down urban planning perspective, but from the inside out: through the eyes and voices of the people who actually live there."
+        },
+        {
+          "type": "paragraph",
+          "text": "The challenge statement we defined for KM5 was deliberately human-centered:"
+        },
+        {
+          "type": "callout",
+          "text": "We are going to design the concept of the KM5 neighborhood to improve the experience of its residents, because they value living a full, comfortable life with their families."
+        },
+        {
+          "type": "paragraph",
+          "text": "That framing matters. We weren't asked to design a tourist attraction or a municipal brand. We were asked to understand a community and help it see its own potential."
+        },
+        {
+          "type": "h2",
+          "text": "The methodology: a double diamond in the field"
+        },
+        {
+          "type": "paragraph",
+          "text": "The process followed a Double Diamond structure — diverge, converge, diverge again, converge — across nine phases: documentation review, challenge definition, field research, empathy mapping, mind mapping, How Might We ideation, solution brainstorming, future mapping, and proto-persona creation."
+        },
+        {
+          "type": "paragraph",
+          "text": "What made this project unusual was phase four: the field research wasn't done through surveys or focus groups. We walked the neighborhood. Twice. We talked to residents on street corners and in front of abandoned buildings. We stood at the balancín roundabout — a rotonda decorated with an oil pump, the physical symbol of the city's economic identity — and tried to understand what it meant to live between two histories: the railroad past and the petroleum present."
+        },
+        {
+          "type": "paragraph",
+          "text": "What we found was a community in a quiet identity crisis. The railroad is gone. The petroleum economy belongs to KM3, not KM5. So who are they?"
+        },
+        {
+          "type": "quote",
+          "text": "\"Hace 70 años que no pasa un tren pero la gente se sigue reconociendo como un pueblo ferroviario.\" — a resident"
+        },
+        {
+          "type": "paragraph",
+          "text": "This is not nostalgia. It's a legitimate question about belonging."
+        },
+        {
+          "type": "h2",
+          "text": "Frame creation: the Dorst lens"
+        },
+        {
+          "type": "paragraph",
+          "text": "This is where Kees Dorst's framework of frame creation becomes essential for understanding what was actually happening in the research."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dorst distinguishes between two modes of design reasoning. In classical problem-solving, you work forward from a known what and how to arrive at a result. In design, you work differently: you have a desired outcome and you need to reason backward to find both the how and the what — the frame — that makes that outcome possible."
+        },
+        {
+          "type": "paragraph",
+          "text": "KM5 wasn't a problem with a known frame. The neighborhood had multiple competing frames fighting for dominance: we are ferroviarios (the older generation), we are not ferroviarios anymore but we don't know what we are (the younger generation), and we are a neighborhood that could be something great but nobody has told us what (the aspiration underneath both)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Frame creation means surfacing the frame that enables new action. In KM5, the emerging frame wasn't about heritage or oil — it was about proximity and potential. The neighborhood is 10 minutes on foot from one of Patagonia's main universities. It faces the sea. It has abandoned infrastructure of extraordinary character — a thermal pool, a power plant, an old cinema, a docked barge turned monument. The frame that unlocked everything was: KM5 is a neighborhood that already has everything it needs to become something new. The resources are here. They're just not activated."
+        },
+        {
+          "type": "paragraph",
+          "text": "That frame shift is what Dorst means when he says great design doesn't solve problems — it reframes them."
+        },
+        {
+          "type": "h2",
+          "text": "Design-driven meaning: the Verganti layer"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roberto Verganti's contribution to this work operates at a different register. Where Dorst focuses on the logic of design reasoning, Verganti focuses on the meaning that design proposes to people."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Design-Driven Innovation, Verganti argues that the most radical innovation doesn't come from listening to what users say they want — it comes from proposing a new meaning for a product, a service, or in this case, a place. People don't just use things; they give them meaning. And places especially carry the weight of meaning."
+        },
+        {
+          "type": "paragraph",
+          "text": "The residents of KM5 were not going to tell us \"we want a co-working space in the old power plant.\" They were going to tell us they missed the cinema, that the pool used to be Olympic-sized, that the station is empty and nobody knows what to do with it. Our job was to listen to those stories not as a wish list, but as a map of latent meaning — what this place could mean to people if its potential were unlocked."
+        },
+        {
+          "type": "paragraph",
+          "text": "The proto-personas we developed at the end of the process — Felipe, the family man and geography teacher; Felicitas, the entrepreneur; Matías, the engineering student from Chubut — were not market segments. They were proposals of possible meaning. Who could live well in KM5 if KM5 were at its best? What kind of life would they be living? What would the neighborhood need to support that life?"
+        },
+        {
+          "type": "paragraph",
+          "text": "This is Verganti's move: from understanding existing meaning to proposing new meaning. The personas weren't derived from data. They were designed from aspiration."
+        },
+        {
+          "type": "h2",
+          "text": "The How Might We machine"
+        },
+        {
+          "type": "paragraph",
+          "text": "Between the empathy phase and the solution phase, the methodology used How Might We (HMW) questions as a structuring tool — generating provocations across fourteen thematic clusters: mobility, ecology, economy, technology, culture, common spaces, family, quality of life, art, physical activity, the sea, urban design, education, and housing."
+        },
+        {
+          "type": "paragraph",
+          "text": "The questions ranged from practical to visionary:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "How might we create a polycentric neighborhood?",
+            "How might we use the sea and marine resources sustainably for development?",
+            "How might we resignify abandoned spaces so residents inhabit and claim them?",
+            "How might we build a new school model that involves the whole neighborhood sustainably?"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "HMW questions work because they hold open the problem space without collapsing it into a single solution. In a classroom, I use them to teach students to sit with ambiguity — to resist the reflex of premature closure. In KM5, they did exactly that: they kept the conversation open long enough for genuinely unexpected ideas to emerge."
+        },
+        {
+          "type": "paragraph",
+          "text": "The power plant as a hotel. The old train station as a café-concert venue. The thermal pool as a boulder climbing park. Offshore wind turbines as both energy infrastructure and a visual symbol of energy transition — visible from the neighborhood, reframing Comodoro's relationship with energy from extraction to generation."
+        },
+        {
+          "type": "h2",
+          "text": "The future map as design artifact"
+        },
+        {
+          "type": "paragraph",
+          "text": "The output of the process was not a report. It was a future map — a spatial proposal for what KM5 could become, combining physical interventions, programmatic ideas, and the personas who would inhabit that future."
+        },
+        {
+          "type": "paragraph",
+          "text": "The map proposed, among other things: co-working and co-living spaces connected to the university; a coastal gastronomic corridor from the boutique hotel in the old usina down to the sea; a public sports area extending over the water with skate, bouldering, and water sports; a mural program channeling the neighborhood's existing graffiti culture into organized artistic expression; free bike-sharing along the coastal path connecting KM5 to KM3; and sustainable housing prototypes embedded in the neighborhood fabric."
+        },
+        {
+          "type": "paragraph",
+          "text": "None of this was invented from outside. Every element traced back to something we heard, saw, or felt in the field. The thermal pool that still holds the memory of being Olympic-sized. The students who can't find anywhere to sit between classes. The families who use the street as their living room because the plazas are too small. The walls covered in football rivalry tags — which are also, seen differently, evidence of a community that cares passionately about its territory."
+        },
+        {
+          "type": "h2",
+          "text": "What foresight actually means"
+        },
+        {
+          "type": "paragraph",
+          "text": "This is what I mean when I say foresight is not about prediction."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prediction assumes a fixed trajectory — you calculate where things are going and you try to get ahead of it. Foresight, in the design sense, means something different: it means identifying the conditions that would make a desired future more likely to emerge. You design those conditions. Then you let the future happen."
+        },
+        {
+          "type": "paragraph",
+          "text": "The residents of KM5 don't need someone to tell them who they are going to be. They need someone to show them the assets they already have — the water, the ruins, the university, the wind, the grafiteros, the Sunday families — and ask: what would it look like if all of this were working together?"
+        },
+        {
+          "type": "paragraph",
+          "text": "That's the question design thinking, at its best, knows how to ask."
+        },
+        {
+          "type": "paragraph",
+          "text": "And that question, I find, works just as well in a classroom in Buenos Aires as it does on a windy street corner in Patagonia."
+        },
+        {
+          "type": "h3",
+          "text": "Credits"
+        },
+        {
+          "type": "paragraph",
+          "text": "This project was developed by Holistic Interaction in collaboration with Gabriel Klein from Plan Pioneros 2030, with coordination by Luciana Perrone. March 2022."
+        }
       ]
     },
     "es": {
