@@ -13,6 +13,7 @@ const ScrollToTop = () => {
 import App from './App.jsx'
 import Blog from './Blog.jsx'
 import BlogPost from './BlogPost.jsx'
+import Admin from './Admin.jsx'
 import CasePage from './CasePage.jsx'
 import Comodoro from './cases/Comodoro.jsx'
 import PradoHoloride from './cases/PradoHoloride.jsx'
@@ -31,6 +32,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<App />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="/cases/comodoro" element={<Comodoro />} />
           <Route path="/cases/prado-holoride" element={<PradoHoloride />} />
           <Route path="/cases/holoride" element={<Holoride />} />
