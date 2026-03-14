@@ -868,6 +868,11 @@
           "text": "Ana came with a clear idea. I convinced her not to build it."
         },
         {
+          "type": "image",
+          "url": "/moolliroadmap.png",
+          "alt": "Moolli — product roadmap"
+        },
+        {
           "type": "paragraph",
           "text": "She wanted to build a blog about dog wellness. She had a community of dog lovers, a vision, and a chat platform that wasn’t gaining traction."
         },
@@ -974,6 +979,11 @@
         {
           "type": "intro",
           "text": "Ana llegó con una idea clara. Yo la convencí de no hacerla."
+        },
+        {
+          "type": "image",
+          "url": "/moolliroadmap.png",
+          "alt": "Moolli — product roadmap"
         },
         {
           "type": "paragraph",

@@ -3,6 +3,7 @@ import { useLanguage } from '../LanguageContext';
 import CaseNav from './CaseNav';
 import casesData from '../data/cases.json';
 import moolliLogo from '../assets/moollilogo.png';
+import moolliRoadmap from '../assets/moolliroadmap.png';
 import moolliApp1 from '../assets/moolliapp.png';
 import moolliApp2 from '../assets/moolliapp2.png';
 import moolliApp3 from '../assets/moolliapp3.png';
@@ -66,27 +67,39 @@ const Wuufy = () => {
 
       {/* PHASES */}
       {t.phases.map((phase, i) => (
-        <section
-          key={i}
-          className={`px-6 md:px-20 py-24 border-t border-gray-50 ${i % 2 === 0 ? 'bg-white' : 'bg-pink-50/30'}`}
-        >
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{phase.number}</p>
-              <h2 className="text-4xl md:text-5xl font-black leading-tight text-gray-900">{phase.title}</h2>
+        <div key={i}>
+          <section
+            className={`px-6 md:px-20 py-24 border-t border-gray-50 ${i % 2 === 0 ? 'bg-white' : 'bg-pink-50/30'}`}
+          >
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+              <div>
+                <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{phase.number}</p>
+                <h2 className="text-4xl md:text-5xl font-black leading-tight text-gray-900">{phase.title}</h2>
+              </div>
+              <div className="space-y-6 text-gray-600 text-lg leading-relaxed pt-1">
+                {phase.body1 ? (
+                  <>
+                    <p>{phase.body1}</p>
+                    <p>{phase.body2}</p>
+                  </>
+                ) : (
+                  <p>{phase.body}</p>
+                )}
+              </div>
             </div>
-            <div className="space-y-6 text-gray-600 text-lg leading-relaxed pt-1">
-              {phase.body1 ? (
-                <>
-                  <p>{phase.body1}</p>
-                  <p>{phase.body2}</p>
-                </>
-              ) : (
-                <p>{phase.body}</p>
-              )}
-            </div>
-          </div>
-        </section>
+          </section>
+          {i === 0 && (
+            <section className="px-6 md:px-20 py-16 bg-white border-t border-gray-50">
+              <div className="max-w-5xl mx-auto">
+                <img
+                  src={moolliRoadmap}
+                  alt="Moolli — product roadmap"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+            </section>
+          )}
+        </div>
       ))}
 
       {/* LOGO SECTION */}
