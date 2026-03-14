@@ -263,11 +263,11 @@ const App = () => {
       {/* --- CASE STUDIES --- */}
       <section id="projects" className="py-24 px-6 md:px-20 bg-pink-50/30">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-24">
+          <Link to="/cases/comodoro" className="block mb-24 group cursor-pointer">
             <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{t.projects.case01}</p>
-            <h2 className="text-6xl font-black mb-12 text-gray-900">Barrios con Encanto —<br />Comodoro Rivadavia</h2>
+            <h2 className="text-6xl font-black mb-12 text-gray-900 group-hover:text-pink-500 transition-colors">Barrios con Encanto —<br />Comodoro Rivadavia</h2>
 
-            <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50">
+            <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group-hover:-translate-y-1 transition-all duration-300">
                <div className="space-y-2 border-l-2 border-pink-500 pl-6">
                   <p className="text-[10px] font-bold uppercase text-gray-400">Project Type</p>
                   <p className="font-bold text-gray-900">Strategic Foresight · Urban Design</p>
@@ -284,16 +284,16 @@ const App = () => {
             <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mb-8">
               As part of Comodoro Rivadavia's Pioneros 2030 strategic plan, I led the field research and future conceptualization of three historic neighborhoods — KM5, Astra, and Diadema. Working directly with residents, I mapped current identity and designed distinct 10-year futures for each: a youth and knowledge hub, a world-class audiovisual and cultural district, and a wellness and spirituality destination.
             </p>
-            <Link to="/cases/comodoro" className="text-xs font-bold text-pink-500 uppercase tracking-widest hover:underline">
+            <span className="text-xs font-bold text-pink-500 uppercase tracking-widest group-hover:underline">
               {t.projects.viewCase}
-            </Link>
-          </div>
+            </span>
+          </Link>
 
-          <div className="mb-24">
+          <Link to="/cases/prado-holoride" className="block mb-24 group cursor-pointer">
             <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{t.projects.case02}</p>
-            <h2 className="text-6xl font-black mb-12 text-gray-900">Museo Nacional<br />del Prado</h2>
+            <h2 className="text-6xl font-black mb-12 text-gray-900 group-hover:text-pink-500 transition-colors">Museo Nacional<br />del Prado</h2>
 
-            <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50">
+            <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group-hover:-translate-y-1 transition-all duration-300">
                <div className="space-y-2 border-l-2 border-pink-500 pl-6">
                   <p className="text-[10px] font-bold uppercase text-gray-400">Project Type</p>
                   <p className="font-bold text-gray-900">Strategic Design · Cultural Futures</p>
@@ -307,16 +307,16 @@ const App = () => {
                   <p className="font-bold text-gray-900">2017–2019</p>
                </div>
             </div>
-            <Link to="/cases/prado-holoride" className="text-xs font-bold text-pink-500 uppercase tracking-widest hover:underline">
+            <span className="text-xs font-bold text-pink-500 uppercase tracking-widest group-hover:underline">
               {t.projects.viewCase}
-            </Link>
-          </div>
+            </span>
+          </Link>
 
-          <div className="mb-24">
+          <Link to="/cases/holoride" className="block mb-24 group cursor-pointer">
             <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{t.projects.case03}</p>
-            <h2 className="text-6xl font-black mb-12 text-gray-900">Holoride</h2>
+            <h2 className="text-6xl font-black mb-12 text-gray-900 group-hover:text-pink-500 transition-colors">Holoride</h2>
 
-            <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50">
+            <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group-hover:-translate-y-1 transition-all duration-300">
                <div className="space-y-2 border-l-2 border-pink-500 pl-6">
                   <p className="text-[10px] font-bold uppercase text-gray-400">Project Type</p>
                   <p className="font-bold text-gray-900">Product Leadership · Emerging Technology</p>
@@ -330,10 +330,10 @@ const App = () => {
                   <p className="font-bold text-gray-900">2023–2024</p>
                </div>
             </div>
-            <Link to="/cases/holoride" className="text-xs font-bold text-pink-500 uppercase tracking-widest hover:underline">
+            <span className="text-xs font-bold text-pink-500 uppercase tracking-widest group-hover:underline">
               {t.projects.viewCase}
-            </Link>
-          </div>
+            </span>
+          </Link>
 
           <div className="mt-32">
             <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{t.projects.strategyLabel}</p>
@@ -345,17 +345,17 @@ const App = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {projects.map((proj, i) => (
-                <div key={i} className={`bg-white p-10 rounded-3xl border border-pink-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group`}>
+                <Link key={i} to={`/cases/${proj.slug}`} className="block bg-white p-10 rounded-3xl border border-pink-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group">
                   <div className="flex justify-between items-start mb-8">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-pink-500 bg-pink-50 px-3 py-1 rounded-full">{t.projects.projectTypes[proj.type]}</span>
                     <ArrowUpRight className="w-5 h-5 text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </div>
-                  <h3 className="text-3xl font-black mb-4 text-gray-900">{proj.name}</h3>
+                  <h3 className="text-3xl font-black mb-4 text-gray-900 group-hover:text-pink-500 transition-colors">{proj.name}</h3>
                   <p className="text-gray-500 text-sm mb-8 leading-relaxed">{proj.desc}</p>
-                  <Link to={`/cases/${proj.slug}`} className="text-xs font-bold text-pink-500 uppercase tracking-widest hover:underline">
+                  <span className="text-xs font-bold text-pink-500 uppercase tracking-widest group-hover:underline">
                     {t.projects.viewCase}
-                  </Link>
-                </div>
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
