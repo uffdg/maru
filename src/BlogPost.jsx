@@ -89,9 +89,9 @@ const BlogPost = () => {
             {post[lang].title}
           </h1>
 
-          {post.content ? (
+          {(post.content || post.contentEs) ? (
             <div className="mt-12">
-              {post.content.map((block, i) => renderBlock(block, i))}
+              {(lang === 'es' && post.contentEs ? post.contentEs : post.content)?.map((block, i) => renderBlock(block, i))}
             </div>
           ) : (
             <>
