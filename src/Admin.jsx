@@ -68,38 +68,54 @@ const ghPut = async (token, posts, sha) => {
   return res.json();
 };
 
+// ---- Text → Blocks parser helpers ----
+
+// Split text into individual sentences
+const toSentences = (text) =>
+  (text.match(/[^.!?…]+[.!?…]+(?:\s|$)/g) || [text]).map(s => s.trim()).filter(Boolean);
+
+// Auto-bold "Term: description" patterns — label gets bolded
+const autoBold = (text) => {
+  const m = text.match(/^([^:]{3,50}):\s+\S/);
+  if (m && m[1].split(' ').length <= 6) {
+    return `**${m[1]}:** ${text.slice(m[0].length - 1)}`;
+  }
+  return text;
+};
+
+// Turn a plain text chunk into blocks (max 2 sentences each)
+const chunkIntoParagraphs = (text) => {
+  const sentences = toSentences(text);
+  const out = [];
+  for (let j = 0; j < sentences.length; j += 2) {
+    const chunk = sentences.slice(j, j + 2).join(' ').trim();
+    if (chunk) out.push({ type: 'paragraph', text: autoBold(chunk) });
+  }
+  return out;
+};
+
 // ---- Text → Blocks parser ----
 const parseTextToBlocks = (raw) => {
   const lines = raw.split('\n');
   const blocks = [];
-  let i = 0;
   let isFirst = true;
+  let i = 0;
 
   while (i < lines.length) {
     const line = lines[i].trim();
-
     if (!line) { i++; continue; }
 
     // Markdown headings
-    if (line.startsWith('### ')) {
-      blocks.push({ type: 'h3', text: line.slice(4) });
-      i++; continue;
-    }
-    if (line.startsWith('## ')) {
-      blocks.push({ type: 'h2', text: line.slice(3) });
-      i++; continue;
-    }
-    if (line.startsWith('# ')) {
-      blocks.push({ type: 'h2', text: line.slice(2) });
-      i++; continue;
-    }
+    if (line.startsWith('### ')) { blocks.push({ type: 'h3', text: line.slice(4) }); i++; continue; }
+    if (line.startsWith('## ')) { blocks.push({ type: 'h2', text: line.slice(3) }); i++; continue; }
+    if (line.startsWith('# '))  { blocks.push({ type: 'h2', text: line.slice(2) }); i++; continue; }
 
-    // List items (-, *, •, numbers)
+    // List items
     if (line.match(/^[-*•]\s/) || line.match(/^\d+\.\s/)) {
       const items = [];
       while (i < lines.length) {
         const l = lines[i].trim();
-        if (l.match(/^[-*•]\s/)) { items.push(l.replace(/^[-*•]\s/, '')); i++; }
+        if (l.match(/^[-*•]\s/))   { items.push(l.replace(/^[-*•]\s/, '')); i++; }
         else if (l.match(/^\d+\.\s/)) { items.push(l.replace(/^\d+\.\s/, '')); i++; }
         else break;
       }
@@ -107,29 +123,37 @@ const parseTextToBlocks = (raw) => {
       continue;
     }
 
-    // Quotes: line starts with " or "
-    if (line.startsWith('"') || line.startsWith('\u201c') || line.startsWith('\u2018')) {
-      let text = line;
-      while (i + 1 < lines.length && lines[i + 1].trim() && !lines[i + 1].trim().match(/^[-*•#]|\d+\./)) {
-        i++;
-        text += ' ' + lines[i].trim();
-      }
-      blocks.push({ type: 'quote', text });
-      i++; continue;
-    }
-
-    // Collect paragraph (until empty line)
+    // Collect full paragraph (until blank line)
     let text = line;
     while (i + 1 < lines.length && lines[i + 1].trim()) {
       i++;
       text += ' ' + lines[i].trim();
     }
 
-    if (isFirst) {
-      blocks.push({ type: 'intro', text });
+    // Explicit quote: starts with " or "
+    if (text.startsWith('"') || text.startsWith('\u201c') || text.startsWith('\u2018')) {
+      blocks.push({ type: 'quote', text });
       isFirst = false;
+      i++; continue;
+    }
+
+    const sentences = toSentences(text);
+
+    if (isFirst) {
+      // Always use first sentence as intro
+      blocks.push({ type: 'intro', text: sentences[0] });
+      if (sentences.length > 1) {
+        blocks.push(...chunkIntoParagraphs(sentences.slice(1).join(' ')));
+      }
+      isFirst = false;
+
+    } else if (sentences.length === 1 && text.length < 140) {
+      // Short punchy standalone sentence → quote for visual pop
+      blocks.push({ type: 'quote', text });
+
     } else {
-      blocks.push({ type: 'paragraph', text });
+      // Split into 2-sentence paragraph chunks
+      blocks.push(...chunkIntoParagraphs(text));
     }
 
     i++;
