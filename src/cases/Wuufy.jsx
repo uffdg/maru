@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import CaseNav from './CaseNav';
 import casesData from '../data/cases.json';
+import moolliLogo from '../assets/moollilogo.png';
+import moolliApp1 from '../assets/moolliapp.png';
+import moolliApp2 from '../assets/moolliapp2.png';
+import moolliApp3 from '../assets/moolliapp3.png';
 
 const caseData = casesData['wuufy'];
 
@@ -84,6 +88,46 @@ const Wuufy = () => {
           </div>
         </section>
       ))}
+
+      {/* LOGO SECTION */}
+      <section className="py-24 border-t border-gray-50 bg-[#F5C518]">
+        <img
+          src={moolliLogo}
+          alt="Moolli — Una tribu de dog lovers"
+          className="w-full max-w-2xl mx-auto block px-12"
+        />
+      </section>
+
+      {/* APP SCREENSHOTS — METRICS */}
+      <section className="py-24 border-t border-gray-50 bg-gray-950">
+        <div className="px-6 md:px-20 max-w-5xl mx-auto mb-12">
+          <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">The Product</p>
+          <h2 className="text-4xl md:text-5xl font-black leading-tight text-white">Moolli · 2023</h2>
+        </div>
+        <img
+          src={moolliApp1}
+          alt="Moolli app — métricas e integración con apps de salud"
+          className="w-full block"
+        />
+      </section>
+
+      {/* APP SCREENSHOTS — ENGAGEMENT */}
+      <section className="border-t border-white/5 bg-gray-950">
+        <img
+          src={moolliApp2}
+          alt="Moolli app — engagement, diagnóstico AI y referidos"
+          className="w-full block"
+        />
+      </section>
+
+      {/* APP SCREENSHOTS — FULL SCREENS */}
+      <section className="border-t border-white/5 bg-gray-950 pb-24">
+        <img
+          src={moolliApp3}
+          alt="Moolli app — pantallas completas"
+          className="w-full block"
+        />
+      </section>
 
       {/* FOOTER */}
       <footer className="bg-pink-500 py-20 px-6 md:px-20 text-white text-center">
