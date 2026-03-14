@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
+import CaseNav from './CaseNav';
 import journeyMap from '../assets/museodelprado.png';
 
 const caseT = {
@@ -100,26 +101,14 @@ const caseT = {
 };
 
 const PradoHoloride = () => {
-  const { lang, toggle } = useLanguage();
+  const { lang } = useLanguage();
   const t = caseT[lang];
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-pink-100">
 
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-20 py-5 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <Link to="/" className="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-pink-500 transition-colors flex items-center gap-2">
-          {t.back}
-        </Link>
-        <div className="flex items-center gap-4">
-          <span className="text-[11px] font-bold uppercase tracking-widest text-gray-400">Maru Fiorillo</span>
-          <button onClick={toggle} className="text-[11px] font-black uppercase tracking-widest flex items-center gap-1">
-            <span className={lang === 'en' ? 'text-pink-500' : 'text-gray-400'}>EN</span>
-            <span className="text-gray-300">/</span>
-            <span className={lang === 'es' ? 'text-pink-500' : 'text-gray-400'}>ES</span>
-          </button>
-        </div>
-      </nav>
+      <CaseNav />
 
       {/* HERO */}
       <section className="pt-40 pb-24 px-6 md:px-20 bg-white">
