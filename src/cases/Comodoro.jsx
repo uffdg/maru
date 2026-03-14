@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../LanguageContext';
 import CaseNav from './CaseNav';
 import casesData from '../data/cases.json';
+import mapKM5 from '../assets/comodorokm5.png';
+import mapAstra from '../assets/comodorastra.png';
+import mapDiadema from '../assets/comodorodiadema.png';
+
+const neighborhoodMaps = [mapKM5, mapAstra, mapDiadema];
 
 const caseData = casesData['comodoro'];
 
@@ -96,6 +101,21 @@ const Comodoro = () => {
           </div>
         </div>
       </section>
+
+      {/* NEIGHBORHOOD MAPS */}
+      {t.neighborhoods.map((n, i) => (
+        <section key={i} className="bg-gray-950 border-t border-white/5 px-6 md:px-20 py-16">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">0{i + 1}</p>
+            <h3 className="text-2xl font-black text-white mb-8">{n.title}</h3>
+            <img
+              src={neighborhoodMaps[i]}
+              alt={n.title}
+              className="w-full rounded-2xl"
+            />
+          </div>
+        </section>
+      ))}
 
       {/* SECTION 4 — WHAT I LEARNED */}
       <section className="px-6 md:px-20 py-24 bg-white border-t border-gray-50">
