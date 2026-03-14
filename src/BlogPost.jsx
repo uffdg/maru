@@ -2,6 +2,44 @@ import { Link, useParams } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 import { posts } from './data/posts';
 
+const renderBlock = (block, i) => {
+  switch (block.type) {
+    case 'intro':
+      return <p key={i} className="text-xl text-gray-500 italic mb-10 leading-relaxed">{block.text}</p>;
+    case 'paragraph':
+      return <p key={i} className="text-gray-600 text-lg leading-relaxed mb-6">{block.text}</p>;
+    case 'h2':
+      return <h2 key={i} className="text-3xl font-black text-gray-900 mt-16 mb-6 leading-tight">{block.text}</h2>;
+    case 'h3':
+      return <h3 key={i} className="text-lg font-black text-pink-500 uppercase tracking-widest mt-10 mb-4">{block.text}</h3>;
+    case 'list':
+      return (
+        <ul key={i} className="mb-6 space-y-3">
+          {block.items.map((item, j) => (
+            <li key={j} className="flex items-start gap-3 text-gray-600 text-lg leading-relaxed">
+              <span className="text-pink-400 font-black mt-1 shrink-0">—</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    case 'quote':
+      return (
+        <blockquote key={i} className="my-10 pl-6 border-l-4 border-pink-300">
+          <p className="text-2xl font-black text-gray-900 leading-tight italic">{block.text}</p>
+        </blockquote>
+      );
+    case 'callout':
+      return (
+        <div key={i} className="my-10 bg-pink-50 border border-pink-100 rounded-2xl p-8">
+          <p className="text-gray-700 text-base leading-relaxed">{block.text}</p>
+        </div>
+      );
+    default:
+      return null;
+  }
+};
+
 const BlogPost = () => {
   const { slug } = useParams();
   const { lang, toggle } = useLanguage();
@@ -26,7 +64,7 @@ const BlogPost = () => {
 
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-20 py-5 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <Link to="/blog" className="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-pink-500 transition-colors">
-          ← {lang === 'en' ? 'Blog' : 'Blog'}
+          ← Blog
         </Link>
         <div className="flex items-center gap-4">
           <span className="text-[11px] font-bold uppercase tracking-widest text-gray-400">Maru Fiorillo</span>
@@ -51,17 +89,22 @@ const BlogPost = () => {
             {post[lang].title}
           </h1>
 
-          <p className="text-xl text-gray-600 leading-relaxed border-l-4 border-pink-200 pl-6 mb-16">
-            {post[lang].excerpt}
-          </p>
-
-          <div className="bg-pink-50/40 border border-pink-100 rounded-[2rem] p-10 text-center">
-            <p className="text-gray-500 text-sm leading-relaxed">
-              {lang === 'en'
-                ? 'Full article coming soon. Stay tuned.'
-                : 'Artículo completo próximamente.'}
-            </p>
-          </div>
+          {post.content ? (
+            <div className="mt-12">
+              {post.content.map((block, i) => renderBlock(block, i))}
+            </div>
+          ) : (
+            <>
+              <p className="text-xl text-gray-600 leading-relaxed border-l-4 border-pink-200 pl-6 mb-16">
+                {post[lang].excerpt}
+              </p>
+              <div className="bg-pink-50/40 border border-pink-100 rounded-[2rem] p-10 text-center">
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {lang === 'en' ? 'Full article coming soon. Stay tuned.' : 'Artículo completo próximamente.'}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </article>
 
