@@ -23,19 +23,34 @@ const slugify = (title) =>
   title.toLowerCase().trim().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
 
 // ---- GitHub API ----
+const b64ToUtf8 = (b64) => {
+  const binary = atob(b64.replace(/\n/g, ''));
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return new TextDecoder('utf-8').decode(bytes);
+};
+
+const utf8ToB64 = (str) => {
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
+  return btoa(binary);
+};
+
 const ghGet = async (token) => {
   const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`, {
     headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.v3+json' },
   });
-  if (!res.ok) throw new Error(`Error ${res.status}: verificá el token`);
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `Error ${res.status}: verificá el token`);
+  }
   const data = await res.json();
-  const decoded = decodeURIComponent(escape(atob(data.content.replace(/\n/g, ''))));
-  return { posts: JSON.parse(decoded), sha: data.sha };
+  return { posts: JSON.parse(b64ToUtf8(data.content)), sha: data.sha };
 };
 
 const ghPut = async (token, posts, sha) => {
-  const json = JSON.stringify(posts, null, 2);
-  const encoded = btoa(unescape(encodeURIComponent(json)));
+  const encoded = utf8ToB64(JSON.stringify(posts, null, 2));
   const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`, {
     method: 'PUT',
     headers: {
@@ -46,7 +61,7 @@ const ghPut = async (token, posts, sha) => {
     body: JSON.stringify({ message: 'Update blog posts via admin', content: encoded, sha }),
   });
   if (!res.ok) {
-    const err = await res.json();
+    const err = await res.json().catch(() => ({}));
     throw new Error(err.message || `Error ${res.status}`);
   }
   return res.json();
@@ -412,6 +427,13 @@ const Admin = () => {
         <div className="flex-1 overflow-y-auto">
           {loading ? (
             <div className="p-6 text-center text-gray-400 text-sm">Cargando...</div>
+          ) : error && posts.length === 0 ? (
+            <div className="p-6 space-y-3">
+              <p className="text-red-400 text-xs leading-relaxed">{error}</p>
+              <button onClick={() => loadPosts(token)} className="text-xs font-bold text-pink-500 hover:underline">Reintentar</button>
+            </div>
+          ) : posts.length === 0 ? (
+            <div className="p-6 text-center text-gray-400 text-sm">No hay posts</div>
           ) : posts.map((post, i) => (
             <button
               key={post.slug || i}
