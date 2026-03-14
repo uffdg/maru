@@ -173,8 +173,8 @@ const Holoride = () => {
       {/* FOOTER */}
       <footer className="bg-gray-950 py-20 px-6 md:px-20 text-white text-center border-t border-white/10">
         <p className="text-[11px] font-bold uppercase tracking-widest text-white/40 mb-6">{t.nextLabel}</p>
-        <Link to="/cases/comodoro" className="text-4xl md:text-5xl font-black tracking-tighter text-pink-400 hover:text-pink-300 transition-colors">
-          Barrios con Encanto →
+        <Link to="/cases/mercantil-andina" className="text-4xl md:text-5xl font-black tracking-tighter text-pink-400 hover:text-pink-300 transition-colors">
+          Mercantil Andina →
         </Link>
       </footer>
     </div>
