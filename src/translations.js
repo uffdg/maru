@@ -14,7 +14,7 @@ export const t = {
     },
     mentoring: {
       label: '20+ YEARS DESIGNING FUTURES AND BUILDING PRODUCTS.',
-      title: 'Strategic foresight.\nProduct leadership.\nBuilt things.',
+      title: 'Strategic foresight.\nProduct leadership.',
       cards: [
         { title: 'PRODUCT STRATEGY', desc: 'Roadmap definition, capability architecture, and backlog governance for scaling products.' },
         { title: 'STRATEGIC FORESIGHT', desc: 'Territory and systems thinking. Designing 10-year futures grounded in community identity and behavioral research.' },
@@ -95,7 +95,7 @@ export const t = {
     },
     mentoring: {
       label: 'MÁS DE 20 AÑOS DISEÑANDO FUTUROS Y CONSTRUYENDO PRODUCTOS.',
-      title: 'Foresight estratégico.\nLiderazgo de producto.\nCosas construidas.',
+      title: 'Foresight estratégico.\nLiderazgo de producto.',
       cards: [
         { title: 'ESTRATEGIA DE PRODUCTO', desc: 'Definición de roadmap, arquitectura de capacidades y gobierno del backlog para productos en crecimiento.' },
         { title: 'FORESIGHT ESTRATÉGICO', desc: 'Pensamiento territorial y sistémico. Diseñando futuros a 10 años anclados en la identidad comunitaria y la investigación conductual.' },
