@@ -1,17 +1,74 @@
-# React + Vite
+# Mariana Fiorillo Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio estático construido con React + Vite para mostrar trabajo en strategic foresight, product leadership, mentoring y escritura.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite 8
+- React Router
+- Tailwind CSS v4
+- Vercel Analytics
 
-## React Compiler
+## Estructura
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/app`: router central y composición global
+- `src/features/home`: landing page y secciones del home
+- `src/features/blog`: listado y detalle de posts
+- `src/features/cases`: navegación y renderer genérico de case studies
+- `src/features/content`: normalización de contenido y language provider
+- `src/shared`: SEO, analytics, componentes y utilidades transversales
+- `src/data`: contenido versionado del portfolio
+- `public/admin`: scaffold de CMS Git-based con Decap
 
-## Expanding the ESLint configuration
+## Desarrollo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# maru
+```bash
+npm install
+npm run dev
+```
+
+## Checks
+
+```bash
+npm run content:check
+npm run lint
+npm run build
+npm run check
+```
+
+## Flujo editorial
+
+El contenido principal vive en:
+
+- `src/data/posts.json`
+- `src/data/cases.json`
+
+La app normaliza esos archivos hacia un esquema consistente en `src/features/content`.
+
+### Publicar un post
+
+1. Agregar un objeto con `slug`, `date`, `label`, `en`, `es`.
+2. Completar `title`, `excerpt` y `content` en ambos idiomas.
+3. Ejecutar `npm run content:check`.
+
+### Publicar un case study
+
+1. Agregar una nueva entrada en `src/data/cases.json`.
+2. Completar hero, about y las secciones requeridas en `en` y `es`.
+3. Registrar el slug y su metadata editorial en `src/features/cases/data/caseRegistry.js`.
+4. Ejecutar `npm run content:check`.
+
+## CMS Git-based
+
+El panel público `/admin` fue retirado del routing principal por seguridad. En su lugar:
+
+- existe un scaffold en `public/admin`
+- el flujo soportado hoy es edición directa del repo
+- si querés activar Decap en producción, necesitás configurar autenticación (`git-gateway` u OAuth) en tu hosting
+
+## Notas de mantenimiento
+
+- No hay secretos ni tokens en el frontend público.
+- El routing de blog y casos sale de una sola fuente de verdad.
+- El siguiente paso natural, si querés profundizar, es optimizar imágenes grandes y migrar gradualmente el contenido a un schema aún más estricto.

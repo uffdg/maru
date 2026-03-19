@@ -105,8 +105,8 @@ export const t = {
     about: {
       label: 'Perfil',
       headline: 'Foresight estratégico.\nPensamiento sistémico.\nProductos como servicio.',
-      body1: 'Lo que hago en realidad es darle sentido a problemas complejos y diseñar las estructuras para resolverlos. Conecto negocio, tecnología y personas — ya sea definiendo el roadmap de una plataforma de fidelización con 880k usuarios o conceptualizando el futuro a 10 años de tres barrios históricos en la Patagonia.',
-      body2: 'Actualmente soy Strategic Product Lead en Qurable. Co-fundé HI — Holistic Interaction, donde entregamos más de 40 proyectos estratégicos. Y estoy construyendo Manifest AI, donde la tecnología se encuentra con el bienestar.',
+      body1: 'Lo que hago en realidad es darle sentido a problemas complejos y diseñar las estructuras para resolverlos. Conecto negocio, tecnología y personas — ya sea definiendo el roadmap de una plataforma de fidelización o conceptualizando el futuro a 10 años de tres barrios históricos en la Patagonia.',
+      body2: 'Actualmente soy Strategic Product Lead en Qurable. Co-fundé HI — Holistic Interaction, donde entregamos más de 40 proyectos estratégicos. Y estoy construyendo Manifest AI, redefiniendo la industria de la meditación.',
     },
     stats: {
       headline: 'Pienso en sistemas.\nDiseño futuros.',
