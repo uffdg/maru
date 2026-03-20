@@ -350,7 +350,7 @@
       "nextLabel": "Próximo caso"
     }
   },
-  "prado-holoride": {
+  "prado": {
     "meta": {
       "skills": "Strategic Foresight · Experience Design · Systems Thinking",
       "company": "Paginar · Holistic Interaction",
@@ -395,6 +395,12 @@
         "desc": "A complete map of the future visitor experience — seven phases, two user archetypes, every touchpoint from digital to physical. Built to guide not just design decisions, but organizational strategy.",
         "caption": "Full customer journey map — Museo Nacional del Prado · 2018"
       },
+      "uiScreens": {
+        "label": "Interface Design",
+        "title": "A fluid user journey",
+        "desc": "The complete ticketing flow was designed to minimize cognitive load, presenting a complex set of options in an effortless, step-by-step experience.",
+        "caption": "Ticketing flow mockups — 2018"
+      },
       "nextLabel": "Next case study"
     },
     "es": {
@@ -435,6 +441,12 @@
         "title": "Experiencia Digital\nMuseo del Prado",
         "desc": "Un mapa completo de la experiencia futura del visitante — siete fases, dos arquetipos de usuario, cada punto de contacto del digital al físico. Construido para guiar no solo las decisiones de diseño, sino la estrategia organizacional.",
         "caption": "Mapa completo de customer journey — Museo Nacional del Prado · 2018"
+      },
+      "uiScreens": {
+        "label": "Diseño de Interfaz",
+        "title": "Un recorrido fluido",
+        "desc": "El flujo completo de compra fue diseñado para minimizar la carga cognitiva, presentando un complejo set de opciones en una experiencia paso a paso sin esfuerzo.",
+        "caption": "Mockups del flujo de compra — 2018"
       },
       "nextLabel": "Próximo caso"
     }
@@ -478,6 +490,12 @@
         "title": "What I learned",
         "body": "\"Designing for a product category that doesn't exist yet requires a different kind of research. You're not validating solutions — you're validating whether the problem is real enough to sustain a business. Holoride had brilliant technology. The market timing wasn't there. That's a product lesson, not a design lesson.\""
       },
+      "uiScreens": {
+        "label": "Interface Design",
+        "title": "Pioneering in-car VR",
+        "desc": "Translating complex commerce and content flows into an entirely new medium with no established interaction patterns, optimizing for motion sickness constraints.",
+        "caption": "Holoride native interface & store mockups — 2023"
+      },
       "nextLabel": "Next case study"
     },
     "es": {
@@ -512,6 +530,12 @@
         "label": "Reflexión",
         "title": "Lo que aprendí",
         "body": "\"Diseñar para una categoría de producto que aún no existe requiere un tipo diferente de investigación. No estás validando soluciones — estás validando si el problema es suficientemente real como para sostener un negocio. Holoride tenía tecnología brillante. El timing de mercado no estuvo. Esa es una lección de producto, no una lección de diseño.\""
+      },
+      "uiScreens": {
+        "label": "Diseño de Interfaz",
+        "title": "Pioneros en VR vehicular",
+        "desc": "Traduciendo flujos complejos de pagos y contenidos a un medio completamente nuevo sin patrones de interacción establecidos, optimizando para evitar mareos por movimiento.",
+        "caption": "Mockups de la tienda y la interfaz nativa de Holoride — 2023"
       },
       "nextLabel": "Próximo caso"
     }

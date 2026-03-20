@@ -33,7 +33,7 @@ const BlogCarousel = ({ lang }) => {
           <Link
             to={`/blog/${post.slug}`}
             onClick={() => trackEvent('blog_carousel_open', { slug: post.slug })}
-            className="block bg-white rounded-[2rem] border border-pink-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-10 md:p-14 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
+            className="block bg-white/40 backdrop-blur-md rounded-[2rem] border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-10 md:p-14 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
           >
             <div className="flex items-center gap-4 mb-6">
               <span className="text-[10px] font-bold uppercase tracking-widest text-pink-500 bg-pink-50 px-3 py-1 rounded-full">

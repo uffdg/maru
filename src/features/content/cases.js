@@ -1,5 +1,6 @@
 import casesData from '../../data/cases.json';
-import roadmapImage from '../../assets/moolliroadmap.png';
+import pradoMapImage from '../../assets/prado-map.png';
+import pradoUiImage from '../../assets/prado-ui.png';
 import { caseOrder, caseRegistry } from '../cases/data/caseRegistry';
 import { siteMeta } from '../../shared/seo/siteMeta';
 import { titleCase } from '../../shared/lib/format';
@@ -82,9 +83,24 @@ const normalizeCaseSections = (slug, content) => {
       title: content.systemMap.title,
       body: [content.systemMap.desc],
       media: {
-        src: roadmapImage,
+        src: pradoMapImage,
         alt: content.systemMap.caption,
         caption: content.systemMap.caption,
+      },
+    });
+  }
+
+  if (content.uiScreens) {
+    sections.push({
+      type: 'ui-showcase',
+      theme: 'tint',
+      eyebrow: content.uiScreens.label,
+      title: content.uiScreens.title,
+      body: [content.uiScreens.desc],
+      media: {
+        src: slug === 'prado' ? pradoUiImage : null,
+        alt: content.uiScreens.caption,
+        caption: content.uiScreens.caption,
       },
     });
   }

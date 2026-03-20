@@ -5,11 +5,13 @@ import { splitLines } from '../../shared/lib/format';
 import { usePageSeo } from '../../shared/seo/usePageSeo';
 import CaseNav from './components/CaseNav';
 import { trackEvent } from '../../shared/analytics/trackEvent';
+import Reveal from '../../shared/components/Reveal';
+import AnimatedPhonesGrid from './components/AnimatedPhonesGrid';
 
 const sectionThemes = {
-  plain: 'bg-white border-t border-gray-50',
-  tint: 'bg-pink-50/30 border-t border-gray-50',
-  dark: 'bg-gray-950 border-t border-white/5',
+  plain: 'bg-white/20 backdrop-blur-md',
+  tint: 'bg-pink-50/30',
+  dark: 'bg-gray-950',
 };
 
 const renderLines = (value) =>
@@ -37,7 +39,7 @@ const CaseStudyPage = () => {
 
   if (!caseStudy) {
     return (
-      <div className="min-h-screen bg-white text-gray-900 font-sans">
+      <div className="min-h-screen bg-transparent text-gray-900 font-sans">
         <CaseNav />
         <div className="pt-40 pb-32 px-6 md:px-20 max-w-4xl mx-auto">
           <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">404</p>
@@ -58,10 +60,10 @@ const CaseStudyPage = () => {
   const nextCaseEyebrow = caseStudy.nextCase.eyebrow[lang];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-pink-100">
+    <div className="min-h-screen bg-transparent text-gray-900 font-sans selection:bg-pink-100">
       <CaseNav />
 
-      <section className="pt-40 pb-24 px-6 md:px-20 bg-white">
+      <section className="pt-40 pb-24 px-6 md:px-20 bg-transparent">
         <div className="max-w-5xl mx-auto">
           <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-6">{hero.label}</p>
           <h1 className="text-7xl md:text-[110px] font-black leading-none tracking-tighter text-gray-900 mb-8">
@@ -72,7 +74,7 @@ const CaseStudyPage = () => {
       </section>
 
       <section className="px-6 md:px-20 pb-24">
-        <div className={`max-w-5xl mx-auto grid gap-8 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50 ${caseStudy.meta.length > 3 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
+        <div className={`max-w-5xl mx-auto grid gap-8 bg-white/40 backdrop-blur-md p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/50 ${caseStudy.meta.length > 3 ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
           {caseStudy.meta.map((item) => (
             <div
               key={`${item.label}-${item.value}`}
@@ -141,7 +143,7 @@ const CaseStudyPage = () => {
                   {section.items.map((item) => (
                     <div
                       key={item.title}
-                      className="group bg-white p-10 rounded-[2rem] border border-pink-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+                      className="group bg-white/40 backdrop-blur-md p-10 rounded-[2rem] border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
                     >
                       <p className="text-pink-500 font-black text-4xl mb-6 tracking-tighter">{item.number}</p>
                       <h3 className="text-xl font-black uppercase text-gray-900 mb-4 leading-tight">{item.title}</h3>
@@ -177,28 +179,59 @@ const CaseStudyPage = () => {
         if (section.type === 'media') {
           return (
             <SectionShell key={`${section.type}-${index}`} theme={section.theme}>
-              <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-                <div>
+              <div className="max-w-5xl mx-auto text-center mb-16">
+                <Reveal>
                   <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{section.eyebrow}</p>
                   <h2 className="text-4xl md:text-5xl font-black leading-tight text-white mb-8">
                     {renderLines(section.title)}
                   </h2>
+                </Reveal>
+                <Reveal delay={200}>
                   {section.body.map((paragraph) => (
-                    <p key={paragraph} className="text-gray-400 text-lg leading-relaxed mb-6">
+                    <p key={paragraph} className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-6">
                       {paragraph}
                     </p>
                   ))}
-                </div>
-                <div className="space-y-4">
+                </Reveal>
+              </div>
+              <Reveal delay={400} className="w-full flex justify-center">
+                <div className="w-full max-w-[1600px] mx-auto rounded-[2.5rem] overflow-hidden bg-white/5 border border-white/10 group relative flex justify-center items-center">
                   <img
                     src={section.media.src}
                     alt={section.media.alt}
-                    className="w-full rounded-2xl border border-white/10"
+                    className="w-auto h-auto max-w-full object-contain rounded-[2.5rem]"
                     loading="lazy"
                   />
-                  <p className="text-xs uppercase tracking-widest text-white/40">{section.media.caption}</p>
                 </div>
+                <p className="text-center text-xs uppercase tracking-widest text-white/40 mt-8">{section.media.caption}</p>
+              </Reveal>
+            </SectionShell>
+          );
+        }
+
+        if (section.type === 'ui-showcase') {
+          return (
+            <SectionShell key={`${section.type}-${index}`} theme={section.theme}>
+              <div className="max-w-5xl mx-auto text-center mb-16">
+                <Reveal>
+                  <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">{section.eyebrow}</p>
+                  <h2 className={`text-4xl md:text-5xl font-black leading-tight mb-6 ${section.theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                    {renderLines(section.title)}
+                  </h2>
+                </Reveal>
+                <Reveal delay={200}>
+                  {section.body.map((paragraph) => (
+                    <p key={paragraph} className={`text-lg leading-relaxed max-w-2xl mx-auto ${section.theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </Reveal>
               </div>
+              
+              <Reveal delay={400} className="w-full relative px-6 md:px-0">
+                <AnimatedPhonesGrid slug={slug} />
+                <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mt-8">{section.media.caption}</p>
+              </Reveal>
             </SectionShell>
           );
         }

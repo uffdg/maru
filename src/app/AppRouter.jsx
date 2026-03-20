@@ -15,11 +15,14 @@ const RouteAnalytics = () => {
   return null;
 };
 
+import HeroAnimation from '../features/home/components/HeroAnimation';
+
 const AppRouter = () => (
   <BrowserRouter>
     <Analytics />
     <ScrollToTop />
     <RouteAnalytics />
+    <HeroAnimation />
     <Routes>
       {appRoutes.map((route) => (
         <Route key={route.path} path={route.path} element={route.element} />

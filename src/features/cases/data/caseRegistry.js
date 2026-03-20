@@ -1,6 +1,6 @@
 export const caseOrder = [
   'comodoro',
-  'prado-holoride',
+  'prado',
   'holoride',
   'mercantil-andina',
   'agrofy',
@@ -23,8 +23,8 @@ export const caseRegistry = {
       es: 'Investigación de campo y conceptualización de futuros para tres barrios históricos de Comodoro Rivadavia, ancladas en identidad barrial y escenarios a 10 años.',
     },
   },
-  'prado-holoride': {
-    slug: 'prado-holoride',
+  prado: {
+    slug: 'prado',
     featured: true,
     projectType: 'Strategic Design · Cultural Futures',
     metadata: [

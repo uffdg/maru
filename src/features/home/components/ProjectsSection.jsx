@@ -24,7 +24,7 @@ const ProjectsSection = ({ lang, translations }) => (
 
           {item.featured && item.slug && item.summary ? (
             <>
-              <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-pink-50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group-hover:-translate-y-1 transition-all duration-300">
+              <div className="grid md:grid-cols-3 gap-8 items-start mb-12 bg-white/40 backdrop-blur-md p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] group-hover:-translate-y-1 transition-all duration-300">
                 {item.homeMetadata.map((meta, metaIndex) => (
                   <div
                     key={`${item.slug}-${meta.label}`}
@@ -62,7 +62,7 @@ const ProjectsSection = ({ lang, translations }) => (
             <Link
               key={project.slug}
               to={`/cases/${project.slug}`}
-              className="block bg-white p-10 rounded-3xl border border-pink-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
+              className="block h-full bg-white/40 backdrop-blur-md p-10 rounded-3xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="flex justify-between items-start mb-8">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-pink-500 bg-pink-50 px-3 py-1 rounded-full">

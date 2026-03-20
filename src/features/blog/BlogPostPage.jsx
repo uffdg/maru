@@ -20,7 +20,7 @@ const BlogPostPage = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="min-h-screen bg-transparent flex items-center justify-center">
         <div className="text-center">
           <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-4">404</p>
           <h1 className="text-5xl font-black text-gray-900 mb-8">
@@ -35,7 +35,7 @@ const BlogPostPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-pink-100">
+    <div className="min-h-screen bg-transparent text-gray-900 font-sans selection:bg-pink-100">
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-20 py-5 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <Link to="/blog" className="text-[11px] font-black uppercase tracking-widest text-gray-500 hover:text-pink-500 transition-colors">
           ← Blog
