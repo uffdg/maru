@@ -29,8 +29,13 @@ export default async function handler(req, res) {
   const payload = JSON.stringify({ token: data.access_token, provider: 'github' });
 
   res.setHeader('Content-Type', 'text/html');
-  res.send(`<!doctype html><html><body><script>
-    window.opener.postMessage('authorization:github:success:${payload}', '*');
-    window.close();
+  res.send(`<!doctype html><html><head><title>Authorizing...</title></head><body><script>
+    (function() {
+      function receiveMessage(e) {
+        window.opener.postMessage('authorization:github:success:${payload}', e.origin);
+      }
+      window.addEventListener('message', receiveMessage, false);
+      window.opener.postMessage('authorizing:github', '*');
+    })();
   </script></body></html>`);
 }
