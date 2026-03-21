@@ -11,6 +11,7 @@ import TrackedExternalLink from '../../shared/components/TrackedExternalLink';
 import ProjectsSection from './components/ProjectsSection';
 import BlogCarousel from './components/BlogCarousel';
 import HeroAnimation from './components/HeroAnimation';
+import GlassBricks from '../../shared/components/GlassBricks';
 
 const renderLines = (value) =>
   splitLines(value).map((line, index, lines) => (
@@ -155,7 +156,7 @@ const HomePage = () => {
       <section className="py-24 px-6 md:px-20 bg-white/20 backdrop-blur-md">
         <div className="max-w-7xl mx-auto">
           <p className="text-pink-500 font-bold uppercase tracking-widest text-xs mb-8">{copy.now.label}</p>
-          <div className="border-2 border-dashed border-pink-200 rounded-[2rem] p-10 md:p-14 relative">
+          <div className="border-2 border-pink-200 rounded-[2rem] p-10 md:p-14 relative">
             <div className="flex flex-col md:flex-row md:items-center gap-4 mb-10">
               <h2 className="text-4xl md:text-5xl font-black leading-tight text-gray-900">{copy.now.title}</h2>
               <span className="inline-flex items-center gap-2 bg-pink-50 text-pink-500 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full border border-pink-200 self-start md:self-auto whitespace-nowrap">
@@ -180,7 +181,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            <p className="mt-10 text-sm text-gray-400 italic border-t border-dashed border-pink-100 pt-8">
+            <p className="mt-10 text-sm text-gray-400 italic border-t border-pink-100 pt-8">
               {copy.now.closing}
             </p>
           </div>
@@ -247,45 +248,41 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-32 px-6 md:px-20 relative text-gray-900 text-center rounded-t-[3rem] mt-10 overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.02)]">
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-2xl pointer-events-none" />
-        <div className="absolute inset-0 opacity-60 pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M0 0h60v1.5H0z' fill='rgba(255,255,255,0.5)'/%3E%3Cpath d='M0 0h1.5v60H0z' fill='rgba(255,255,255,0.5)'/%3E%3Cpath d='M58.5 0h1.5v60H58.5z' fill='rgba(0,0,0,0.04)'/%3E%3Cpath d='M0 58.5h60v1.5H0z' fill='rgba(0,0,0,0.04)'/%3E%3C/svg%3E\")" }} />
+      <div className="relative mt-10 rounded-t-[3rem] overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.02)]">
+        <GlassBricks />
         
-        <div className="relative z-10 flex flex-col items-center">
-          <h2 className="text-7xl md:text-9xl font-black tracking-tighter mb-12">{renderLines(copy.contact.headline)}</h2>
-          <div className="flex flex-col items-center gap-8">
-            <TrackedExternalLink
-              href="mailto:marufiorillo@gmail.com"
-              eventName="contact_click"
-              eventPayload={{ type: 'email' }}
-              className="bg-pink-500 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest shadow-[0_20px_50px_rgba(236,72,153,0.3)] hover:shadow-[0_25px_60px_rgba(236,72,153,0.4)] hover:-translate-y-2 hover:bg-pink-600 transition-all duration-300 flex items-center gap-3"
-            >
-              {copy.contact.cta} <Mail className="w-5 h-5" />
-            </TrackedExternalLink>
-            <div className="flex gap-8 mt-12">
+        <section id="contact" className="py-32 px-6 md:px-20 text-gray-900 text-center relative z-10">
+          <div className="flex flex-col items-center">
+            <h2 className="text-7xl md:text-9xl font-black tracking-tighter mb-12">{renderLines(copy.contact.headline)}</h2>
+            <div className="flex flex-col items-center gap-8">
               <TrackedExternalLink
-                href="https://linkedin.com/in/marianafiorillo"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:marufiorillo@gmail.com"
                 eventName="contact_click"
-                eventPayload={{ type: 'linkedin' }}
-                className="hover:text-pink-500 hover:scale-110 transition-all bg-white/50 p-4 rounded-full text-pink-500 shadow-sm"
+                eventPayload={{ type: 'email' }}
+                className="bg-pink-500 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest shadow-[0_20px_50px_rgba(236,72,153,0.3)] hover:shadow-[0_25px_60px_rgba(236,72,153,0.4)] hover:-translate-y-2 hover:bg-pink-600 transition-all duration-300 flex items-center gap-3"
               >
-                <Linkedin className="w-6 h-6" />
+                {copy.contact.cta} <Mail className="w-5 h-5" />
               </TrackedExternalLink>
+              <div className="flex gap-8 mt-12">
+                <TrackedExternalLink
+                  href="https://linkedin.com/in/marianafiorillo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  eventName="contact_click"
+                  eventPayload={{ type: 'linkedin' }}
+                  className="hover:text-pink-500 hover:scale-110 transition-all bg-white/50 p-4 rounded-full text-pink-500 shadow-sm"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </TrackedExternalLink>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer className="relative py-8 px-6 md:px-20 text-[10px] font-bold uppercase tracking-widest text-gray-500 overflow-hidden">
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-2xl pointer-events-none" />
-        <div className="absolute inset-0 opacity-60 pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M0 0h60v1.5H0z' fill='rgba(255,255,255,0.5)'/%3E%3Cpath d='M0 0h1.5v60H0z' fill='rgba(255,255,255,0.5)'/%3E%3Cpath d='M58.5 0h1.5v60H58.5z' fill='rgba(0,0,0,0.04)'/%3E%3Cpath d='M0 58.5h60v1.5H0z' fill='rgba(0,0,0,0.04)'/%3E%3C/svg%3E\")" }} />
-        
-        <div className="relative z-10 flex justify-center items-center">
+        <footer className="py-8 px-6 md:px-20 text-[10px] font-bold uppercase tracking-widest text-gray-500 relative z-10 flex justify-center items-center">
           <p>{copy.footer.copy}</p>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };
