@@ -131,6 +131,10 @@ const PrivateGalleryPage = () => {
     setIsUnlocked(true);
     setError('');
     setPassword('');
+    fetch('https://ntfy.sh/maru-private-maru', {
+      method: 'POST',
+      body: 'Someone accessed your private portfolio - ' + new Date().toLocaleString(),
+    });
   };
 
   const handleLock = () => {
