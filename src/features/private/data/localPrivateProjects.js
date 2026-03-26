@@ -15,31 +15,31 @@ const localPrivateProjects = [
         slug: 'dashboard',
         title: 'Dashboard',
         summary:
-          'Performance monitoring and campaign health surfaces designed to help teams understand redemptions, participation, and zero-state behavior at a glance.',
+          'The central question was: how does a client know if their loyalty program is actually working? I defined which metrics were actionable versus decorative, and designed the dashboard from that prioritization — campaign performance, coupon behavior, tier distribution, and mission completion. The client can now detect redemption problems in real time without depending on Qurable\'s technical team.',
       },
       {
         slug: 'coupons',
         title: 'Coupons',
         summary:
-          'End-to-end coupon operations covering catalog management, creation flows, media configuration, validity rules, usage settings, and audience setup.',
+          'Coupons in Qurable cover real complexity: they are issued, activated, redeemed, registered by code, auto-activated by rules, or redeemed at a portal checkout. Each use case has its own flow. The challenge was designing a coherent system that supports all scenarios without fragmenting the operator experience.',
       },
       {
         slug: 'campaigns',
         title: 'Geofencing',
         summary:
-          'Geo-targeting flows for configuring campaign areas, location selection, custom polygon drawing, and reusable geographic presets inside the campaign builder.',
+          'Geofencing allows clients to create geographic areas to launch location-based promotions. The design challenge was making a technically complex feature accessible to non-technical teams who operate the manager directly.',
       },
       {
         slug: 'referrals',
         title: 'Referrals',
         summary:
-          'Referral campaign journeys combining onboarding triggers, reward mechanics, code strategies, validity settings, and performance insights.',
+          'I migrated the referral module from an isolated version to one fully integrated within the campaign engine. The change wasn\'t just technical — it meant redefining how clients think about acquisition campaigns and how they connect to the rest of the loyalty program.',
       },
       {
         slug: 'audiences',
         title: 'Audiences',
         summary:
-          'Audience segmentation tools spanning audience lists, creation method selection, precomputed filters, runtime evaluation, and CSV import workflows.',
+          'Audiences allows creating user segments in three different ways, each with distinct implications for performance and use case. Audiences can be called from campaigns and coupons to target specific actions. I designed the system so that technical complexity stays invisible to the operator.',
       },
     ],
     entries: [
@@ -56,7 +56,7 @@ const localPrivateProjects = [
         module: 'dashboard',
         title: 'Dashboard empty state',
         description:
-          'Dashboard variant showing no recent activity, useful for documenting zero-data behavior and onboarding scenarios.',
+          'An empty state is a product decision, not an error state. I designed each empty state as an onboarding opportunity — guiding the client toward the right action instead of showing a blank screen.',
         image: img('dashboard-empty-state.png'),
       },
       {
