@@ -48,7 +48,7 @@ const localPrivateProjects = [
         module: 'dashboard',
         title: 'Dashboard',
         description:
-          'Main analytics dashboard with populated campaign insights, coupon performance, tiers distribution, and mission completion modules.',
+          'The central question was: how does a client know if their loyalty program is actually working? I defined which metrics were actionable versus decorative, and designed the dashboard from that prioritization — campaign performance, coupon behavior, tier distribution, and mission completion. The client can now detect redemption problems in real time without depending on Qurable\'s technical team.',
         image: img('dashboard.png'),
       },
       {
