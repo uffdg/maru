@@ -5,7 +5,7 @@ const DEMO_URL = 'https://uffdg.github.io/priceless-demo/';
 
 const SectionLabel = ({ number, total, title }) => (
   <div className="flex items-baseline gap-3">
-    <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-violet-600">
+    <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#FF0066]">
       {number}
       <span className="text-slate-400">/{total}</span>
     </span>
@@ -15,22 +15,22 @@ const SectionLabel = ({ number, total, title }) => (
 
 const ProblemCard = ({ title, body }) => (
   <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_4px_24px_rgba(15,23,42,0.04)]">
-    <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em] text-violet-500">{title}</p>
+    <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em] text-[#FF0066]">{title}</p>
     <p className="text-sm leading-7 text-slate-600">{body}</p>
   </div>
 );
 
 const ActorCard = ({ number, actor, role, items }) => (
-  <div className="flex flex-col gap-4 rounded-2xl border border-violet-100 bg-white/80 p-6 shadow-[0_4px_24px_rgba(76,29,149,0.05)]">
+  <div className="flex flex-col gap-4 rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-[0_4px_24px_rgba(255,0,102,0.05)]">
     <div>
-      <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.28em] text-violet-400">Actor {number}</p>
+      <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.28em] text-[#FF0066]/70">Actor {number}</p>
       <p className="text-xl font-black tracking-tight text-slate-950">{actor}</p>
-      <p className="mt-1 text-sm font-semibold text-violet-700">{role}</p>
+      <p className="mt-1 text-sm font-semibold text-[#FF0066]">{role}</p>
     </div>
     <ul className="space-y-2">
       {items.map((item) => (
         <li key={item} className="flex items-start gap-2 text-sm leading-6 text-slate-600">
-          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
+          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF0066]" />
           {item}
         </li>
       ))}
@@ -40,7 +40,7 @@ const ActorCard = ({ number, actor, role, items }) => (
 
 const ProcessStep = ({ number, title, description, tags }) => (
   <div className="grid gap-4 border-t border-slate-100 py-6 md:grid-cols-[auto_1fr_auto] md:items-start md:gap-8">
-    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-violet-50 text-[13px] font-black text-violet-700">
+    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-50 text-[13px] font-black text-[#FF0066]">
       {number}
     </span>
     <div>
@@ -51,7 +51,7 @@ const ProcessStep = ({ number, title, description, tags }) => (
       {tags.map((tag) => (
         <span
           key={tag}
-          className="rounded-full border border-violet-100 bg-violet-50/70 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-700"
+          className="rounded-full border border-pink-100 bg-pink-50/70 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#FF0066]"
         >
           {tag}
         </span>
@@ -69,7 +69,7 @@ const DeliverableCard = ({ icon, title, description }) => (
 );
 
 const Quote = ({ text, attribution }) => (
-  <blockquote className="my-8 rounded-2xl border-l-4 border-violet-400 bg-violet-50/60 px-6 py-5">
+  <blockquote className="my-8 rounded-2xl border-l-4 border-[#FF0066] bg-pink-50/60 px-6 py-5">
     <p className="text-base font-medium italic leading-8 text-slate-700">"{text}"</p>
     {attribution ? (
       <footer className="mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">{attribution}</footer>
@@ -81,11 +81,11 @@ const MastercardStoryProject = () => {
   return (
     <article className="space-y-0">
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="rounded-[2rem] border border-white/70 bg-[linear-gradient(135deg,_rgba(124,58,237,0.12)_0%,_rgba(139,92,246,0.06)_50%,_rgba(255,255,255,0.9)_100%)] p-8 shadow-[0_24px_80px_rgba(76,29,149,0.08)] backdrop-blur-xl md:p-12">
+      <section className="rounded-[2rem] border border-white/70 bg-[linear-gradient(135deg,_rgba(255,0,102,0.08)_0%,_rgba(255,0,102,0.03)_50%,_rgba(255,255,255,0.9)_100%)] p-8 shadow-[0_24px_80px_rgba(255,0,102,0.06)] backdrop-blur-xl md:p-12">
         <div className="grid gap-8 md:grid-cols-[1fr_auto]">
           <div>
             <div className="mb-4 flex flex-wrap items-center gap-3">
-              <span className="rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.24em] text-violet-700">
+              <span className="rounded-full border border-pink-200 bg-pink-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.24em] text-[#FF0066]">
                 Product Strategy & Design · 2026
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.24em] text-amber-700">
@@ -101,7 +101,7 @@ const MastercardStoryProject = () => {
             </p>
           </div>
 
-          <div className="flex flex-col justify-between gap-6 rounded-[1.5rem] border border-violet-100 bg-white/80 p-6 md:min-w-[260px]">
+          <div className="flex flex-col justify-between gap-6 rounded-[1.5rem] border border-pink-100 bg-white/80 p-6 md:min-w-[260px]">
             <div className="space-y-4 text-sm">
               {[
                 { label: 'My role', value: 'Strategic Product Lead' },
@@ -118,7 +118,7 @@ const MastercardStoryProject = () => {
             <TrackedExternalLink
               href={DEMO_URL}
               eventName="mastercard_demo_click"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-5 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition hover:bg-violet-700"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FF0066] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition hover:opacity-90"
             >
               View live demo
               <ArrowUpRight className="h-4 w-4" />
@@ -239,7 +239,7 @@ const MastercardStoryProject = () => {
               <TrackedExternalLink
                 href={DEMO_URL}
                 eventName="mastercard_demo_click_preview"
-                className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white shadow-lg transition hover:bg-violet-700"
+                className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white shadow-lg transition hover:opacity-90"
               >
                 Explore full demo
                 <ArrowUpRight className="h-4 w-4" />
@@ -355,15 +355,15 @@ const MastercardStoryProject = () => {
           ].map(({ metric, label }) => (
             <div
               key={metric}
-              className="rounded-2xl border border-violet-100 bg-violet-50/60 p-6 text-center"
+              className="rounded-2xl border border-pink-100 bg-pink-50/60 p-6 text-center"
             >
-              <p className="text-5xl font-black tracking-tight text-violet-700">{metric}</p>
+              <p className="text-5xl font-black tracking-tight text-[#FF0066]">{metric}</p>
               <p className="mt-3 text-sm leading-6 text-slate-600 whitespace-pre-line">{label}</p>
             </div>
           ))}
         </div>
         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_4px_24px_rgba(15,23,42,0.04)]">
-          <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em] text-violet-500">The Snapp connection</p>
+          <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em] text-[#FF0066]">The Snapp connection</p>
           <p className="text-sm leading-7 text-slate-600">
             Qurable's SMB product (Snapp) already has benefits, campaigns, missions, and tiers. An SMB merchant using Snapp is <strong>one toggle away</strong> from publishing their offer into the Mastercard network — no re-onboarding, no new integration. Snapp becomes the high-velocity onramp for the long tail of merchants that enterprise onboarding can't reach at scale.
           </p>
@@ -390,7 +390,7 @@ const MastercardStoryProject = () => {
               key={item}
               className="flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-white px-5 py-4"
             >
-              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-violet-100 text-[10px] font-bold text-violet-700">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-pink-100 text-[10px] font-bold text-[#FF0066]">
                 ✓
               </span>
               <p className="text-sm leading-7 text-slate-700">{item}</p>
@@ -416,8 +416,8 @@ const MastercardStoryProject = () => {
               body: 'ML-assisted validation, transaction attribution, settlement & reconciliation, AI optimization, network-scale model.',
             },
           ].map(({ phase, label, body }) => (
-            <div key={phase} className="rounded-2xl border border-violet-100 bg-violet-50/40 p-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-violet-500">{phase}</p>
+            <div key={phase} className="rounded-2xl border border-pink-100 bg-pink-50/40 p-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#FF0066]">{phase}</p>
               <p className="mt-1 font-black text-slate-950">{label}</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">{body}</p>
             </div>
@@ -428,7 +428,7 @@ const MastercardStoryProject = () => {
           <TrackedExternalLink
             href={DEMO_URL}
             eventName="mastercard_demo_click_footer"
-            className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition hover:bg-violet-700"
+            className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition hover:opacity-90"
           >
             Open live demo
             <ArrowUpRight className="h-4 w-4" />

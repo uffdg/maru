@@ -14,7 +14,7 @@ const PROJECTS = [
 // ── Single screen card ───────────────────────────────────────
 const ScreenCard = ({ entry }) => (
   <figure className="group overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_2px_12px_rgba(15,23,42,0.05)] transition hover:shadow-[0_8px_32px_rgba(15,23,42,0.10)]">
-    <div className="overflow-hidden bg-gradient-to-b from-violet-50/50 to-slate-50 p-3">
+    <div className="overflow-hidden bg-gradient-to-b from-pink-50/50 to-slate-50 p-3">
       <img
         src={entry.image}
         alt={entry.title}
@@ -40,7 +40,7 @@ const QurableProject = ({ projects }) => {
     <div className="space-y-8">
       {/* Project header */}
       <div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-violet-500">{project.client}</p>
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#FF0066]">{project.client}</p>
         <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 md:text-4xl">{project.title}</h2>
         <p className="mt-3 max-w-2xl text-base leading-7 text-slate-500">{project.summary}</p>
       </div>
@@ -56,8 +56,8 @@ const QurableProject = ({ projects }) => {
               onClick={() => setActiveSlug(mod.slug)}
               className={`flex items-center gap-2.5 rounded-full border px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] transition ${
                 active
-                  ? 'border-violet-200 bg-violet-600 text-white shadow-sm shadow-violet-200'
-                  : 'border-slate-200 bg-white text-slate-500 hover:border-violet-200 hover:text-violet-600'
+                  ? 'border-pink-200 bg-[#FF0066] text-white shadow-sm shadow-pink-200'
+                  : 'border-slate-200 bg-white text-slate-500 hover:border-pink-200 hover:text-[#FF0066]'
               }`}
             >
               {mod.title}
@@ -79,7 +79,7 @@ const QurableProject = ({ projects }) => {
               <h3 className="text-xl font-black tracking-tight text-slate-950">{currentModule.title}</h3>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-500">{currentModule.summary}</p>
             </div>
-            <div className="hidden shrink-0 items-center gap-1.5 rounded-full border border-violet-100 bg-violet-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-600 md:inline-flex">
+            <div className="hidden shrink-0 items-center gap-1.5 rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#FF0066] md:inline-flex">
               <Eye className="h-3 w-3" />
               {currentModule.entries.length} screens
             </div>
@@ -141,15 +141,15 @@ const PrivateGalleryPage = () => {
   return (
     <main className="min-h-screen bg-white text-slate-900">
 
-      {/* ── Header band (violet) ───────────────────────────── */}
-      <div className="bg-[radial-gradient(ellipse_at_top_left,_rgba(139,92,246,0.22),_transparent_60%),linear-gradient(160deg,_#f0ebff_0%,_#ede8ff_50%,_#e8e2ff_100%)]">
+      {/* ── Header band ──────────────────────────────────── */}
+      <div style={{ background: 'linear-gradient(135deg, #fff0f5 0%, #ffffff 60%)' }}>
         <div className="mx-auto max-w-7xl px-6 pb-10 pt-10 md:px-12 md:pb-12 md:pt-12">
 
           {/* Top nav */}
           <div className="mb-10 flex items-center justify-between">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-violet-500 transition hover:text-violet-800"
+              className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#FF0066] transition hover:opacity-70"
             >
               <ArrowRight className="h-4 w-4 rotate-180" />
               Portfolio
@@ -158,7 +158,7 @@ const PrivateGalleryPage = () => {
               <button
                 type="button"
                 onClick={handleLock}
-                className="inline-flex items-center gap-2 rounded-full border border-violet-200/60 bg-white/50 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-violet-600 backdrop-blur-sm transition hover:bg-white/80"
+                className="inline-flex items-center gap-2 rounded-full border border-pink-200/60 bg-white/50 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[#FF0066] backdrop-blur-sm transition hover:bg-white/80"
               >
                 <Lock className="h-3.5 w-3.5" />
                 Lock
@@ -167,7 +167,7 @@ const PrivateGalleryPage = () => {
           </div>
 
           {/* Title */}
-          <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-violet-500">
+          <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.28em] text-[#FF0066]">
             Confidential portfolio
           </p>
           <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
@@ -181,14 +181,14 @@ const PrivateGalleryPage = () => {
           {!isUnlocked && (
             <form className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-end" onSubmit={handleSubmit}>
               <label className="block">
-                <span className="mb-2 block text-[11px] font-bold uppercase tracking-[0.24em] text-violet-500">
+                <span className="mb-2 block text-[11px] font-bold uppercase tracking-[0.24em] text-[#FF0066]">
                   Password
                 </span>
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-72 rounded-2xl border border-violet-200/60 bg-white/70 px-4 py-3 text-base text-slate-900 backdrop-blur-sm outline-none transition focus:border-violet-400 focus:bg-white focus:ring-4 focus:ring-violet-100"
+                  className="w-72 rounded-2xl border border-pink-200/60 bg-white/70 px-4 py-3 text-base text-slate-900 backdrop-blur-sm outline-none transition focus:border-[#FF0066] focus:bg-white focus:ring-4 focus:ring-[#FF0066]/10"
                   placeholder="Enter password"
                   autoFocus
                 />
@@ -196,7 +196,7 @@ const PrivateGalleryPage = () => {
               <div className="flex flex-col gap-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition hover:bg-violet-700"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#FF0066] px-6 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition hover:opacity-90"
                 >
                   Unlock
                   <ArrowRight className="h-4 w-4" />
@@ -216,14 +216,14 @@ const PrivateGalleryPage = () => {
                   onClick={() => setActiveProject(p.id)}
                   className={`flex flex-col items-start gap-0.5 rounded-2xl border px-5 py-4 text-left transition ${
                     activeProject === p.id
-                      ? 'border-violet-300/70 bg-white shadow-[0_4px_20px_rgba(76,29,149,0.12)]'
-                      : 'border-violet-200/40 bg-white/40 hover:bg-white/70'
+                      ? 'border-pink-300/70 bg-white shadow-[0_4px_20px_rgba(255,0,102,0.12)]'
+                      : 'border-pink-200/40 bg-white/40 hover:bg-white/70'
                   }`}
                 >
                   <span className={`text-sm font-black tracking-tight ${activeProject === p.id ? 'text-slate-950' : 'text-slate-500'}`}>
                     {p.label}
                   </span>
-                  <span className={`text-[11px] ${activeProject === p.id ? 'text-violet-600 font-semibold' : 'text-slate-400'}`}>
+                  <span className={`text-[11px] ${activeProject === p.id ? 'text-[#FF0066] font-semibold' : 'text-slate-400'}`}>
                     {p.description} · {p.tag}
                   </span>
                 </button>
