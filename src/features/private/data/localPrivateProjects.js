@@ -1,10 +1,4 @@
-const toDevAssetUrl = (absolutePath) => {
-  if (!import.meta.env.DEV) {
-    return null;
-  }
-
-  return `/@fs${encodeURI(absolutePath)}`;
-};
+const img = (path) => `/private/qurable/${path}`;
 
 const localPrivateProjects = [
   {
@@ -55,9 +49,7 @@ const localPrivateProjects = [
         title: 'Dashboard',
         description:
           'Main analytics dashboard with populated campaign insights, coupon performance, tiers distribution, and mission completion modules.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/dashboard.png',
-        ),
+        image: img('dashboard.png'),
       },
       {
         slug: 'dashboard-empty-state',
@@ -65,9 +57,7 @@ const localPrivateProjects = [
         title: 'Dashboard empty state',
         description:
           'Dashboard variant showing no recent activity, useful for documenting zero-data behavior and onboarding scenarios.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/dashboard-empty-state.png',
-        ),
+        image: img('dashboard-empty-state.png'),
       },
       {
         slug: 'coupon-book-overview',
@@ -75,9 +65,7 @@ const localPrivateProjects = [
         title: 'Coupons catalog',
         description:
           'Coupon management overview with search, filters, lifecycle states, and table-level actions for active, paused, and pending offers.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-01.png',
-        ),
+        image: img('coupons/coupon-book-01.png'),
       },
       {
         slug: 'coupon-book-detail',
@@ -85,9 +73,7 @@ const localPrivateProjects = [
         title: 'Coupon detail drawer',
         description:
           'Detailed coupon inspection with media thumbnails, configuration summary, key metrics, and generated coupon book key for operational follow-up.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-02.png',
-        ),
+        image: img('coupons/coupon-book-02.png'),
       },
       {
         slug: 'coupon-templates',
@@ -95,9 +81,7 @@ const localPrivateProjects = [
         title: 'Coupon templates',
         description:
           'Template selection view for defining audience strategies, discount mechanics, co-branded offers, rewards, and advanced coupon configuration.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-03.png',
-        ),
+        image: img('coupons/coupon-book-03.png'),
       },
       {
         slug: 'coupon-basic-configuration',
@@ -105,9 +89,7 @@ const localPrivateProjects = [
         title: 'Coupon setup: basic configuration',
         description:
           'Initial coupon setup step for naming the coupon, selecting its type, configuring code behavior, and defining the core benefit structure.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-04.png',
-        ),
+        image: img('coupons/coupon-book-04.png'),
       },
       {
         slug: 'coupon-validity',
@@ -115,9 +97,7 @@ const localPrivateProjects = [
         title: 'Coupon setup: validity',
         description:
           'Validity and period limit controls for timezone, scheduling, active weekdays, and recurring redemption conditions.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-05.png',
-        ),
+        image: img('coupons/coupon-book-05.png'),
       },
       {
         slug: 'coupon-usage-rules',
@@ -125,9 +105,7 @@ const localPrivateProjects = [
         title: 'Coupon setup: usage rules',
         description:
           'Usage configuration screen defining per-member and total limits, accrual behavior, and points logic for coupon claiming and redemption.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-06.png',
-        ),
+        image: img('coupons/coupon-book-06.png'),
       },
       {
         slug: 'coupon-eligibility',
@@ -135,9 +113,7 @@ const localPrivateProjects = [
         title: 'Coupon setup: eligibility',
         description:
           'Audience definition screen combining segment filters, participating locations, and payment methods with a live summary card.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-07.png',
-        ),
+        image: img('coupons/coupon-book-07.png'),
       },
       {
         slug: 'coupon-media-basic',
@@ -145,9 +121,7 @@ const localPrivateProjects = [
         title: 'Coupon setup: media basics',
         description:
           'Media step for title, description, and initial visual assets, introducing the structure for coupon content and custom attributes.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-08.png',
-        ),
+        image: img('coupons/coupon-book-08.png'),
       },
       {
         slug: 'coupon-media-expanded',
@@ -155,9 +129,7 @@ const localPrivateProjects = [
         title: 'Coupon setup: media and attributes',
         description:
           'Expanded media configuration with multiple image slots, subtitle support, and structured custom attributes for richer coupon rendering.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-09.png',
-        ),
+        image: img('coupons/coupon-book-09.png'),
       },
       {
         slug: 'coupon-book-filtered',
@@ -165,9 +137,7 @@ const localPrivateProjects = [
         title: 'Coupons catalog with filters',
         description:
           'Coupon list variant with state filters, search, partner attribution, and table actions for scanning published, draft, and partner offers.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/coupons/coupon-book-10.png',
-        ),
+        image: img('coupons/coupon-book-10.png'),
       },
       {
         slug: 'geofencing-rules-overview',
@@ -175,9 +145,7 @@ const localPrivateProjects = [
         title: 'Geofencing: rules overview',
         description:
           'Rules screen combining audience, tiers, locations, rewards, and optional conditions for points-per-purchase campaigns.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/geofencing-02.png',
-        ),
+        image: img('campaigns/geofencing-02.png'),
       },
       {
         slug: 'geofencing-map-library',
@@ -185,9 +153,7 @@ const localPrivateProjects = [
         title: 'Geofencing: area library',
         description:
           'Custom area modal with saved geofenced regions, search, and reusable presets layered over the live map.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/geofencing-03.png',
-        ),
+        image: img('campaigns/geofencing-03.png'),
       },
       {
         slug: 'geofencing-map-empty',
@@ -195,9 +161,7 @@ const localPrivateProjects = [
         title: 'Geofencing: empty area state',
         description:
           'Map state prepared for drawing or searching geographic areas before any saved presets are surfaced in the side panel.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/geofencing-04.png',
-        ),
+        image: img('campaigns/geofencing-04.png'),
       },
       {
         slug: 'geofencing-map-saved-areas',
@@ -205,9 +169,7 @@ const localPrivateProjects = [
         title: 'Geofencing: saved areas on map',
         description:
           'Saved geofenced areas displayed alongside the drawing canvas, making it easy to reuse existing polygons and compare coverage.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/geofencing-05.png',
-        ),
+        image: img('campaigns/geofencing-05.png'),
       },
       {
         slug: 'geofencing-location-dropdown',
@@ -215,9 +177,7 @@ const localPrivateProjects = [
         title: 'Geofencing: location selector',
         description:
           'Configuration state with location selection open, showing how teams choose participating places before refining rewards and area logic.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/geofencing-01.png',
-        ),
+        image: img('campaigns/geofencing-01.png'),
       },
       {
         slug: 'referrals-list',
@@ -225,9 +185,7 @@ const localPrivateProjects = [
         title: 'Referral campaigns list',
         description:
           'Campaign list focused on referral programs, showing member engagement, time alive, publishing states, and quick actions from the table.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-01.png',
-        ),
+        image: img('campaigns/referrals/referral-01.png'),
       },
       {
         slug: 'referrals-details',
@@ -235,9 +193,7 @@ const localPrivateProjects = [
         title: 'Referral setup: details',
         description:
           'Initial referral campaign configuration for naming the program, adding descriptive content, and preparing media slots before defining logic.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-02.png',
-        ),
+        image: img('campaigns/referrals/referral-02.png'),
       },
       {
         slug: 'referrals-trigger',
@@ -245,9 +201,7 @@ const localPrivateProjects = [
         title: 'Referral setup: activation trigger',
         description:
           'Activation step for referral campaigns where teams define the event that starts the program, such as new sign-up or purchase with referral code.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-03.png',
-        ),
+        image: img('campaigns/referrals/referral-03.png'),
       },
       {
         slug: 'referrals-validity',
@@ -255,9 +209,7 @@ const localPrivateProjects = [
         title: 'Referral setup: validity',
         description:
           'Validity configuration for referral campaigns with start and end dates, no-end toggle, and a live card summary of active settings.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-04.png',
-        ),
+        image: img('campaigns/referrals/referral-04.png'),
       },
       {
         slug: 'referrals-rules-goal',
@@ -265,9 +217,7 @@ const localPrivateProjects = [
         title: 'Referral setup: rules overview',
         description:
           'Rules screen for defining referral goals, attribution windows, reward types, and code strategy before refining the detailed reward configuration.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-05.png',
-        ),
+        image: img('campaigns/referrals/referral-05.png'),
       },
       {
         slug: 'referrals-rules-code-strategy',
@@ -275,9 +225,7 @@ const localPrivateProjects = [
         title: 'Referral setup: rewards and code strategy',
         description:
           'Referral rules variant with custom goals, enabled rewards for referrer and referred members, and the selected reusable code behavior.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-06.png',
-        ),
+        image: img('campaigns/referrals/referral-06.png'),
       },
       {
         slug: 'referrals-insights-empty',
@@ -285,9 +233,7 @@ const localPrivateProjects = [
         title: 'Referral insights empty state',
         description:
           'Insights view before the first referral happens, emphasizing onboarding and setting expectations for future conversion and reward data.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-07.png',
-        ),
+        image: img('campaigns/referrals/referral-07.png'),
       },
       {
         slug: 'referrals-insights-populated',
@@ -295,9 +241,7 @@ const localPrivateProjects = [
         title: 'Referral insights dashboard',
         description:
           'Populated referral analytics view with KPI cards and funnel visualization tracking exposure, link creation, registrations, purchases, and benefits granted.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/campaigns/referrals/referral-08.png',
-        ),
+        image: img('campaigns/referrals/referral-08.png'),
       },
       {
         slug: 'audiences-list',
@@ -305,9 +249,7 @@ const localPrivateProjects = [
         title: 'Audience management list',
         description:
           'Audience overview with search, type labels, estimated size, status, usage count, update metadata, and row-level actions.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 01.png',
-        ),
+        image: img('audiences/Audience 01.png'),
       },
       {
         slug: 'audiences-method-selection',
@@ -315,9 +257,7 @@ const localPrivateProjects = [
         title: 'Audience creation method',
         description:
           'Entry point for choosing how to define an audience, comparing precomputed, dynamic, and CSV-import based segmentation approaches.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 02.png',
-        ),
+        image: img('audiences/Audience 02.png'),
       },
       {
         slug: 'audiences-precomputed-empty',
@@ -325,9 +265,7 @@ const localPrivateProjects = [
         title: 'Precomputed audience builder',
         description:
           'Initial precomputed audience setup with basic information, estimation controls, and the first segmentation rule group.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 03.png',
-        ),
+        image: img('audiences/Audience 03.png'),
       },
       {
         slug: 'audiences-precomputed-filled',
@@ -335,9 +273,7 @@ const localPrivateProjects = [
         title: 'Precomputed audience with filters',
         description:
           'Expanded precomputed audience state showing multiple rule groups, tags, tiers, dates, and a live size estimate for richer segmentation logic.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 04.png',
-        ),
+        image: img('audiences/Audience 04.png'),
       },
       {
         slug: 'audiences-dynamic-filled',
@@ -345,9 +281,7 @@ const localPrivateProjects = [
         title: 'Dynamic audience builder',
         description:
           'Runtime audience setup with available attributes for evaluation, including location, dates, tiers, tags, and member type conditions.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 05.png',
-        ),
+        image: img('audiences/Audience 05.png'),
       },
       {
         slug: 'audiences-dynamic-empty',
@@ -355,9 +289,7 @@ const localPrivateProjects = [
         title: 'Dynamic audience empty state',
         description:
           'Blank dynamic audience state before any rule is added, emphasizing runtime evaluation behavior and the next action to define conditions.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 06.png',
-        ),
+        image: img('audiences/Audience 06.png'),
       },
       {
         slug: 'audiences-csv-empty',
@@ -365,9 +297,7 @@ const localPrivateProjects = [
         title: 'CSV import audience empty state',
         description:
           'CSV-based audience setup with upload instructions, matching configuration, and an empty upload history for first-time imports.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 07.png',
-        ),
+        image: img('audiences/Audience 07.png'),
       },
       {
         slug: 'audiences-csv-history',
@@ -375,9 +305,7 @@ const localPrivateProjects = [
         title: 'CSV import audience history',
         description:
           'CSV import workflow with populated upload history, file validation states, and matching configuration tied to the member database.',
-        image: toDevAssetUrl(
-          '/Users/marianafiorillo/portfolio-maru/private-content/qurable/audiences/Audience 08.png',
-        ),
+        image: img('audiences/Audience 08.png'),
       },
     ],
   },
