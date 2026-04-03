@@ -72,6 +72,13 @@ const newBlock = (type) => {
   return { type, text: '' };
 };
 
+// ---- Draft helpers ----
+const draftKey = (index, post) => index === -1 ? 'draft_new' : `draft_${post?.slug || index}`;
+const getDraft = (key) => { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch { return null; } };
+const saveDraftToStorage = (key, post) => localStorage.setItem(key, JSON.stringify(post));
+const clearDraftFromStorage = (key) => localStorage.removeItem(key);
+const hasDraftInStorage = (slug) => !!localStorage.getItem(`draft_${slug}`);
+
 const emptyPost = () => ({
   slug: '',
   date: new Date().toISOString().split('T')[0],
@@ -373,6 +380,11 @@ const Admin = () => {
   const [editingPost, setEditingPost] = useState(null);
   const [activeLang, setActiveLang] = useState('en');
   const [preview, setPreview] = useState(false);
+  const [currentDraftKey, setCurrentDraftKey] = useState(null);
+  const [draftLoaded, setDraftLoaded] = useState(false);
+  const [draftSlugs, setDraftSlugs] = useState(() =>
+    posts.map(p => p.slug).filter(s => hasDraftInStorage(s))
+  );
 
   // Canvas refs & state
   const canvasRef = useRef(null);
@@ -399,14 +411,37 @@ const Admin = () => {
   };
 
   const handleSelectPost = (index) => {
+    const base = index === -1 ? emptyPost() : JSON.parse(JSON.stringify(posts[index]));
+    const key = draftKey(index, posts[index]);
+    const draft = getDraft(key);
     setSelectedIndex(index);
-    setEditingPost(index === -1 ? emptyPost() : JSON.parse(JSON.stringify(posts[index])));
+    setEditingPost(draft ?? base);
+    setCurrentDraftKey(key);
+    setDraftLoaded(!!draft);
     setActiveLang('en');
     setSuccess('');
     setError('');
     setShowPicker(false);
     setToolbarVisible(false);
     blockRefs.current = [];
+  };
+
+  const handleSaveDraft = () => {
+    if (!editingPost) return;
+    saveDraftToStorage(currentDraftKey, editingPost);
+    const slug = editingPost.slug || posts[selectedIndex]?.slug;
+    if (slug) setDraftSlugs(prev => prev.includes(slug) ? prev : [...prev, slug]);
+    setSuccess('Borrador guardado');
+  };
+
+  const handleDiscardDraft = () => {
+    clearDraftFromStorage(currentDraftKey);
+    const base = selectedIndex === -1 ? emptyPost() : JSON.parse(JSON.stringify(posts[selectedIndex]));
+    setEditingPost(base);
+    setDraftLoaded(false);
+    const slug = posts[selectedIndex]?.slug;
+    if (slug) setDraftSlugs(prev => prev.filter(s => s !== slug));
+    setSuccess('Borrador descartado');
   };
 
   // --- Block operations ---
@@ -575,6 +610,9 @@ const Admin = () => {
       await ghPut(token, newPosts, currentSha);
       setPosts(newPosts);
       localStorage.setItem('admin_gh_token', token);
+      clearDraftFromStorage(currentDraftKey);
+      setDraftLoaded(false);
+      setDraftSlugs(prev => prev.filter(s => s !== post.slug));
       if (selectedIndex === -1) setSelectedIndex(0);
       setEditingPost(post);
       setSuccess('¡Publicado! Vercel redeploy en ~1 min.');
@@ -702,7 +740,12 @@ const Admin = () => {
                 onClick={() => handleSelectPost(realIndex)}
                 className={`w-full text-left p-4 border-b border-gray-50 hover:bg-pink-50/50 transition-colors ${selectedIndex === realIndex ? 'bg-pink-50 border-l-2 border-l-pink-500' : 'border-l-2 border-l-transparent'}`}
               >
-                <p className="text-[10px] font-bold uppercase tracking-widest text-pink-400 mb-1">{post.label}</p>
+                <div className="flex items-center gap-2 mb-1">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-pink-400">{post.label}</p>
+                  {draftSlugs.includes(post.slug) && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" title="Borrador guardado" />
+                  )}
+                </div>
                 <p className="text-sm font-bold text-gray-900 leading-tight line-clamp-2">{post.en?.title || post.slug}</p>
                 <p className="text-[10px] text-gray-400 mt-1">{post.date}</p>
               </button>
@@ -760,6 +803,12 @@ const Admin = () => {
               {error && <p className="text-red-400 text-xs max-w-xs">{error}</p>}
               {success && <p className="text-green-500 text-xs max-w-xs">{success}</p>}
               <button
+                onClick={handleSaveDraft}
+                className="border border-gray-200 text-gray-500 px-4 py-2 rounded-xl font-black uppercase tracking-widest text-xs hover:border-amber-300 hover:text-amber-500 transition-colors whitespace-nowrap"
+              >
+                Guardar borrador
+              </button>
+              <button
                 onClick={handleSave}
                 disabled={saving}
                 className="bg-pink-500 text-white px-6 py-2 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-pink-600 transition-colors disabled:opacity-50 whitespace-nowrap"
@@ -808,6 +857,16 @@ const Admin = () => {
           {/* Medium canvas */}
           {!preview && <div className="flex-1 overflow-y-auto">
             <div className="max-w-2xl mx-auto px-20 py-12">
+
+              {/* Draft banner */}
+              {draftLoaded && (
+                <div className="flex items-center justify-between bg-amber-50 border border-amber-200 rounded-xl px-4 py-2.5 mb-6 text-xs">
+                  <span className="text-amber-700 font-bold">Estás editando un borrador guardado</span>
+                  <button onClick={handleDiscardDraft} className="text-amber-500 hover:text-amber-700 font-black underline underline-offset-2">
+                    Descartar
+                  </button>
+                </div>
+              )}
 
               {/* Title */}
               <input
