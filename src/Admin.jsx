@@ -385,6 +385,7 @@ const Admin = () => {
   const [draftSlugs, setDraftSlugs] = useState(() =>
     posts.map(p => p.slug).filter(s => hasDraftInStorage(s))
   );
+  const [newDraftExists, setNewDraftExists] = useState(() => !!getDraft('draft_new'));
 
   // Canvas refs & state
   const canvasRef = useRef(null);
@@ -429,8 +430,12 @@ const Admin = () => {
   const handleSaveDraft = () => {
     if (!editingPost) return;
     saveDraftToStorage(currentDraftKey, editingPost);
-    const slug = editingPost.slug || posts[selectedIndex]?.slug;
-    if (slug) setDraftSlugs(prev => prev.includes(slug) ? prev : [...prev, slug]);
+    if (selectedIndex === -1) {
+      setNewDraftExists(true);
+    } else {
+      const slug = editingPost.slug || posts[selectedIndex]?.slug;
+      if (slug) setDraftSlugs(prev => prev.includes(slug) ? prev : [...prev, slug]);
+    }
     setSuccess('Borrador guardado');
   };
 
@@ -439,8 +444,12 @@ const Admin = () => {
     const base = selectedIndex === -1 ? emptyPost() : JSON.parse(JSON.stringify(posts[selectedIndex]));
     setEditingPost(base);
     setDraftLoaded(false);
-    const slug = posts[selectedIndex]?.slug;
-    if (slug) setDraftSlugs(prev => prev.filter(s => s !== slug));
+    if (selectedIndex === -1) {
+      setNewDraftExists(false);
+    } else {
+      const slug = posts[selectedIndex]?.slug;
+      if (slug) setDraftSlugs(prev => prev.filter(s => s !== slug));
+    }
     setSuccess('Borrador descartado');
   };
 
@@ -613,6 +622,7 @@ const Admin = () => {
       clearDraftFromStorage(currentDraftKey);
       setDraftLoaded(false);
       setDraftSlugs(prev => prev.filter(s => s !== post.slug));
+      if (selectedIndex === -1) setNewDraftExists(false);
       if (selectedIndex === -1) setSelectedIndex(0);
       setEditingPost(post);
       setSuccess('¡Publicado! Vercel redeploy en ~1 min.');
@@ -729,6 +739,49 @@ const Admin = () => {
         </div>
 
         <div className="flex-1 overflow-y-auto">
+          {/* Drafts section */}
+          {(newDraftExists || draftSlugs.length > 0) && !search && (
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-widest text-amber-500 px-4 pt-4 pb-2">Borradores</p>
+
+              {/* New unpublished draft */}
+              {newDraftExists && (() => {
+                const draft = getDraft('draft_new');
+                return (
+                  <button
+                    onClick={() => handleSelectPost(-1)}
+                    className={`w-full text-left p-4 border-b border-amber-50 hover:bg-amber-50 transition-colors ${selectedIndex === -1 ? 'bg-amber-50 border-l-2 border-l-amber-400' : 'border-l-2 border-l-transparent'}`}
+                  >
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1">{draft?.label || 'Sin label'}</p>
+                    <p className="text-sm font-bold text-gray-900 leading-tight line-clamp-2">{draft?.en?.title || 'Sin título'}</p>
+                    <p className="text-[10px] text-amber-400 mt-1">Nuevo · no publicado</p>
+                  </button>
+                );
+              })()}
+
+              {/* Existing posts with draft changes */}
+              {draftSlugs.map(slug => {
+                const realIndex = posts.findIndex(p => p.slug === slug);
+                if (realIndex === -1) return null;
+                const draft = getDraft(`draft_${slug}`);
+                return (
+                  <button
+                    key={slug}
+                    onClick={() => handleSelectPost(realIndex)}
+                    className={`w-full text-left p-4 border-b border-amber-50 hover:bg-amber-50 transition-colors ${selectedIndex === realIndex ? 'bg-amber-50 border-l-2 border-l-amber-400' : 'border-l-2 border-l-transparent'}`}
+                  >
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1">{draft?.label || posts[realIndex]?.label}</p>
+                    <p className="text-sm font-bold text-gray-900 leading-tight line-clamp-2">{draft?.en?.title || posts[realIndex]?.en?.title}</p>
+                    <p className="text-[10px] text-amber-400 mt-1">Cambios sin publicar</p>
+                  </button>
+                );
+              })}
+
+              <div className="border-t border-gray-100 mt-2 mb-1" />
+              <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 px-4 pt-3 pb-2">Publicados</p>
+            </div>
+          )}
+
           {filteredPosts.length === 0 && (
             <p className="text-xs text-gray-400 text-center px-4 py-6">Sin resultados</p>
           )}
