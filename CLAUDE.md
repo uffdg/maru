@@ -21,10 +21,12 @@ Run `npm run check` before committing to catch content errors, lint issues, and 
 
 **Feature-based structure under `src/`:**
 - `app/` — Router setup (`AppRouter.jsx`, `routes.jsx`)
-- `features/` — Domain modules: `home/`, `blog/`, `cases/`, `content/`, `not-found/`
+- `features/` — Domain modules: `home/`, `blog/`, `cases/`, `content/`, `not-found/`, `private/`
 - `shared/` — Cross-feature utilities: analytics, components (Reveal, HeroAnimation, LanguageToggle), seo, routing, lib
 - `data/` — Source of truth: `posts.json` and `cases.json`
 - `translations.js` — All UI strings in EN and ES (flat structure per language)
+
+**Legacy files:** `src/Admin.jsx`, `src/Blog.jsx`, `src/BlogPost.jsx`, `src/CasePage.jsx`, `src/LanguageContext.jsx`, `src/useLanguage.js`, and `src/cases/` are superseded by the `features/` modules. Do not edit them.
 
 ## Content System
 
@@ -34,7 +36,7 @@ All content lives in `src/data/posts.json` and `src/data/cases.json` as static J
 
 **Case schema:** keyed by slug, each with `en`/`es` objects containing `label`, `title`, `subtitle`, and typed sections.
 
-**Case registry** (`src/features/cases/data/caseRegistry.js`) stores display metadata (featured flag, order, role, summary) and the `caseOrder` array that controls navigation sequencing. When adding a new case, update this registry.
+**Case registry** (`src/features/cases/data/caseRegistry.js`) stores display metadata (featured flag, `projectType`, `metadata` array, bilingual `summary`) and the `caseOrder` array that controls navigation sequencing. When adding a new case, update both `caseRegistry` and `caseOrder`.
 
 **Content validation** runs via `scripts/check-content.mjs` and checks for duplicate slugs and missing required fields in both languages.
 

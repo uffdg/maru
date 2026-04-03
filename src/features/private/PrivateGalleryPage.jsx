@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Lock, ArrowRight, Eye } from 'lucide-react';
 import { privateGalleryPassword, privateProjects } from './data/localPrivateProjects';
@@ -99,14 +99,11 @@ const QurableProject = ({ projects }) => {
 // ── Main page ────────────────────────────────────────────────
 const PrivateGalleryPage = () => {
   const [password, setPassword] = useState('');
-  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [isUnlocked, setIsUnlocked] = useState(
+    () => typeof window !== 'undefined' && window.localStorage.getItem(STORAGE_KEY) === 'true'
+  );
   const [error, setError] = useState('');
   const [activeProject, setActiveProject] = useState('qurable');
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    setIsUnlocked(window.localStorage.getItem(STORAGE_KEY) === 'true');
-  }, []);
 
   const availableProjects = useMemo(
     () =>

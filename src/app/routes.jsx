@@ -4,6 +4,7 @@ import BlogPostPage from '../features/blog/BlogPostPage';
 import CaseStudyPage from '../features/cases/CaseStudyPage';
 import NotFoundPage from '../features/not-found/NotFoundPage';
 import PrivateGalleryPage from '../features/private/PrivateGalleryPage';
+import Admin from '../Admin';
 
 export const appRoutes = [
   { path: '/', element: <HomePage /> },
@@ -11,5 +12,6 @@ export const appRoutes = [
   { path: '/blog/:slug', element: <BlogPostPage /> },
   { path: '/cases/:slug', element: <CaseStudyPage /> },
   { path: '/private', element: <PrivateGalleryPage /> },
+  { path: '/admin', element: <Admin /> },
   { path: '*', element: <NotFoundPage /> },
 ];
