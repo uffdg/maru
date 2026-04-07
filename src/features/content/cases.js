@@ -112,6 +112,8 @@ const normalizeCaseSections = (slug, content) => {
       eyebrow: content.learned.label,
       title: content.learned.title,
       body: [content.learned.body],
+      blogLink: content.learned.blogLink || null,
+      blogLinkLabel: content.learned.blogLinkLabel || null,
     });
   }
 

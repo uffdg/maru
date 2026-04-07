@@ -250,6 +250,15 @@ const CaseStudyPage = () => {
                   {section.body.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
+                  {section.blogLink && (
+                    <Link
+                      to={section.blogLink}
+                      onClick={() => trackEvent('case_blog_link_click', { case: slug, post: section.blogLink })}
+                      className="not-italic inline-block mt-6 text-sm font-black text-pink-500 hover:underline"
+                    >
+                      {section.blogLinkLabel}
+                    </Link>
+                  )}
                 </div>
               </div>
             </SectionShell>
